@@ -14,18 +14,29 @@ body{
     min-width: 250px;
 }
 .in-flex:first-child{
-    align-items:center;
     display: flex;
-    flex: 2;
-    padding: 25px;
+    padding: 5px;
     background-color:#B8B7C9;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
 }
-.Botones{
-    background: chartreuse;
+.more{
+    height: 20px;
+    width: 50px;
+}
+.lupa{
+    width: 10px;
+    height: 10px;
     flex-wrap: wrap;
 }
-.hal{
+.Botones{
+    display: flex;
+    align-items: center;
+    float: right;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.botoncito{
     color: #79769d;
     width: 150px;
     border: solid 5px white;
@@ -40,4 +51,8 @@ body{
     padding: 25px;
     margin: 20px;
 }
-
+.carousel-item{
+   padding: 25px;
+    width: 10px;
+    height: 350px;
+}
