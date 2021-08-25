@@ -14,11 +14,11 @@
 <section class="home">
         <div class="in-flex"> 
             <div class="Botones"> 
-            <img src="/CaesMal/Cubbi_BDM_PWCI/Ventanas_de_la_poderosa_Curi/Multimedia/more.png" alt="more" class="more"> 
-                <img src="/CaesMal/Cubbi_BDM_PWCI/Ventanas_de_la_poderosa_Curi/Multimedia/logo.png" alt="logo"> 
+            <img src="/Cubbi_BDM_PWCI/Ventanas_de_la_poderosa_Curi/Multimedia/more.png" alt="more" class="more"> 
+                <img src="/Cubbi_BDM_PWCI/Ventanas_de_la_poderosa_Curi/Multimedia/logo.png" alt="logo"> 
                 <div class="buscador">                   
                 <input type="search">
-                <img src="/CaesMal/Cubbi_BDM_PWCI/Ventanas_de_la_poderosa_Curi/Multimedia/lupa.png" alt="" class="lupa">
+                <img src="/Cubbi_BDM_PWCI/Ventanas_de_la_poderosa_Curi/Multimedia/lupa.png" alt="" class="lupa">
                 </div>             
 
                 <h3 class="botoncito">Iniciar sesion </h3>
@@ -37,21 +37,21 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                <img src="/CaesMal/Cubbi_BDM_PWCI/Ventanas_de_la_poderosa_Curi/Multimedia/a.gif" class="d-block w-100" alt="...">
+                <img src="/Cubbi_BDM_PWCI/Ventanas_de_la_poderosa_Curi/Multimedia/a.gif" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Bordado</h5>
                     <p>Impartida por Brenda</p>
                     </div>
             </div>
             <div class="carousel-item">
-                <img src="/CaesMal/Cubbi_BDM_PWCI/Ventanas_de_la_poderosa_Curi/Multimedia/b.gif" class="d-block w-100" alt="..."  >
+                <img src="/Cubbi_BDM_PWCI/Ventanas_de_la_poderosa_Curi/Multimedia/b.gif" class="d-block w-100" alt="..."  >
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Croche</h5>
                     <p>Impartida por curi</p>
                 </div>
                 </div>
             <div class="carousel-item">
-                <img src="/CaesMal/Cubbi_BDM_PWCI/Ventanas_de_la_poderosa_Curi/Multimedia/c.gif" class="d-block w-100" alt="..." >   
+                <img src="/Cubbi_BDM_PWCI/Ventanas_de_la_poderosa_Curi/Multimedia/c.gif" class="d-block w-100" alt="..." >   
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Evadir impuestos</h5>
                     <p>Impartida por anonimo</p>
