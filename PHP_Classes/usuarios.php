@@ -43,7 +43,7 @@
         function query_insert_Usuario() {
             $database = new DB;
             $conexion = $database->ConectarDB();
-            mysqli_query($conexion, "INSERT INTO Usuarios (txt_NomUser, txt_Contra, txt_Nom, txt_ApePat, txt_Email, date_FchaRegistro, date_FchaUltiCambio, blob_img) VALUES ('{$this->txt_NomUser}', '{$this->txt_Contra}', '{$this->txt_Nom}', '{$this->txt_ApePat}', '{$this->txt_Email}', NOW(), NOW(), null)");
+            mysqli_query($conexion, "call sp_Usuarios('A', null, 1, '{$this->txt_NomUser}', '{$this->txt_Contra}', '{$this->txt_Nom}', '{$this->txt_ApePat}', '{$this->txt_Email}', NOW(), NOW(), null)");
             mysqli_close($conexion);
         }
     }
