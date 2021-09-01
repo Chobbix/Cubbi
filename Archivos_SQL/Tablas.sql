@@ -25,7 +25,7 @@ CREATE TABLE Usuarios (
 	txt_Email			VARCHAR(40),
 	date_FchaRegistro	DATE,
 	date_FchaUltiCambio	DATE,
-	blob_img			MEDIUMBLOB,
+	blob_img			MEDIUMBLOB NULL,
 
 	CONSTRAINT pk_us PRIMARY KEY (ID_Usuario),
     CONSTRAINT fk_us_rol FOREIGN KEY (ID_Rol) REFERENCES Roles (ID_Rol)
