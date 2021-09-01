@@ -1,22 +1,23 @@
 *{
+   
     padding: 0px;
     margin: 0px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 body{
-    background-color: #DEE0E9;
+    
 }
 .home{  
     flex-wrap: wrap;
 }
-.in-flex{   
-    flex: 1;     
-    min-width: 250px;
+.header{   
+
+    position: fixed;
 }
 .in-flex:first-child{
     display: flex;
     padding: 5px;
-    background-color:#B8B7C9;
     margin-bottom: 10px;
 }
 .more{
@@ -38,6 +39,7 @@ body{
 }
 .botoncito{
     color: #79769d;
+
     width: 150px;
     border: solid 5px white;
     font-size: 25px;
@@ -52,7 +54,7 @@ body{
     margin: 20px;
 }
 .carousel-item{
-   padding: 25px;
+    padding: 25px;
     width: 10px;
     height: 350px;
 }

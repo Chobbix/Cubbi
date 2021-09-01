@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 80px;
+}
+.header{
+    background-color: #B8B7C9;
+    height: 130px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+   border-bottom: rgb(255, 242, 218) 2px solid ;
+}
+.nav{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.nav-menu{
+    display: flex;
+    list-style: none;
+    margin-right: 40px;
+    align-items: center;
+    
+}
+.nav-item{
+    text-decoration: none;
+    font-size: 30px;
+}
+.nav-item{
+
+    width: max-content;
+}
+
+.lupa{
+    width: 30px;
+    height: 30px;
+    padding:  5px;
+    margin-bottom:1px;
+}
+.carrito{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+.logo{
+    width: 200px;
+    height: 60px;
+    margin-left: 40px;
+}
+.separacion{
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.search{
+    height: 37px;
+    display: block;
+    font-size: 30px;
+    background-color: rgb(255, 242, 218) ;
+    border: none;
+    
+}
+.buscador{
+    background-color: white;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius:10px ;
+}
