@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="div">
-    <?php include ('D:\wamp\www\Cubbi_BDM_PWCI\Ventanas_de_la_poderosa_Curi\Navegacion/Nav.php');?>
+    <?php include ("../Navegacion/Nav.php");?>
     </div>
     <div class="contenedor">
         <div class="contenido">
