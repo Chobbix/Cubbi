@@ -1,3 +1,59 @@
-.header{
-    background-color: blue;
+
+.contenedor{
+    height: 100vh;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenido{
+    background-color: #dad8e6;   
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    width: 30vw;
+    height: 80vh;
+    padding: 20px;
+}
+.diseno-input{
+    
+    width: 100%;
+    height: 35px;
+    border: #7c7096 2px solid;
+    border-radius: 5px ;
+}
+.cont-texto{
+    align-content: center; 
+    width: 90%;
+    text-align: left;
+    margin: 0 auto;
+}
+.email, .pass{
+    margin-bottom: 15px;
+    font-size: 10px;
+}
+.btn-inicio{
+    margin-top: 25px;
+    width: 100%;
+    border: none;
+    border: #7c7096 2px solid;
+    border-radius: 5px;
+    height:  40px;
+    font-size: 25px;
+}
+.registrate{
+    border-top:#7c7096 2px groove ;
+    margin-top: 65px;
+    display: flex;
+    justify-content: center;
+}
+.text-registro{
+    margin-top: 5px;
+}
+.link{
+    margin-left: 5px;
+    line-height: 33px;
+    color: #c2bad4 ;
+}
+.link:hover{
+    color: #7c7096
 }

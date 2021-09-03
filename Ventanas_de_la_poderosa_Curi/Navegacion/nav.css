@@ -16,26 +16,32 @@ body{
     background-color: #B8B7C9;
     height: 150px;
     width: 100%;
-    position: fixed;
-
-
+    position: static;
 }
+
 .nav{
     height: 150px;
-    width: 100%;
+    width: 90%;
     align-content: center;
     align-items: center;
     margin-left: 0;
     display: flex;
     justify-content: space-between;
+    
     padding: 20px;
+
 }
-.nav-menu{    
+
+.nav-menu{ 
+   
     align-items: center;
     display: flex;
     list-style: none;
+
 }
+
 .nav-item{
+    
     width: max-content;
 }
 .fas{
@@ -45,6 +51,7 @@ body{
     height: 30px;
 
 }
+
 .fa-shopping-cart{ 
     width: 80px;
 }
@@ -55,13 +62,15 @@ body{
 .fa-search:hover{
     color: #c2bad4;
 }
+
 .logo{
 
     width: 200px;
     height: 60px;
     margin-left: 40px;
-    margin-right: 40px;
+    margin-right: 20px;
 }
+
 .btn-sesion{
     width: 150px;
     height: 35px;
@@ -74,11 +83,13 @@ body{
     overflow: hidden;
     margin-left: 5px;
 }
+
 .btn-log{ 
     border: white solid 2px;
     border-radius: 2px;
     background-color: rgb(255, 242, 218) ;
 }
+
 .btn-sesion:hover{
     background-color: white;
     cursor: pointer;
@@ -89,9 +100,11 @@ body{
     border-right: white 2px solid;
     margin-right: 10px;
 }
+
 .menu-categorias{
     display: flex;
 }
+
 .search{
     height: 51px;
     width: 250px;
@@ -126,6 +139,7 @@ body{
 .longitud {
     height: 204px;
 }
+
 scroll-container {
     display: block;
     height: 200px;
