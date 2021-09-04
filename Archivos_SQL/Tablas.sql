@@ -114,3 +114,17 @@ CREATE TABLE Comentarios_Cursos (
     CONSTRAINT fk_comcur_cur FOREIGN KEY (ID_Curso) REFERENCES Cursos (ID_Curso),
     CONSTRAINT fk_comcur_usu FOREIGN KEY (ID_Usuario) REFERENCES Usuarios (ID_Usuario)
 );
+
+CREATE TABLE Carrito (
+	ID_Usuario			INT,
+    ID_Curso			INT,
+    int_NivelActual		INT,
+    isTerminado			BOOL,
+    isBaja				BOOL,
+    date_FchaTerm		DATE,
+    
+	CONSTRAINT pk_curreg PRIMARY KEY (ID_Usuario, ID_Curso),
+    CONSTRAINT fk_curreg_usu FOREIGN KEY (ID_Usuario) REFERENCES Usuarios (ID_Usuario)
+    CONSTRAINT fk_curreg_cur FOREIGN KEY (ID_Curso) REFERENCES Cursos (ID_Curso)
+    CONSTRAINT fk_curreg_niv FOREIGN KEY (int_NivelActual) REFERENCES Niveles (int_Nivel),
+);

@@ -79,3 +79,8 @@ ID_Curso,
 ID_Usuario,
 txt_Comentario,
 date_FchaEnvio
+
+
+CARRITO:
+ID_Usuario,
+ID_Curso
