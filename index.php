@@ -8,13 +8,36 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="estilosPrueba.css">
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="/Cubbi_BDM_PWCI/JavaScript/Validaciones.js"></script>
         <title>Document</title>
     </head>
 <body>
-    <?php
-        $juan = new Usuario("Juan23", "Caballo69", "Juan", "Martinez", "juan@hotmail.com");
-        $juan->query_insert_Usuario();
-        echo "FINALIZADO";
-    ?>
+    <form action="index.php">
+        
+        <label>Nombre Completo: </label>
+        <input type="text" name="txt_Nombre" id="1" valid="vacio"><br>
+
+        <label>Genero: </label>
+        <input type="text" name="genero" id="2" valid="vacio"><br>
+        
+        <label>Fecha de Nacimiento: </label>
+        <input type="text" name="date_Fnac" id="3" valid="vacio"><br>
+        
+        <label>Nombre de Usuario: </label>
+        <input type="text" name="txt_Usuario" id="4" valid="vacio"><br>
+
+        <label>Email: </label>
+        <input type="text" name="txt_Email" id="5" valid="vacio"><br>
+        
+        <label>Contraseña: </label>
+        <input type="text" name="txt_Password" id="6" valid="vacio"><br>
+        
+        <button id="btn_Aceptar">Aceptar</button>
+    </form>
 </body>
 </html>
