@@ -22,10 +22,65 @@
                         <h1> Informacion personal</h1>
                         <h3>Cuenta creada desde el 2021</h3>
                         <h3>Fecha de nacimiento:</h3>
-                        <hr>
-                        <a href="#">
-                            <h3 class="btn-edit">Editar</h3>
-                        </a>                       
+                        <hr>                        
+                        <div class="responder">
+                            <a href="#modal" id="mostrar" >  <h3 class="btn-edit ">Editar</h3>     </a>
+                        </div>
+                        <aside id="modal" class="modal"> 
+                            <div class="contenido-modal"> 
+                                <header>
+                                    <h1>Editor</h1>
+                                    <a href="#" class="cerrar"> <h3 class="x"> <i class="fas fa-times-circle"></i> </h3> </a>
+                                </header>
+                                <article>
+                                    <div class="contenedor-answer">   
+                                        <input type="radio" id="Preguntas" name="categoria" value="preguntas" checked >
+                                        <input type="radio" id="Respuestas" name="categoria" value="Respuestas">  
+                                        <div class="contenedor-categoria">
+                                            <label for="Preguntas"> <h6 class="design-tittle separacion">Perfil</h6></label>
+                                            <label for="Respuestas"><h6 class="design-tittle">Contraseña</h6> </label>                                      
+                                        </div>
+                                        <div class="bloque-menu"  id="Registro">
+                                        <scroll-container>
+
+                                            <div class="bloque-contenido">
+                                                <div class="contenedor-Preg" >
+                                                    <div class="bloque-editar">
+                                                        <img src="../Multimedia/a.gif" alt="" class="perfilus">
+                                                        <div class="divisorio">
+                                                            <h1 class="selector" id="type">Nick name</h1> 
+                                                            <input type="text">  
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                                <div class="contenedor-resp" id="Registro" >
+                                                    <div class="bloque-editar">
+                                                        <div class="divisorio">
+                                                            <h1 class="selector " id="type">Contraseña  original:</h1>  
+                                                            <input type="text">
+                                                        </div>
+                                                        <div class="divisorio">
+                                                            <h1 class="selector a" id="type">Nueva Contraseña</h1>  
+                                                            <input type="text">
+
+                                                        </div>
+                                                        <div class="divisorio">                                                             
+                                                            <h1 class="selector a" id="type">confirmar Contraseña</h1> 
+                                                            <input type="text">                                        
+                                                
+                                                        </div>
+                                                    </div>                                                                                        
+                                                </div> 
+                                                <div class="btn-guardado">
+                                                    <a href="" class="save-modal">  <button  class="btn-guarda">Guardar</button>   </a>
+                                                </div>   
+                                            </div>                                      
+                                        </scroll-container>                                      
+                                    </div>                                     
+                                </div>
+                                </article>
+                            </div>
+                        </aside>
                         <hr>
                         <h5>Ultimo cambio realizado: 01 sep 2021</h5>
                 </div>
