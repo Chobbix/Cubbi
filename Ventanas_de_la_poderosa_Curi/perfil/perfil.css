@@ -1,0 +1,101 @@
+.contenedor{
+    width: 90%;
+    margin: 0 auto;
+}
+.cabecera{
+    height: 170px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px #c2bad4 solid;
+}
+.usperfil{
+    width: 150px;
+    height: 150px;   
+    border-radius: 100px;
+}
+.usname{
+    margin-left: 25px;
+}
+.grupo{  
+    display: flex;
+}
+.subgrupo-info-us{
+    width: 40%;
+}
+.info-personal{
+
+    width: 60%;
+}
+hr{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: #c2bad4 solid 1px;
+}
+.btn-edit{
+    display: flex;
+    justify-content: center;
+}
+.subgrupo-info-cursos{
+    width: 50%;
+}
+.bloque{
+    background-color: white;
+    margin-bottom: 25px;
+    padding: 25px;
+}
+.cont{
+    width: 100%;
+    display: flex;
+    align-content: center;
+}
+.info{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Empieza contenido cursos*/
+
+.bloque-tittle{
+display: flex;
+}
+.bloque-ultimo-curso{
+    display: flex;
+    align-items: center;
+    height: 300px;
+    padding: 5px;
+}
+.icon, .descripcion{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    
+}
+.cuadro1, .cuadro2{
+    width: 50%;
+}
+.cuadro2{
+    text-align: right;
+}
+.link:hover{
+    color: #dad8e6;
+}
+.btn-edit:hover{
+    color: #dad8e6;
+}
+.miniatura{
+    width: 95%;
+    height: 60%;
+}
+.porcentaje{
+    color: #dad8e6;
+}
+.Cont-ultimo-curso{
+    border-bottom: 1px solid #c2bad4;
+}

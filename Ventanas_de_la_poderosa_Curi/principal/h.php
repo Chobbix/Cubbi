@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="./principal.css">
     <title>Document</title>
 </head>
 <body>
@@ -16,7 +17,7 @@
             <a href="#"> <img src="/Cubbi_BDM_PWCI/Ventanas_de_la_poderosa_Curi/Multimedia/logo.png" alt="logo" class="logo">  </a>   
             <ul class="nav-menu">                 
                 <ul class="menu-categorias">
-                    <li><a href="#" class="clase-a">Cursos <i class="fas fa-angle-down"></i></a>                    
+                    <li><a href="#" >Cursos <i class="fas fa-angle-down"></i></a>                    
                         <ul class="longitud">
                             <li><a href="#" >Categorias </a>                            
                                 <ul class="diseno">
@@ -46,21 +47,8 @@
                 <li><a href="#" class="nav-item buscador " > <input type="text"  id="inputsearch" placeholder="¿Que vas a aprender?"class="search"> </li>
                 <li><a href="#" class="nav-item buscador "> <i class="fas fa-search"></i></a></li>
                 <li><a href="#" class="nav-item"> <button class="btn-carrito "> <i class="fas fa-shopping-cart" class=""></i></button> </a></li>
-                <i class="fas fa-graduation-cap"></i>
-                <ul class="nav-perfil">
-                    <li>
-                        <img src="../Multimedia/a.gif" alt="" class="perfil">
-                        <ul class="a"  >
-                            <li><a href="#" class="botones-perfil"> Mi perfil</a></li>
-                            <li><a href="#" class="botones-perfil">Mis diplomas</a> </li>
-                            <li><a href="#" class="botones-perfil">Mis proyectos</a> </li>
-                            <hr>
-                            <li><a href="#" class="botones-perfil"> cerrar sesion </a></li>
-                        </ul>
-                    </li>
-                    
-                </ul>
-            
+                <li><a href="#" class="nav-item"> <button class="btn-sesion"> Iniciar sesion </button> </a></li>
+                <li><a href="#" class="nav-item"> <button class="btn-sesion btn-log "> Prueba gratis </button> </a></li>
             </ul>
         </nav>
     </header>

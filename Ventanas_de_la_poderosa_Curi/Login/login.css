@@ -14,8 +14,7 @@
     height: 80vh;
     padding: 20px;
 }
-.diseno-input{
-    
+.diseno-input{    
     width: 100%;
     height: 35px;
     border: #7c7096 2px solid;
@@ -39,6 +38,10 @@
     border-radius: 5px;
     height:  40px;
     font-size: 25px;
+}
+.btn-inicio:hover{
+    background-color:#c2bad4 ;
+    color: #dad8e6;
 }
 .registrate{
     border-top:#7c7096 2px groove ;

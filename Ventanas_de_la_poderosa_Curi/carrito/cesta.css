@@ -1,0 +1,48 @@
+.contenedor{
+    display: flex;
+    justify-content: center;
+}
+.bloque{    
+    align-items: center;
+    margin-top: 25px;
+    width: 90vw;
+}
+.cabecera{
+    display: flex;
+
+}
+.carrito{
+    width: 50%;
+}
+h1{
+    color: #dad8e6;
+}
+.a-pagar{
+    width: 50%;
+
+    display: flex;
+    justify-content:  right;
+}
+.contenido{    
+    margin: 0 auto;
+}
+.lista{
+    display: flex;
+    height: 150px;
+    overflow: auto;
+}
+.descripcion{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    padding:25px;
+}
+.texto{
+    display: flex;
+    justify-content: right;
+}
+hr{
+    margin-top: 25px ;
+    border:solid 1px;
+}
+

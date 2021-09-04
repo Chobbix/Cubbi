@@ -18,6 +18,7 @@ body{
     width: 100%;
     position: static;
 }
+
 .nav{
     height: 150px;
     width: 90%;
@@ -25,24 +26,32 @@ body{
     align-items: center;
     margin-left: 0;
     display: flex;
-    justify-content: space-between;    
-    margin: 0 auto;
+    justify-content: space-between;
+    
+    padding: 20px;
+
 }
-.nav-menu{  
+
+.nav-menu{ 
+   
     align-items: center;
     display: flex;
     list-style: none;
-}
-.nav-item{
-    width: max-content;
+
 }
 
+.nav-item{
+    
+    width: max-content;
+}
 .fas{
     color: #7c7096;
     font-size: 25px;
     width: 30px;
     height: 30px;
+
 }
+
 .fa-shopping-cart{ 
     width: 80px;
 }
@@ -53,12 +62,15 @@ body{
 .fa-search:hover{
     color: #c2bad4;
 }
+
 .logo{
+
     width: 200px;
     height: 60px;
     margin-left: 40px;
     margin-right: 20px;
 }
+
 .btn-sesion{
     width: 150px;
     height: 35px;
@@ -71,11 +83,13 @@ body{
     overflow: hidden;
     margin-left: 5px;
 }
+
 .btn-log{ 
     border: white solid 2px;
     border-radius: 2px;
     background-color: rgb(255, 242, 218) ;
 }
+
 .btn-sesion:hover{
     background-color: white;
     cursor: pointer;
@@ -86,9 +100,11 @@ body{
     border-right: white 2px solid;
     margin-right: 10px;
 }
+
 .menu-categorias{
     display: flex;
 }
+
 .search{
     height: 51px;
     width: 250px;
@@ -107,6 +123,7 @@ body{
     width: 50px;
     padding: 10px;
 }
+
 .buscador, .fa-search{
     background-color: white;
     height: 51px;
@@ -115,12 +132,14 @@ body{
 }
 /*-----------------------------------------*/
 
-.diseno{    
+.diseno{
+    
     width: 250px;
 }
 .longitud {
     height: 204px;
 }
+
 scroll-container {
     display: block;
     height: 200px;
@@ -134,12 +153,14 @@ scroll-container {
     background: rgb(0, 0, 0); 
     border-radius: 5px;
 }
+
 .menu-categorias li a{    
     font-size: 25px;  
     text-decoration: none;
     padding: 10px 15px;
     display: block;
 }
+
 .menu-categorias >li{
     float: left;
 }
@@ -149,68 +170,30 @@ scroll-container {
 .menu-categorias ul li a:hover{
     color: #c2bad4 ;  
 }
-
 .menu-categorias li ul{
     display:none ;
     position: absolute;
     min-width: 140px;
     background-color: rgb(255, 242, 218);
-    border-top: #ffffff solid 2px;
-    border-bottom:#ffffff solid 2px; 
+    border-top: black solid 2px;
+    border-bottom:black solid 2px; 
 
 }
 .menu-categorias li:hover>ul{
     display: block;
 }
+
+
 .menu-categorias li ul li ul{
     right: -240px;
     top:-2px
 }
-.perfil{
-    display: flex;
-    justify-content: center;
-    width: 60px;
-    height: 60px;
-    border-radius: 100px;
-}
-.fa-graduation-cap{
 
-    margin-right: 25px;
-    margin-left: 25px;
-}
-.fa-graduation-cap:hover{
-    color: white;
-    cursor: pointer;
-}
 
-/*--------------------------------*/
-.nav-perfil li a{    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-}
-.nav-perfil >li{
-    float: left;
-}
-.nav-perfil  li a:hover{
-    color: white ;  
-}
-.nav-perfil ul li a:hover{
-    color: #c2bad4 ;  
-}
-.nav-perfil li ul{
-    display:none ;
-    position: absolute; 
-    background-color: rgb(255, 242, 218);
-    border-radius: 2px;
-    border-top: #ffffff solid 2px;
-    border-bottom:#ffffff solid 2px; 
-    margin-top: 5px;
 
-}
-.nav-perfil li:hover>ul{
-    display: block;
-}
-.nav-perfil li ul li ul{
-    right: -240px;
-    top:-2px
-}
+
+
+
+
+
+
