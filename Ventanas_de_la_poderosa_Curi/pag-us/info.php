@@ -57,29 +57,35 @@
 
                                         <div class="bloque-menu"  id="filtrado">   
                                             <div class="contenidoooo">
-                                                <div class="bloque-contenido">                                                                                                      
+                                                <div class="bloque-contenido"> 
                                                         <div class="contenedor-Todos container-dis">
                                                             <div class="bloque-containeer">  
                                                                 <div class="container">
                                                                         <div class="miniatura "> <img src="../Multimedia/c.gif" alt="" class="miniatura_ds"> </div>
                                                                         <div class="titulo ">
-                                                                            <div class="hola" >
-                                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, ea. Neque quasi ut fugiat repudiandae dicta nulla sint deserunt quis ex quos eaque suscipit eius laboriosam, doloremque labore, quod necessitatibus!                                                                            </div>
+                                                                            <div class="tittle-text" >
+                                                                                <h4>  Bordado basico </h4>
+                                                                            </div>
                                                                         </div>
-                                                                        <div class="porcentaje "></div>
+                                                                        <div class="porcentaje "> 
+
+                                                                        </div>
                                                                         <div class="btn-curso "><button class="btn-curso-ds">Empieza ahora</button></div>
                                                                 </div>  
                                                             </div>                                                                                                                              
-                                                        </div>  
+                                                        </div>                                                                                                
                                                         <div class="contenedor-Todos container-dis">
                                                             <div class="bloque-containeer">  
                                                                 <div class="container">
                                                                         <div class="miniatura "> <img src="../Multimedia/c.gif" alt="" class="miniatura_ds"> </div>
                                                                         <div class="titulo ">
-                                                                            <div class="hola" >
-                                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, ea. Neque quasi ut fugiat repudiandae dicta nulla sint deserunt quis ex quos eaque suscipit eius laboriosam, doloremque labore, quod necessitatibus!                                                                            </div>
+                                                                            <div class="tittle-text" >
+                                                                                <h4>  Introduccion a la programacion web </h4>                                                                               
+                                                                            </div>
                                                                         </div>
-                                                                        <div class="porcentaje "> 10%</div>
+                                                                        <div class="porcentaje ">
+                                                                            <h5 class="texto"> 10%</h5>
+                                                                        </div>
                                                                         <div class="btn-curso "><button class="btn-curso-ds">Continua ahora</button></div>
                                                                 </div>  
                                                             </div>                                                                                                                              
@@ -89,14 +95,15 @@
                                                                 <div class="container">
                                                                         <div class="miniatura "> <img src="../Multimedia/c.gif" alt="" class="miniatura_ds"> </div>
                                                                         <div class="titulo ">
-                                                                            <div class="hola" >
-                                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, ea. Neque quasi ut fugiat repudiandae dicta nulla sint deserunt quis ex quos eaque suscipit eius laboriosam, doloremque labore, quod necessitatibus!                                                                            </div>
+                                                                            <div class="tittle-text" >
+                                                                                <h4>  Introduccion a la programacion web</h4>                                                                              
+                                                                            </div>
                                                                         </div>
-                                                                        <div class="porcentaje "> </div>
-                                                                        <div class="btn-curso "><button class="btn-curso-ds">Completado</button></div>
+                                                                        <div class="porcentaje "></div>
+                                                                        <div class="btn-curso "><button class="btn-curso-ds">Terminado</button></div>
                                                                 </div>  
                                                             </div>                                                                                                                              
-                                                        </div>  
+                                                        </div>    
                                                         
                                                         <div class="contenedor-sinver container-dis"  id="filtrado" >
                                                             sin empezar

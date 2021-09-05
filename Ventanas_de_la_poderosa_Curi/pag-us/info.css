@@ -201,6 +201,13 @@ input[type="radio"]{
     max-height: 16%;
     overflow: hidden;
 }
+.tittle-text{
+    text-align: left;   
+    font-size: 20px;
+}
+.texto{
+    color: #c2bad4;
+}
 .btn-curso-ds{
     width: 100%;
 
