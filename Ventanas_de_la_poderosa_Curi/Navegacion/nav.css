@@ -19,6 +19,7 @@ body{
     position: static;
 }
 .nav{
+
     height: 150px;
     width: 90%;
     align-content: center;
@@ -28,7 +29,7 @@ body{
     justify-content: space-between;    
     margin: 0 auto;
 }
-.nav-menu{  
+.nav-menu{ 
     align-items: center;
     display: flex;
     list-style: none;
@@ -184,7 +185,8 @@ scroll-container {
 }
 
 /*--------------------------------*/
-.nav-perfil li a{    text-decoration: none;
+.nav-perfil li a{  
+    text-decoration: none;
     padding: 10px 15px;
     display: block;
 }

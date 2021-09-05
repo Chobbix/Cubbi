@@ -1,0 +1,225 @@
+.contenedor{
+    width: 100%;
+    padding: 26px;
+}
+.menus{
+    display: flex;
+
+}
+input[type="radio"]{
+    display: none;
+}
+.contenedor-categoria{    
+    width: 20%;
+    padding: 25px;
+    border-right: 2px solid #DEE0E9;
+}
+.contenedor-categoria1{
+    width:80%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.sub-bloque-contenido{
+    background-color: white;
+}
+.hi{
+    background-color: violet;
+}
+.contenedor-cursos{
+    display: flex;
+    width: 100%; 
+}
+
+/**/
+.fitro{
+    align-content: right;
+    width: 100%;
+}
+.bloque-menu{
+        width: 100%;
+        justify-content: center;
+        padding: 50px;
+}
+.contenedor-filtros{
+    display: flex;
+    justify-content: right;
+}
+/**/
+.cont-btn-filtro{
+    background-color: rgb(255, 242, 218);
+    align-content: center;
+    display: flex;
+    text-align: center;
+    justify-items: center;
+}
+.diseño:hover{
+    opacity: .5;
+}
+.nav-filtro li a{  
+    text-decoration: none;
+    display: block;
+    width: 150px;
+ 
+    text-decoration: none; 
+}
+.nav-filtro >li{
+    float: left;
+}
+.nav-filtro  li a:hover{
+    color: white ;  
+}
+.nav-filtro ul li a:hover{
+    color: #c2bad4 ;  
+}
+.nav-filtro li ul{
+    display:none ;
+    position: absolute; 
+
+}
+.nav-filtro li:hover>ul{
+    display: block;
+}
+.nav-filtro li ul li ul{
+    right: -240px;
+    top:-2px
+}
+.contenedor-categoria label{
+    padding: 10px 10px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contenedor-categoria label:hover{
+    color: white;
+    opacity: 0.5;
+}
+.a{
+    border-radius: 5px;
+    padding: 0 35px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.design-filtro{
+    font-size: 20px;
+    background-color: aqua;
+    color:  #7c7096;
+    background-color: white;
+}
+.design-filtro:hover{
+    color: #DEE0E9;
+}
+.design-tittle:hover{
+    color: #c2bad4;
+}
+.contenedor-filtro label{
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cursos:checked ~ #Registro .contenedor-diplomas,
+#cursos:checked ~ #Registro .contenedor-guardado,
+#cursos:checked ~ #Registro .contenedor-proyectos{
+    display:none;
+}
+#proyectos:checked ~ #Registro .contenedor-cursos,
+#proyectos:checked ~ #Registro .contenedor-diplomas,
+#proyectos:checked ~ #Registro .contenedor-guardado{
+    display:none;
+}
+
+#diplomas:checked ~ #Registro .contenedor-guardado,
+#diplomas:checked ~ #Registro .contenedor-cursos,
+#diplomas:checked ~ #Registro .contenedor-proyectos{
+    display:none;
+}
+#guardados:checked ~ #Registro .contenedor-diplomas,
+#guardados:checked ~ #Registro .contenedor-cursos,
+#guardados:checked ~ #Registro .contenedor-proyectos{
+    display:none;
+}
+#Todos:checked ~ #filtrado .contenedor-progreso,
+#Todos:checked ~ #filtrado .contenedor-Completos,
+#Todos:checked ~ #filtrado .contenedor-inexistentes,
+#Todos:checked ~ #filtrado .contenedor-sinver{
+    display:none;
+}
+#sinver:checked ~ #filtrado .contenedor-progreso,
+#sinver:checked ~ #filtrado .contenedor-Completos,
+#sinver:checked ~ #filtrado .contenedor-inexistentes,
+#sinver:checked ~ #filtrado .contenedor-Todos{
+    display:none;
+}
+#progreso:checked ~ #filtrado .contenedor-sinver,
+#progreso:checked ~ #filtrado .contenedor-Completos,
+#progreso:checked ~ #filtrado .contenedor-inexistentes,
+#progreso:checked ~ #filtrado .contenedor-Todos{
+    display:none;
+}
+#Completos:checked ~ #filtrado .contenedor-sinver,
+#Completos:checked ~ #filtrado .contenedor-progreso,
+#Completos:checked ~ #filtrado .contenedor-inexistentes,
+#Completos:checked ~ #filtrado .contenedor-Todos{
+    display:none;
+}
+#inexistentes:checked ~ #filtrado .contenedor-sinver,
+#inexistentes:checked ~ #filtrado .contenedor-progreso,
+#inexistentes:checked ~ #filtrado .contenedor-Completos,
+#inexistentes:checked ~ #filtrado .contenedor-Todos{
+    display:none;
+}
+.bloque-contenido{
+    width: 100%;
+    display: flex;
+    
+}
+.contenidoooo{
+    display: flex; height: 300px;
+}
+.container-dis{
+    width:35%;
+    margin-right: 15px;
+   
+}
+.bloque-containeer{
+    height: 100%;
+}
+.container{
+    height: 100%;
+}
+.miniatura{
+    background-color: darkorange;
+    height: 46%;
+    
+}
+.titulo,.porcentaje,.btn-curso{
+    text-align: center;
+    height:16%;
+    max-height: 16%;
+    overflow: hidden;
+}
+.btn-curso-ds{
+    width: 100%;
+
+}
+.miniatura_ds{
+    width: 100%;
+    height: 100%;
+}
+/*
+.porcentaje{
+    background-color: rgb(240, 125, 125);
+    height:16%;
+}
+.btn-curso{
+    height: 16%;
+    background-color:
+
+    darkseagreen;
+}
+.hola{
+   
+}
