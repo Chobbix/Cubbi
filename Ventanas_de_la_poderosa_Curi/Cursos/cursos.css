@@ -1,15 +1,18 @@
-
-.bloque{
-    margin-top: 10px;
-    width: 100vw;
+.Container{
+    width: 100%;
     display: flex;
+    align-content: center;
+    align-items: center;
     justify-content: center;
 }
+.bloque{
+    margin-top: 10px;
+    width: 80%;
+}
 
-.fila{
+.columla{
     display: flex;
     justify-content: center;
-    width: 95vw;
 }
 .contenedor{   
     height: 380px;

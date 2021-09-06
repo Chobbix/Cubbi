@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/5554cc4983.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="nav.css">
-    <title>Document</title>
-</head>
-<body>
-    <header class="header">
-        <nav class="nav">           
-            <a href="../Cursos/cursos.php"> <img src="/Cubbi_BDM_PWCI/Ventanas_de_la_poderosa_Curi/Multimedia/logo.png" alt="logo" class="logo">  </a>   
+<header class="header">
+    <nav class="nav">           
+            <a href="#"> <img src="/Cubbi_BDM_PWCI/Ventanas_de_la_poderosa_Curi/Multimedia/logo.png" alt="logo" class="logo">  </a>   
             <ul class="nav-menu">                 
                 <ul class="menu-categorias">
                     <li><a href="#" class="clase-a">Cursos <i class="fas fa-angle-down"></i></a>                    
@@ -40,19 +27,13 @@
                                 </ul>                                
                             </li>                                
                         </ul>
-                    </li>
-                    
+                    </li>                    
                 </ul>               
                 <li><a href="#" class="nav-item buscador " > <input type="text"  id="inputsearch" placeholder="¿Que vas a aprender?"class="search"> </li>
                 <li><a href="../Cursos/cursos.php" class="nav-item buscador "> <i class="fas fa-search"></i></a></li>
-                <li><a href="../carrito/cesta.php" class="nav-item"> <button class="btn-carrito "> <i class="fas fa-shopping-cart" class=""></i></button> </a></li>
-                <li><a href="../pag-us/info.php">  <i class="fas fa-graduation-cap"></i> </a></li>
-                <?php include ("../Navegacion/perfil.php");?>
-            
+                <li><a href="../Login/login.php"> <button class="btn-sesion">Iniciar sesion</button></a></li>
+                <li><a href="../Registro/registro.php">  <button class="btn-log">Registrarse</button></a></li>               
             </ul>
         </nav>
-    </header>
-   
-
-</body>
-</html>
+    </header>  
+    

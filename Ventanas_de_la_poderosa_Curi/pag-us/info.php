@@ -145,7 +145,8 @@
                                         </div>
                                     </div>
                                     <div class="btn-curso ">
-                                        <button class="btn-curso-ds">Comprar</button>
+                                        <a href="../Curso/curso.php"><button class="btn-curso-ds">Comprar</button></a>
+                                        
                                     </div>
                                 </div>                               
                             </div> 
