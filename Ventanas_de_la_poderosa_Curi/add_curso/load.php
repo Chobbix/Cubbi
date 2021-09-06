@@ -108,7 +108,7 @@
                 </div>                      
                     </div>    
                     <div class="contenedor-diplomas bloque_contenedor_cursos" id="Registro">   
-                        <h1>a</h1>
+                        
                     </div>
                     <div class="contenedor-guardado bloque_contenedor_cursos" id="Registro" >   
                         <div class="contenedor-Todos container-dis">       
