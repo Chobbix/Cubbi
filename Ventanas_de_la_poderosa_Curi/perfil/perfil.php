@@ -119,7 +119,7 @@
                         <div class="bloque-tittle">
                             <div class="cuadro1"> <h2>Ultimo curso visto:</h2></div>
                             <div class="cuadro2">
-                                <a href="#">
+                                <a href="../pag-us/info.php">
                                     <h3 class="link">Ir a tus cursos</h3>
                                 </a>
                             </div>
@@ -142,7 +142,7 @@
                         <div class="bloque-tittle">
                             <div class="cuadro1"><h2 >Ultimo proyecto:</h2></div>
                             <div class="cuadro2">
-                                <a href="#">
+                                <a href="../pag-us/info.php">
                                     <h3 class="link">Ir a tus proyectos</h3>
                                 </a>
                             </div>

@@ -21,10 +21,10 @@
                             <li><a href="#" >Categorias </a>                            
                                 <ul class="diseno">
                                     <scroll-container>
-                                        <li><a href="#">Azucar</a></li>
-                                        <li><a href="#">leche</a></li>
-                                        <li><a href="#">huevos</a></li>
-                                        <li><a href="#">Azucar</a></li>                                                                                     
+                                        <li><a href="../Cursos/cursos.php"> Azucar </a></li>
+                                        <li><a href="../Cursos/cursos.php">leche</a></li>
+                                        <li><a href="../Cursos/cursos.php">huevos</a></li>
+                                        <li><a href="../Cursos/cursos.php">Azucar</a></li>                                                                                     
                                     </scroll-container>
                                     
                                 </ul>
@@ -41,19 +41,19 @@
                             </li>                                
                         </ul>
                     </li>
-                    <li><a href="#">Maestros</a></li>
+                    
                 </ul>               
                 <li><a href="#" class="nav-item buscador " > <input type="text"  id="inputsearch" placeholder="¿Que vas a aprender?"class="search"> </li>
-                <li><a href="#" class="nav-item buscador "> <i class="fas fa-search"></i></a></li>
-                <li><a href="#" class="nav-item"> <button class="btn-carrito "> <i class="fas fa-shopping-cart" class=""></i></button> </a></li>
-                <i class="fas fa-graduation-cap"></i>
+                <li><a href="../Cursos/cursos.php" class="nav-item buscador "> <i class="fas fa-search"></i></a></li>
+                <li><a href="../carrito/cesta.php" class="nav-item"> <button class="btn-carrito "> <i class="fas fa-shopping-cart" class=""></i></button> </a></li>
+                <li><a href="../pag-us/info.php">  <i class="fas fa-graduation-cap"></i> </a></li>
                 <ul class="nav-perfil">
                     <li>
                         <img src="../Multimedia/a.gif" alt="" class="perfil">
                         <ul class="a"  >
-                            <li><a href="#" class="botones-perfil"><h3>Mi perfil</h3> </a></li>
-                            <li><a href="#" class="botones-perfil"><h4>Mis diplomas</h4></a> </li>
-                            <li><a href="#" class="botones-perfil"><h5>Mis proyectos</h5></a> </li>
+                            <li><a href="../perfil/perfil.php" class="botones-perfil"><h3>Mi perfil</h3> </a></li>
+                            <li><a href="../pag-us/info.php" class="botones-perfil"><h4>Mis diplomas</h4></a> </li>
+                            <li><a href="../pag-us/info.php" class="botones-perfil"><h5>Mis proyectos</h5></a> </li>
                             <hr>
                             <li><a href="#" class="botones-perfil"> cerrar sesion </a></li>
                         </ul>

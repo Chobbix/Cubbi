@@ -220,7 +220,8 @@ input[type="radio"]{
     font-size: 20px;
 }
 .btn-curso-ds:hover{
-    color:#6f4e7e
+    background-color:#7c7096;
+    color: white;
 }
 .miniatura_ds{
     width: 100%;

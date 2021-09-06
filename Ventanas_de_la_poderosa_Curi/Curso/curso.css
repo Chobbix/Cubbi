@@ -1,0 +1,103 @@
+.contenedor{
+    height: 100vh;
+}
+.bloque{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+.sub_bloque{
+    width: 80%;
+}
+.usuario_bloque{
+    display: flex;
+    align-items: center;
+}
+.texto_us{
+    margin-left: 22px;
+}
+.sub_caja{ 
+    display: flex;
+}
+.caja_perfil{
+    height: 100%;
+    width: 95%;
+    margin-left: 25px;
+}
+.caja_nickname{
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.coment{
+    height:150px;
+    width:100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.descripcion{
+    height: 50px;
+    width:100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.comentario{
+    line-height:25px;
+}
+.bloque_informacion{
+    display: flex;
+}
+hr{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #DAD8E6;
+}
+.informacion_megusta{
+    margin-top: 25px;
+    font-size:30px;
+    margin-right: 50px;
+    display: flex;
+}
+.fa-heart {
+    margin-right: 5px;
+}
+.cantidad{
+    margin-right: 5px;
+}
+.me_gusta{
+    margin-right: 55px;
+    margin-bottom: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+.Precio{
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+}
+.bloque_precio{
+	margin-left: auto;
+	margin-right: auto;
+    width: 50%;
+}
+.ayuda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn_diseño{
+    width: 50%;
+    height: 40px;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 25px;
+    border: none;
+    margin-bottom: 5px;
+}
+
+.btn_diseño:hover{
+    background-color:#7c7096;
+    color: white;
+}
