@@ -49,7 +49,10 @@
                         </div>
                         <div class="contenedor_info " id="componentes_cabecra">
                             <div class="contenido_informacion">
-                                <h2>hola</h2>
+                                <div class="descripcion_general">
+                                    <H1>Duracion</H1>
+                                    <h1>Descripcion</h1>
+                                </div>
                             </div>
                             <div class="contenido_archivos"  id="componentes_cabecra">
                                 <h3>hola</h3>
