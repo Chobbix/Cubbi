@@ -86,9 +86,9 @@ CREATE TABLE Cursos_Registrados (
     date_FchaTerm		DATE,
     
 	CONSTRAINT pk_curreg PRIMARY KEY (ID_Usuario, ID_Curso),
-    CONSTRAINT fk_curreg_usu FOREIGN KEY (ID_Usuario) REFERENCES Usuarios (ID_Usuario)
-    CONSTRAINT fk_curreg_cur FOREIGN KEY (ID_Curso) REFERENCES Cursos (ID_Curso)
-    CONSTRAINT fk_curreg_niv FOREIGN KEY (int_NivelActual) REFERENCES Niveles (int_Nivel),
+    CONSTRAINT fk_curreg_usu FOREIGN KEY (ID_Usuario) REFERENCES Usuarios (ID_Usuario),
+    CONSTRAINT fk_curreg_cur FOREIGN KEY (ID_Curso) REFERENCES Cursos (ID_Curso),
+    CONSTRAINT fk_curreg_niv FOREIGN KEY (int_NivelActual) REFERENCES Niveles (int_Nivel)
 );
 
 
@@ -124,7 +124,7 @@ CREATE TABLE Carrito (
     date_FchaTerm		DATE,
     
 	CONSTRAINT pk_curreg PRIMARY KEY (ID_Usuario, ID_Curso),
-    CONSTRAINT fk_curreg_usu FOREIGN KEY (ID_Usuario) REFERENCES Usuarios (ID_Usuario)
-    CONSTRAINT fk_curreg_cur FOREIGN KEY (ID_Curso) REFERENCES Cursos (ID_Curso)
-    CONSTRAINT fk_curreg_niv FOREIGN KEY (int_NivelActual) REFERENCES Niveles (int_Nivel),
+    CONSTRAINT fk_curreg_usu FOREIGN KEY (ID_Usuario) REFERENCES Usuarios (ID_Usuario),
+    CONSTRAINT fk_curreg_cur FOREIGN KEY (ID_Curso) REFERENCES Cursos (ID_Curso),
+    CONSTRAINT fk_curreg_niv FOREIGN KEY (int_NivelActual) REFERENCES Niveles (int_Nivel)
 );
