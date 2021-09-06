@@ -1,0 +1,389 @@
+
+.contenedor{
+    width: 100%;
+    padding: 26px;
+}
+.menus{
+    display: flex;
+}
+input[type="radio"]{
+    display: none;
+}
+.contenedor-categoria{    
+    width: 20%;
+    padding: 25px;
+    border-right: 2px solid #DEE0E9;
+}
+.contenedor-categoria1{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.sub-bloque-contenido{
+    background-color: white;
+}
+
+.bloque_contenedor_cursos{
+    display: flex;
+    width: 100%; 
+}
+
+/**/
+
+.fitro{
+    align-content: right;
+    width: 100%;
+}
+.bloque-menu{
+        width: 100%;
+        justify-content: center;
+        padding: 50px;
+}
+.contenedor-filtro{
+    width: 100%;
+    background-color: cadetblue;
+}
+.contenedor-filtros{
+    display: flex;
+    justify-content: right;
+}
+/**/
+
+.cont-btn-filtro{
+    display: flex;
+    width: 100%;
+}
+.diseño:hover{      
+    opacity: .5;
+}
+
+
+.Cabeza li a{  
+    background-color: darkblue;
+    text-decoration: none;
+    width: 150px; 
+    text-decoration: none; 
+}
+.Cabeza li a:hover{
+    background-color: darkgoldenrod;
+    color: white ;  
+}
+.Cabeza ul li a:hover{
+    color: #c2bad4 ;  
+}
+.Cabeza  li ul{
+    display:none ;
+    position: absolute; 
+}
+
+.Cabeza  li:hover>ul{
+    display: block;
+}
+.Cabeza li ul li ul{
+    right: -240px;
+    top:-2px
+}
+.Cabeza{
+    width: 100%;
+}
+.CI{
+    display: flex;
+    background: chocolate;
+    width: 100%;
+}
+.CI ul{
+    margin-right: 50px;
+    display: flex;
+}
+
+.contenedor-categoria label{
+    padding: 10px 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.contenedor-categoria label:hover{
+    color: white;
+    opacity: 0.5;
+}
+
+.filtro_texto_diseñp{
+    border-radius: 5px;
+    padding: 0 35px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.design-filtro{
+    font-size: 20px;
+    display: flex;
+    color:  #7c7096;
+    background-color: white;
+}
+.design-filtro:hover{
+    color: #DEE0E9;
+}
+.design-tittle:hover{
+    color: #c2bad4;
+}
+.contenedor-filtro label{
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+#cursos:checked ~ #Registro .contenedor-diplomas,
+#cursos:checked ~ #Registro .contenedor-guardado,
+#cursos:checked ~ #Registro .contenedor-proyectos{
+    display:none;
+}
+#proyectos:checked ~ #Registro .contenedor-cursos,
+#proyectos:checked ~ #Registro .contenedor-diplomas,
+#proyectos:checked ~ #Registro .contenedor-guardado{
+    display:none;
+}
+
+#diplomas:checked ~ #Registro .contenedor-guardado,
+#diplomas:checked ~ #Registro .contenedor-cursos,
+#diplomas:checked ~ #Registro .contenedor-proyectos{
+    display:none;
+}
+#guardados:checked ~ #Registro .contenedor-diplomas,
+#guardados:checked ~ #Registro .contenedor-cursos,
+#guardados:checked ~ #Registro .contenedor-proyectos{
+    display:none;
+}
+
+#Info:checked ~ #filtrado .contenedor-contenido{
+    display:none;
+}
+
+#contenido:checked ~ #filtrado .contenedor-Info{
+    display:none;
+}
+.bloque-contenido{
+    width: 100%;
+    display: flex;
+    
+}
+.contenidoooo{
+    display: flex; height: 300px;
+}
+.container-dis{
+    width:35%;
+    margin-right: 15px;   
+}
+.bloque-containeer{
+    height: 100%;
+}
+.container{
+    height: 100%;
+}
+.miniatura{
+    height: 46%;
+    
+}
+.titulo,.porcentaje{
+    text-align: center;
+    height:16%;
+    max-height: 16%;
+    overflow: hidden;
+}
+.tittle-text{
+    text-align: left;   
+    font-size: 20px;
+}
+.texto{
+    color: #c2bad4;
+}
+.btn-curso-ds{
+    background-color: white;
+    border: none;
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.btn-curso-ds:hover{
+    background-color:#7c7096;
+    color: white;
+}
+.miniatura_ds{
+    width: 100%;
+    height: 100%;
+}
+
+.bloque_general{
+    padding: 25px;
+    width: 100%;
+    display: flex;
+}
+.block{
+    background-color:rgb(255, 255, 255) ;
+    width: 35%;
+    height: 100%;
+    margin-right: 15px;
+    display: flex;
+    
+    
+}
+.bloque_guardado{
+    width: 35%;
+    height: 100%;
+    margin-right: 15px;
+    display: flex; 
+}
+.informacion_dentro_del_bloque{
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.la_info{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+.link_descargar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 80%;
+}
+.miniatura_guardado, .btn_comprar{
+    height:  16%;
+}
+.titulo_curso{
+    display: flex;
+    justify-content: left;
+}
+
+.cabecera{
+    width: 100%;
+}
+.hi{
+    width: 100%;
+    display: flex;   
+}
+
+.bontones_seleccion{
+    text-align: center;
+    width: 50%;
+}
+.text_decoration:hover{
+    color: white;
+}
+hr{
+    border: 1px solid #7c7096;
+}
+.caja{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+}
+.text_input{
+    width: 50%;
+    height: 40px;
+    font-size: 30px;
+    border: none;
+    background-color: #ffffff;
+}
+.subcaja{
+    width: 100%;
+    height: 100%;
+}
+
+.img_box{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DEE0E9;
+    border-radius: 5px;
+}
+
+
+.btn_img h1{
+    text-align: center;
+    color: #DEE0E9;
+}
+
+.btn_img{
+    position:relative  ;
+    width: 80%;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.btn_enviar{
+    position: absolute ;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom:0px ;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.save_btn{
+    border: none;
+    background-color:rgb(255, 242, 218);
+    width: 20%;
+}
+.save_btn:hover{
+    background-color: white;
+}
+.cabecera_nivel{
+    display: flex;
+}
+.cabecera_nivel input{
+    width: 80%;
+}
+.btn{
+    display: flex;
+}
+.nombre_del_subcapitulo{
+    display: flex;
+}
+.capitulos{
+    width: 100%;
+    background-color: #DEE0E9;
+}
+.nombre_del_subcapitulo{
+    margin-bottom: 15px;
+}
+.btn_video1{
+    position:relative  ;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: white;    
+    padding: 25px;
+}
+.btn_video{
+    position:relative  ;
+    padding: 25px;
+    background-color: white;
+}
+.btn_contenidos{
+    display: flex;
+}
+.plus{
+    background-color: transparent;
+    border: none;
+}
+.btd_addchap{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.btn_addsec{    
+    display: flex;
+    align-items: center;
+}
