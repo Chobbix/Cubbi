@@ -18,102 +18,77 @@ body{
     width: 100%;
     position: static;
 }
-
-.nav{
+.nav{ 
     height: 150px;
     width: 90%;
     align-content: center;
     align-items: center;
     margin-left: 0;
     display: flex;
-    justify-content: space-between;
-    
-    padding: 20px;
-
+    justify-content: space-between;    
+    margin: 0 auto;
 }
-
+.btn-sesion{    
+    width: 150px;
+    height: 50px;
+    border: rgb(255, 242, 218)  solid 2px;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 20px;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.btn-log{ 
+    width: 150px;
+    height: 50px;
+    border: white solid 2px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: rgb(255, 242, 218) ;
+}
+.btn-log:hover{
+    background-color: white;
+    cursor: pointer;
+}
+.btn-sesion:hover{
+    background-color: rgb(255, 242, 218);
+    cursor: pointer;
+}
 .nav-menu{ 
-   
     align-items: center;
     display: flex;
     list-style: none;
-
 }
-
 .nav-item{
-    
     width: max-content;
 }
+
 .fas{
     color: #7c7096;
     font-size: 25px;
     width: 30px;
     height: 30px;
-
-}
-
-.fa-shopping-cart{ 
-    width: 80px;
-}
-.fa-shopping-cart:hover{
-    color: white;
-    cursor: pointer;
 }
 .fa-search:hover{
     color: #c2bad4;
 }
-
 .logo{
-
     width: 200px;
     height: 60px;
     margin-left: 40px;
     margin-right: 20px;
 }
-
-.btn-sesion{
-    width: 150px;
-    height: 35px;
-    border: white solid 2px;
-    border-radius: 2px;
-    text-align: center;
-    line-height: 15px;
-    background-color: transparent;
-    font-size: 20px;
-    overflow: hidden;
-    margin-left: 5px;
-}
-
-.btn-log{ 
-    border: white solid 2px;
-    border-radius: 2px;
-    background-color: rgb(255, 242, 218) ;
-}
-
-.btn-sesion:hover{
-    background-color: white;
-    cursor: pointer;
-}
-.btn-carrito{
-    background-color: transparent;
-    border: none;
-    border-right: white 2px solid;
-    margin-right: 10px;
-}
-
 .menu-categorias{
     display: flex;
 }
-
 .search{
     height: 51px;
     width: 250px;
-    display: block;
     font-size: 30px;
     background-color: rgb(255, 242, 218) ;
     border: none;
     margin-left: 50px;
-    font-size: 30px;
 }
 ::placeholder{
     color: #c2bad4;
@@ -123,23 +98,19 @@ body{
     width: 50px;
     padding: 10px;
 }
-
-.buscador, .fa-search{
+.fa-search{
     background-color: white;
     height: 51px;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
 }
-/*-----------------------------------------*/
 
-.diseno{
-    
+.diseno{    
     width: 250px;
 }
 .longitud {
     height: 204px;
 }
-
 scroll-container {
     display: block;
     height: 200px;
@@ -153,15 +124,15 @@ scroll-container {
     background: rgb(0, 0, 0); 
     border-radius: 5px;
 }
-
 .menu-categorias li a{    
+    color:#7c7096;
     font-size: 25px;  
     text-decoration: none;
     padding: 10px 15px;
     display: block;
 }
-
-.menu-categorias >li{
+.menu-categorias >li{    
+    z-index: 3;
     float: left;
 }
 .menu-categorias  li a:hover{
@@ -170,30 +141,45 @@ scroll-container {
 .menu-categorias ul li a:hover{
     color: #c2bad4 ;  
 }
+
 .menu-categorias li ul{
     display:none ;
     position: absolute;
     min-width: 140px;
     background-color: rgb(255, 242, 218);
-    border-top: black solid 2px;
-    border-bottom:black solid 2px; 
+    border-top: #ffffff solid 2px;
+    border-bottom:#ffffff solid 2px; 
 
 }
 .menu-categorias li:hover>ul{
     display: block;
 }
-
-
 .menu-categorias li ul li ul{
     right: -240px;
     top:-2px
 }
+/*Carrusel*/
+.container{
+    margin-top: 25px;
+    width: 50%;
+    height: 50%;
 
+}
+.carousel-inner{
+    margin: none;
+}
 
+.d-block{
+    border-radius: 5px;
+}
 
-
-
-
-
-
-
+.preguntas{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.texto{
+    background-color:rgba(255, 255, 255, 0.432) ;
+    color: #521d75;
+}

@@ -13,7 +13,7 @@
 <body>
     <header class="header">
         <nav class="nav">           
-            <a href="#"> <img src="/Cubbi_BDM_PWCI/Ventanas_de_la_poderosa_Curi/Multimedia/logo.png" alt="logo" class="logo">  </a>   
+            <a href="../principal/h.php"> <img src="/Cubbi_BDM_PWCI/Ventanas_de_la_poderosa_Curi/Multimedia/logo.png" alt="logo" class="logo">  </a>   
             <ul class="nav-menu">                 
                 <ul class="menu-categorias">
                     <li><a href="#" class="clase-a">Cursos <i class="fas fa-angle-down"></i></a>                    
@@ -47,19 +47,7 @@
                 <li><a href="../Cursos/cursos.php" class="nav-item buscador "> <i class="fas fa-search"></i></a></li>
                 <li><a href="../carrito/cesta.php" class="nav-item"> <button class="btn-carrito "> <i class="fas fa-shopping-cart" class=""></i></button> </a></li>
                 <li><a href="../pag-us/info.php">  <i class="fas fa-graduation-cap"></i> </a></li>
-                <ul class="nav-perfil">
-                    <li>
-                        <img src="../Multimedia/a.gif" alt="" class="perfil">
-                        <ul class="a"  >
-                            <li><a href="../perfil/perfil.php" class="botones-perfil"><h3>Mi perfil</h3> </a></li>
-                            <li><a href="../pag-us/info.php" class="botones-perfil"><h4>Mis diplomas</h4></a> </li>
-                            <li><a href="../pag-us/info.php" class="botones-perfil"><h5>Mis proyectos</h5></a> </li>
-                            <hr>
-                            <li><a href="#" class="botones-perfil"> cerrar sesion </a></li>
-                        </ul>
-                    </li>
-                    
-                </ul>
+                <?php include ("../Navegacion/perfil.php");?>
             
             </ul>
         </nav>

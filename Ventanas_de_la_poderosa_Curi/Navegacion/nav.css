@@ -19,7 +19,6 @@ body{
     position: static;
 }
 .nav{
-
     height: 150px;
     width: 90%;
     align-content: center;
@@ -93,12 +92,10 @@ body{
 .search{
     height: 51px;
     width: 250px;
-    display: block;
     font-size: 30px;
     background-color: rgb(255, 242, 218) ;
     border: none;
     margin-left: 50px;
-    font-size: 30px;
 }
 ::placeholder{
     color: #c2bad4;
@@ -108,7 +105,7 @@ body{
     width: 50px;
     padding: 10px;
 }
-.buscador, .fa-search{
+.fa-search{
     background-color: white;
     height: 51px;
     border-bottom-right-radius: 5px;

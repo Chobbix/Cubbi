@@ -1,0 +1,10 @@
+.Genero_Fecha{
+    width: 100%;
+    display: flex;
+}
+.cabecera{
+    width: 50%;
+}
+select{
+    width: 80%;
+}
