@@ -51,9 +51,9 @@
                     <li>
                         <img src="../Multimedia/a.gif" alt="" class="perfil">
                         <ul class="a"  >
-                            <li><a href="#" class="botones-perfil"> Mi perfil</a></li>
-                            <li><a href="#" class="botones-perfil">Mis diplomas</a> </li>
-                            <li><a href="#" class="botones-perfil">Mis proyectos</a> </li>
+                            <li><a href="#" class="botones-perfil"><h3>Mi perfil</h3> </a></li>
+                            <li><a href="#" class="botones-perfil"><h4>Mis diplomas</h4></a> </li>
+                            <li><a href="#" class="botones-perfil"><h5>Mis proyectos</h5></a> </li>
                             <hr>
                             <li><a href="#" class="botones-perfil"> cerrar sesion </a></li>
                         </ul>

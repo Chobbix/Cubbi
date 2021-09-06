@@ -1,10 +1,10 @@
+
 .contenedor{
     width: 100%;
     padding: 26px;
 }
 .menus{
     display: flex;
-
 }
 input[type="radio"]{
     display: none;
@@ -15,7 +15,7 @@ input[type="radio"]{
     border-right: 2px solid #DEE0E9;
 }
 .contenedor-categoria1{
-    width:80%;
+    width:100%;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -27,12 +27,13 @@ input[type="radio"]{
 .hi{
     background-color: violet;
 }
-.contenedor-cursos{
+.bloque_contenedor_cursos{
     display: flex;
     width: 100%; 
 }
 
 /**/
+
 .fitro{
     align-content: right;
     width: 100%;
@@ -47,6 +48,7 @@ input[type="radio"]{
     justify-content: right;
 }
 /**/
+
 .cont-btn-filtro{
     background-color: rgb(255, 242, 218);
     align-content: center;
@@ -57,11 +59,11 @@ input[type="radio"]{
 .diseño:hover{
     opacity: .5;
 }
+
 .nav-filtro li a{  
     text-decoration: none;
     display: block;
-    width: 150px;
- 
+    width: 150px; 
     text-decoration: none; 
 }
 .nav-filtro >li{
@@ -76,8 +78,8 @@ input[type="radio"]{
 .nav-filtro li ul{
     display:none ;
     position: absolute; 
-
 }
+
 .nav-filtro li:hover>ul{
     display: block;
 }
@@ -85,6 +87,7 @@ input[type="radio"]{
     right: -240px;
     top:-2px
 }
+
 .contenedor-categoria label{
     padding: 10px 10px;
     margin: 10px;
@@ -95,13 +98,15 @@ input[type="radio"]{
     color: white;
     opacity: 0.5;
 }
-.a{
+
+.filtro_texto_diseñp{
     border-radius: 5px;
     padding: 0 35px;
     display: flex;
     text-align: center;
     align-items: center;
 }
+
 .design-filtro{
     font-size: 20px;
     background-color: aqua;
@@ -181,8 +186,7 @@ input[type="radio"]{
 }
 .container-dis{
     width:35%;
-    margin-right: 15px;
-   
+    margin-right: 15px;   
 }
 .bloque-containeer{
     height: 100%;
@@ -191,11 +195,10 @@ input[type="radio"]{
     height: 100%;
 }
 .miniatura{
-    background-color: darkorange;
     height: 46%;
     
 }
-.titulo,.porcentaje,.btn-curso{
+.titulo,.porcentaje{
     text-align: center;
     height:16%;
     max-height: 16%;
@@ -209,24 +212,67 @@ input[type="radio"]{
     color: #c2bad4;
 }
 .btn-curso-ds{
+    background-color: white;
+    border: none;
     width: 100%;
-
+    height: 35px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.btn-curso-ds:hover{
+    color:#6f4e7e
 }
 .miniatura_ds{
     width: 100%;
     height: 100%;
 }
-/*
-.porcentaje{
-    background-color: rgb(240, 125, 125);
-    height:16%;
-}
-.btn-curso{
-    height: 16%;
-    background-color:
 
-    darkseagreen;
+.bloque_general{
+    padding: 25px;
+    width: 100%;
+    display: flex;
 }
-.hola{
-   
+.block{
+    background-color:rgb(255, 255, 255) ;
+    width: 35%;
+    height: 100%;
+    margin-right: 15px;
+    display: flex;
+    
+    
+}
+.bloque_guardado{
+    width: 35%;
+    height: 100%;
+    margin-right: 15px;
+    display: flex; 
+}
+.informacion_dentro_del_bloque{
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.la_info{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+.link_descargar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 80%;
+}
+.miniatura_guardado, .btn_comprar{
+    height:  16%;
+}
+.titulo_curso{
+    background-color: #6e31f3;
+    display: flex;
+    justify-content: left;
 }
