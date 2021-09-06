@@ -23,11 +23,14 @@
                         <h1>Contraseña</h1>
                         <input type="password"  id="inputsearch" placeholder="Contraseña" class="diseno-input"> 
                     </div>    
-                        <a href="../Cursos/cursos.php">  <button class="btn-inicio"> Iniciar sesion</button>   </a>
-                  
+                        <a href="../Cursos/cursos.php">  <button class="btn-inicio"> Iniciar sesion</button>   </a>                  
                     <div class="registrate">
-                        <h3 class="text-registro">¿Como?¿No tienes cuenta? </h3> <a href="../Registro/registro.php" > <h4 class="text-registro link">Registrate</h4></a>
+                        <div class="cont_reg"> <h3 class="text-registro">¿Como?¿No tienes cuenta? </h3> <a href="../Registro/registro.php" > <h4 class="text-registro link">Registrate</h4></a></div>
+                        <div class="cont_reg"> 
+                        
+                        <h3 class="text-registro">¿Quieres ser maestro? </h3> <a href="../Registro/registro.php" > <h4 class="text-registro link">Registrate</h4></a></div>
                     </div>    
+                    
                 </div>
             </div>
         </div>       

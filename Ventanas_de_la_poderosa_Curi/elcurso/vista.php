@@ -39,14 +39,25 @@
             <div class="bloque_menu_video">
                 <div class="cabecera">
                     <div class="bloque_cabecera">
-                        <div class="bloque_contenido">
-                            <h2>Informacion</h2>
+                        <input type="radio" name="categoria" id="Visualizacion" value="visualizacion" checked>
+                        <input type="radio" name="categoria" id="Archivos" value="Archivos">
+                        <input type="radio" name="categoria" id="Comentarios" value="Comentarios">
+                        <div class="cabecera_items">
+                            <label for="Visualizacion" class="design"><h3 class=ds_btm>Informacion</h3></label>
+                            <label for="Archivos" class="design"> <h3 class=ds_btm>Clases y Archivos</h3> </label>
+                            <label for="Comentarios" class="design"> <h3 class=ds_btm>Comentarios</h3> </label>
                         </div>
-                        <div class="bloque_contenido">
-                            <h2>Archivos descargables</h2>
-                        </div>
-                        <div class="bloque_contenido">
-                            <h2>Comentarios</h2>
+                        <div class="contenedor_info " id="componentes_cabecra">
+                            <div class="contenido_informacion">
+                                <h2>hola</h2>
+                            </div>
+                            <div class="contenido_archivos"  id="componentes_cabecra">
+                                <h3>hola</h3>
+                            </div>
+                            <div class="contenido_comentarios"  id="componentes_cabecra">
+                                <h4>hola</h4>
+                            </div>
+
                         </div>
                     </div>
                 </div>

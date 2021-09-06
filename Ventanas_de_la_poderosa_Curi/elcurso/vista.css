@@ -41,15 +41,37 @@
     height: 100%;
 }
 .cabecera{
-    display: flex;
+    margin-top: 25px;
+    border-top: 2px solid #7c7096;
 }
-.bloque_cabecera{
-    width: 100%;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    padding: 25px;
-}
+
 .bloque_contenido{
     width: 25%;
+}
+
+/**/
+
+input[type="radio"]{
+    display: none;
+}
+.cabecera_items{
+    width: 100%;
+    display: flex;
+    padding: 25px;
+}
+.design{
+    text-align: center;
+    width: 50%;
+}
+#Visualizacion:checked ~ #componentes_cabecra .contenido_comentarios,
+#Visualizacion:checked ~ #componentes_cabecra .contenido_archivos{
+    display: none;
+}
+#Archivos:checked ~ #componentes_cabecra .contenido_comentarios,
+#Archivos:checked ~ #componentes_cabecra .contenido_informacion{
+    display: none;
+}
+#Comentarios:checked ~ #componentes_cabecra .contenido_informacion,
+#Comentarios:checked ~ #componentes_cabecra .contenido_archivos{
+    display: none;
 }

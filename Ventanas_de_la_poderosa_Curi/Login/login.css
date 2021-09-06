@@ -46,7 +46,6 @@
 .registrate{
     border-top:#7c7096 2px groove ;
     margin-top: 65px;
-    display: flex;
     justify-content: center;
 }
 .text-registro{
@@ -59,4 +58,7 @@
 }
 .link:hover{
     color: #7c7096
+}
+.cont_reg{ 
+    display: flex;
 }

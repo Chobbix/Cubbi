@@ -125,7 +125,7 @@
                             </div>
                         </div>
                         <div class="Cont-ultimo-curso">
-                            <a href="#" class="bloque-ultimo-curso">
+                            <a href="../elcurso/vista.php" class="bloque-ultimo-curso">
                                 <div class="icon">
                                     <img src="../Multimedia/b.gif" alt="" class="miniatura">
                                 </div>

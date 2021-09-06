@@ -39,6 +39,8 @@
                                             <input type="text" placeholder="Ingresa descripcion" class="text_input">                             
                                             <h1>Categoria</h1>
                                             <input type="text" placeholder="Programacion, manualidades, etc." class="text_input">
+                                            <h1>Duracion</h1>
+                                            <input type="text" placeholder="tiempo estimado" class="text_input">
                                         </div>
                                         <div class="subcaja">
                                             <div class="caja_imagen">                                                    
