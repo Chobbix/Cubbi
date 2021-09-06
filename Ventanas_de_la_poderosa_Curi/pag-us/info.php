@@ -20,7 +20,6 @@
             <input type="radio" id="guardados" name="categoria" value="guardado">
             <div class="contenedor-categoria">
                 <label for="cursos"> <h2 class="design-tittle">Tus cursos</h2></label>
-                <label for="proyectos"><h2 class="design-tittle">Tus proyectos</h2> </label>
                 <label for="diplomas"><h2 class="design-tittle">Tus diplomas</h2>  </label>
                 <label for="guardados"><h2 class="design-tittle">Cursos guardados</h2>  </label>
             </div>        
@@ -66,7 +65,8 @@
                                                         <div class="porcentaje "> 
                                                         </div>
                                                         <div class="btn-curso ">
-                                                            <button class="btn-curso-ds">Empieza ahora</button>
+                                                            <a href="../elcurso/vista.php"> <button class="btn-curso-ds">Empieza ahora</button></a>
+                                                            
                                                         </div>
                                                     </div>  
                                                 </div>                                                                                                                              
@@ -86,7 +86,8 @@
                                                             <h5 class="texto"> 10%</h5>
                                                         </div>
                                                         <div class="btn-curso ">
-                                                            <button class="btn-curso-ds">Continua ahora</button>
+                                                            <a href="../elcurso/vista.php"> <button class="btn-curso-ds">Continua ahora</button> </a>
+                                                            
                                                         </div>
                                                     </div>  
                                                 </div>                                                                                                                              
@@ -105,7 +106,7 @@
                                                         <div class="porcentaje ">                                                                        
                                                         </div>
                                                         <div class="btn-curso ">
-                                                            <button class="btn-curso-ds">Terminado</button>
+                                                            <a href="../elcurso/vista.php">  <button class="btn-curso-ds">Terminado</button> </a>
                                                         </div>
                                                     </div>  
                                                 </div>                                                                                                                              
@@ -127,10 +128,7 @@
                                 </div>
                             </div>
                         </div>                            
-                    </div>                     
-                    <div class="contenedor-proyectos bloque_contenedor_cursos" id="Registro" >
-                    <?php include ("./cuadro.php");?>
-                    </div> 
+                    </div>   
                     <div class="contenedor-diplomas bloque_contenedor_cursos" id="Registro">   
                     <?php include ("./cuadro.php");?>                       
                     </div>

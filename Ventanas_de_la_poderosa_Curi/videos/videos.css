@@ -1,0 +1,34 @@
+.contenedor{
+    width: 100%;
+    height: 100%;
+}
+.bloque_contenedor{   
+    display: flex;
+}
+.video{
+    width: 80%;
+    height: 100vh;
+}
+.informacion{    
+    background-color: tomato;
+    width: 20%;
+}
+.cabecera{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.separacion{
+    width: 50%;
+    height: 50%;
+}
+.logo{
+    width: 50%;
+    height: 100%;
+}
+.video_contenido{
+    width: 100%;
+    height: 100%;
+}

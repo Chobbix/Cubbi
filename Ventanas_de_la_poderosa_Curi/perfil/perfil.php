@@ -137,29 +137,7 @@
                                     </div>                                   
                                 </div>
                             </a>
-
-                        </div>
-                        <div class="bloque-tittle">
-                            <div class="cuadro1"><h2 >Ultimo proyecto:</h2></div>
-                            <div class="cuadro2">
-                                <a href="../pag-us/info.php">
-                                    <h3 class="link">Ir a tus proyectos</h3>
-                                </a>
-                            </div>
-                        </div>       
-                        <div class="Cont-ultimo-curso">
-                            <a href="#" class="bloque-ultimo-curso">
-                                <div class="icon">
-                                    <img src="../Multimedia/b.gif" alt="" class="miniatura">
-                                </div>
-                                <div class="descripcion">
-                                    <div class="contenido-desc">
-                                        <h2>Curso</h2>                                        
-                                    </div>                                   
-                                </div>
-                            </a>
-
-                        </div>                  
+                        </div>                
                 </div>  
             </div>    
                     </div>
