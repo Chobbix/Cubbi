@@ -387,3 +387,31 @@ hr{
     display: flex;
     align-items: center;
 }
+
+/**/
+
+.cont_cursos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.bloque_de_cursos{
+    width: 80%;   
+    margin-bottom: .4rem; 
+}
+.curso_cajita{
+    background-color: #DEE0E9;
+    display: flex;
+    margin-bottom: 10px; 
+    justify-content: space-between;
+}
+
+.ds_delete{
+    background-color:white;
+    width: 100%;
+    border: none;
+    margin-bottom: .5rem;
+}
+.ds_delete:hover{
+    background-color:rgb(255, 242, 218);
+}

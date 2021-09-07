@@ -20,13 +20,13 @@
                             <input type="radio" id="Info" name="a" value="Info" checked>
                             <input type="radio" id="contenido" name="a" value="contenido">                         
                             <div class="hi">
-                                    <div   div class="bontones_seleccion">
-                                        <label for="Info"><h1 class="text_decoration">informacion general</h1></a></label>
-                                    </div>
-                                    <div class="bontones_seleccion">
-                                        <label for="contenido"><h1 class="text_decoration" >Contenido curso</h1></label>
-                                    </div>
-                                    <button class="save_btn"><h3> Guardar cambios </h3></button>
+                                <div   div class="bontones_seleccion">
+                                    <label for="Info"><h1 class="text_decoration">informacion general</h1></a></label>
+                                </div>
+                                <div class="bontones_seleccion">
+                                    <label for="contenido"><h1 class="text_decoration" >Contenido curso</h1></label>
+                                </div>
+                                <button class="save_btn"><h3> Guardar cambios </h3></button>
                             </div> 
                             <hr>
                             <div class="contenido_caja" id="filtrado">
@@ -41,6 +41,8 @@
                                             <input type="text" placeholder="Programacion, manualidades, etc." class="text_input">
                                             <h1>Duracion</h1>
                                             <input type="text" placeholder="tiempo estimado" class="text_input">
+                                            <h1>Costo:</h1>
+                                            <input type="text" placeholder="Asigna un precio" class="text_input">
                                         </div>
                                         <div class="subcaja">
                                             <div class="caja_imagen">                                                    
@@ -107,22 +109,59 @@
                             </div>
                         </div>
                     </div>
-                </div>                      
-                    </div>    
-                    <div class="contenedor-diplomas bloque_contenedor_cursos" id="Registro">   
+                </div>
+                <div class="contenedor-diplomas bloque_contenedor_cursos" id="Registro">   
+                    <div class="cont_cursos">
+                        <div class="bloque_de_cursos">
+                            <div class="curso_cajita">
+                                <div class="info_basica_curso">
+                                    <h1>*Titulo del curso*</h1>
+                                    <h1>*borrador*</h1>
+                                </div>
+                                <div class="btn_edicion">
+                                    <div class="">
+                                        <button class="ds_delete">
+                                        <label for="cursos">                                        
+                                                <h1>Editar</h1>                                       
+                                        </label>
+                                        </button>
+                                    </div>
+                                    <button class="ds_delete"> <h1>Eliminar</h1> </button>
+                                </div>
+                            </div>       
+                            <div class="curso_cajita">
+                                <div class="info_basica_curso">
+                                    <h1>*Titulo del curso*</h1>
+                                    <h1>*Publicado*</h1>
+                                </div>
+                                <div class="btn_edicion">
+                                    <div class="">
+                                        <button class="ds_delete">
+                                        <label for="cursos">                                        
+                                                <h1>Editar</h1>                                       
+                                        </label>
+                                        </button>
+                                    </div>
+                                    <button class="ds_delete"> <h1>Eliminar</h1> </button>
+                                </div>
+                            </div>                            
+                        </div>
+
                         
                     </div>
-                    <div class="contenedor-guardado bloque_contenedor_cursos" id="Registro" >   
-                        <div class="contenedor-Todos container-dis">       
-                            <h1>
-                                sa
-                            </h1>                  
-                        </div>
-                    </div> 
                 </div>
-            </div>                              
-        </div>                               
-    </div>                       
+                <div class="contenedor-guardado bloque_contenedor_cursos" id="Registro" >   
+                    <div class="contenedor-Todos container-dis">       
+                        <h1>
+                            sa
+                        </h1>                  
+                    </div>
+                </div>                      
+            </div>    
+        </div>
+    </div>                              
+    </div>                               
+</div>                       
 <!--
 <div class="contenedor">
     <div class="bloque">
