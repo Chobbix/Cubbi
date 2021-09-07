@@ -24,7 +24,7 @@
                     <a href="../elcurso/vista.php"> <i class="fas fa-arrow-left"></i></button</a>    
                     <div class="separacion">
                         <div class="cont_video">
-                            <a href="#"> <img src="../Multimedia/logo.png" alt="" class="logo"></a>                             
+                            <a href="../Cursos/cursos.php"> <img src="../Multimedia/logo.png" alt="" class="logo"></a>                             
                         </div>                        
                     </div>
                     <div class="perfil">

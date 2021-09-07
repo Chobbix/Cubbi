@@ -53,10 +53,23 @@
                                         <input type="text" placeholder="Ingresa descripcion" class="text_input">
                                         <h1>Categoria</h1>
                                         <input type="text" placeholder="Programacion, manualidades, etc." class="text_input">
+                                        <h1>Categoria</h1>
+                                        <select name="Categorias" id="categorias"  class="text_input">
+                                            <option value="curso1">Curso1</option>
+                                            <option value="curso2">Curso2</option>
+                                            <option value="curso3">Curso3</option>
+                                            <option value="curso4">Curso4</option>
+                                        </select>
                                         <h1>Duracion</h1>
                                         <input type="text" placeholder="tiempo estimado" class="text_input">
                                         <h1>Costo:</h1>
                                         <input type="text" placeholder="Asigna un precio" class="text_input">
+                                        <h1>Tipo de pago:</h1>
+                                        <select name="Tipodepago" id="categorias"  class="text_input">
+                                            <option value="Pago1">Gratis</option>
+                                            <option value="Pago2">Pago</option>
+                                        </select>
+                                        
                                     </div>
                                     <div class="subcaja">
                                         <div class="caja_imagen">
