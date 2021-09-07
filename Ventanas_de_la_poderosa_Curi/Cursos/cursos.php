@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="../Navegacion/nav.css">
     <link rel="stylesheet" href="../Cursos/cursos.css">
+    <script src="../../JavaScript/Mensaje.js"></script>
 </head>
 <body>
     <div class="div">   
@@ -34,7 +37,7 @@
                                 <h6>126</h6>
                             </div>
                         </div>
-                        <a href="../carrito/cesta.php"> <button class="add-carrito"> Agregar al carro</button></a>                   
+                        <button class="add-carrito"> Agregar al carro</button>
                     </div>
                     <div class="contenedor">              
                         <a href="#">   <img src="../Multimedia/a.gif" alt="" class="video"> </a>
