@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../Navegacion/nav.css">
     <link rel="stylesheet" href="./cesta.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="../modal/contmodal.css">
     <script src="../../JavaScript/Carrito.js"></script>
     <title>Document</title>
 </head>
@@ -65,9 +67,10 @@
             <h1>10000.00$</h1>
         </div>
     </div>
-
+        <link rel="stylesheet" href="./moda.css">
     <button  class="btn-confirmar">
-        <h2><a href="../Cursos/cursos.php"> Confirmar compra</a></h2>
+        <h2><a href="#modal" id="mostrar"> Confirmar compra</a></h2>
     </button>
+    <?php include("../modal/modalpago.php")?>
 </body>
 </html>
