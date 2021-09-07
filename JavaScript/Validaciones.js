@@ -25,7 +25,31 @@ $(document).ready(function(){
         });
     }
 
+    function ValidarFechaActual(FNac){
+        var f = new Date;
+        console.log(f);
+
+        var mes = (f.getMonth() + 1).toString();
+        mes = "0" + mes;
+
+        var dia = f.getDate().toString();
+        dia = "0" + dia;
+
+        var fechaActual= f.getFullYear().toString() + "-" + mes + "-" + dia;
+        console.log(fechaActual);
+
+        if(FNac < fechaActual) return true;
+        else return false;
+    }
+
     $(".btn-inicio").click(function(){
+
+        var a = $("[vali=usu]").val();
+
+        if(ValidarVacios($("[vali=usu]").val())) {
+            MostrarMsgBox('Espacios vacios', 'Revisa la informacion', 'error');
+            return false;
+        }
 
         if(ValidarVacios($("[vali=nom]").val())) {
             MostrarMsgBox('Espacios vacios', 'Revisa la informacion', 'error');
@@ -52,10 +76,17 @@ $(document).ready(function(){
             return false;
         }
         
+        var isUsuarioValid= expresiones.usuario.test($("[vali=usu]").val());
         var isNombreValid= expresiones.nombre.test($("[vali=nom]").val());
         var isApesValid= expresiones.nombre.test($("[vali=apes]").val());
         var isEmailValid= expresiones.correo.test($("[vali=email]").val());
-        
+        var isFNacValid= ValidarFechaActual($("[vali=Fnac]").val());
+
+        if(!isUsuarioValid) {
+            MostrarMsgBox('Nombre de usuario Invalido', 'No se permiten caracteres especiales mas que el guion y guion bajo', 'error');
+            return false;
+        }
+
         if (!isNombreValid) {
             MostrarMsgBox('Nombre Invalido', 'Solo se permiten letras en el apartado Nombre', 'error');
             return false;
@@ -68,6 +99,11 @@ $(document).ready(function(){
 
         if (!isEmailValid) {
             MostrarMsgBox('Email Invalido', 'Sintaxis del correo incorrecta ejemplo: ejemplo@gmail.com', 'error');
+            return false;
+        }
+
+        if (!isFNacValid) {
+            MostrarMsgBox('Fecha Invalido', 'La fecha ingresada debe ser menor a la del dia actual', 'error');
             return false;
         }
 

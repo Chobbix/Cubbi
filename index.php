@@ -11,7 +11,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-        <link rel="stylesheet" href="estilosPrueba.css">
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="/Cubbi_BDM_PWCI/JavaScript/Validaciones.js"></script>
         <title>Document</title>
@@ -26,7 +25,7 @@
         <input type="text" name="genero" id="2" valid="vacio"><br>
         
         <label>Fecha de Nacimiento: </label>
-        <input type="text" name="date_Fnac" id="3" valid="vacio"><br>
+        <input type="date" name="date_Fnac" id="3" valid="vacio"><br>
         
         <label>Nombre de Usuario: </label>
         <input type="text" name="txt_Usuario" id="4" valid="vacio"><br>
