@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Navegacion/nav.css">
     <link rel="stylesheet" href="./curso.css">
+    <link rel="stylesheet" href="./caja_comment.css">
     <title>Document</title>
 </head>
 <body>
@@ -44,9 +45,11 @@
                                 <div class="ayuda">
                                     <h1>$250</h1>
                                 </div>
-                                <div class="ayuda">
-                                    <button class="btn_diseño">Comprar ahora</button>
-                                </div>
+                                <a href="../carrito/cesta.php">
+                                    <div class="ayuda">                                        
+                                        <button class="btn_diseño">Comprar ahora</button>
+                                    </div>
+                                </a>
                                 <div class="ayuda">
                                     <button class="btn_diseño">Agragar al carrito</button>
                                 </div>
@@ -61,17 +64,7 @@
                 <h3>Clases:</h3>
                 <hr>
                 <div class="caja_comentarios">
-                    <div class="sub_caja">
-                        <img src="../Multimedia/a.gif" alt="" class="perfil">
-                        <div class="caja_perfil">
-                            <div class="caja_nickname">
-                                <h3> soy el nick name</h3>
-                            </div>    
-                            <div class="coment">
-                                <h3 class="comentario"> *soy el comentario*</h3>
-                            </div> 
-                        </div>                 
-                    </div>                     
+                <?php include ("./caja_comment.php");?>                
                 </div>                   
             </div>
         </div>      

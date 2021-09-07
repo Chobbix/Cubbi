@@ -26,9 +26,7 @@
                         <a href="../Cursos/cursos.php">  <button class="btn-inicio"> Iniciar sesion</button>   </a>                  
                     <div class="registrate">
                         <div class="cont_reg"> <h3 class="text-registro">¿Como?¿No tienes cuenta? </h3> <a href="../Registro/registro.php" > <h4 class="text-registro link">Registrate</h4></a></div>
-                        <div class="cont_reg"> 
-                        
-                        <h3 class="text-registro">¿Quieres ser maestro? </h3> <a href="../Registro/registro.php" > <h4 class="text-registro link">Registrate</h4></a></div>
+                        <div class="cont_reg">                     
                     </div>    
                     
                 </div>

@@ -16,34 +16,7 @@
 .texto_us{
     margin-left: 22px;
 }
-.sub_caja{ 
-    display: flex;
-}
-.caja_perfil{
-    height: 100%;
-    width: 95%;
-    margin-left: 25px;
-}
-.caja_nickname{
-    height: 50px;
-    display: flex;
-    align-items: center;
-}
-.coment{
-    height:150px;
-    width:100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.descripcion{
-    height: 50px;
-    width:100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.comentario{
-    line-height:25px;
-}
+
 .bloque_informacion{
     display: flex;
 }

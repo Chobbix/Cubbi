@@ -8,6 +8,16 @@
                 <div class="tittle "><h1> Registro</h1></div>
                     <div class="cont-texto">
                     <div class="email cont"> 
+                        <select name="tipous" id="idus" class="select_us">
+                            <option value="Usuario">Estudiante</option>
+                            <option value="escuela">Maestro</option>
+                        </select>
+                    </div> 
+                    <div class="email cont"> 
+                        <h1>Nombre de usuario</h1>
+                        <input type="text"  id="inputsearch" placeholder="Nick name" class="diseno-input"> 
+                    </div> 
+                    <div class="email cont"> 
                         <h1>Nombre</h1>
                         <input type="text"  id="inputsearch" placeholder="Nombre" class="diseno-input"> 
                     </div>  
@@ -30,7 +40,7 @@
                         </div>
                         <div class="cabecera">
                         <h1>Cumpleaños</h1>
-                        <input type="date" id="start" name="trip-start"  min="1921-07-07" > 
+                        <input type="date" id="start" name="trip-start"  min="1921-07-07" class="data_btd"> 
                         </div>
                         
                         

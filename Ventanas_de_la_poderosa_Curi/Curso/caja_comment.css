@@ -1,0 +1,27 @@
+.sub_caja{ 
+    display: flex;
+}
+.caja_perfil{
+    width: 95%;
+    margin-left: 25px;
+}
+.caja_nickname{
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.coment{
+    width:100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.descripcion{
+    height: 50px;
+    width:100%;
+    margin-bottom: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.comentario{
+    line-height:25px;
+}

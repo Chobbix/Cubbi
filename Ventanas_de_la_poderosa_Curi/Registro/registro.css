@@ -5,6 +5,10 @@
 .cabecera{
     width: 50%;
 }
-select{
+select, .data_btd{
+    font-size: 20px;
     width: 80%;
+}
+.select_us{
+    width: 100%;
 }

@@ -75,3 +75,137 @@ input[type="radio"]{
 #Comentarios:checked ~ #componentes_cabecra .contenido_archivos{
     display: none;
 }
+/**/
+.contenido_informacion{
+    display: flex;
+}
+.descripcion_general{
+    width: 50%;
+    display: flex;
+}
+.Calificacion_curso{
+    width: 50%;
+}
+.bloque_calificacion{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    align-content: center;
+}
+.cuadro_informativo{
+    background-color: #DEE0E9;
+    height: 150px;
+    width: 90%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+.fa-heart{
+    margin-right: 8px
+}
+.cuadro_informativo h2{
+    margin-right: 8px;
+}
+.actualizacion{
+    border-top: .1px solid #7c7096;
+    display: flex;
+}
+.date_update{
+    margin-right: 4px;
+    color: #8D738F    ;
+}
+
+/**/
+.bloque_clases_info{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+}
+.contenedor_sep{
+    width: 50%;
+    height: 100%;
+}
+.informacion_clases{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
+.img_box{
+    background-color: aquamarine;
+}
+.arcchivos_descargar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor_archivo{
+    width: 80%;
+    background-color: blueviolet;
+}
+.btn_img h1{
+    text-align: center;
+    color: #7c7096;
+}
+.btn_img{
+    position:relative  ;
+    border-radius: 5px;
+    background-color: white;
+}
+.btn_enviar{
+    position: absolute ;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom:0px ;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+/**/
+.bloque_comentarios{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+.cajadecomentarios{
+    width: 80%;
+    height: 10%;
+}
+.contenedor_coment{
+    margin-bottom: 25px;
+    margin-top: 25px;
+    border-bottom: 1px solid #7c7096;
+}
+.coment_bloque{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+.fotoynick{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+.comment_add{
+    background-color: #DEE0E9;
+    border: none;
+    width: 90%;
+    height: 100%;
+    margin-left: 50px;
+}
+.far{
+    font-size: 40px;
+}
+.btn_send{
+    width: 20%;
+    height: 120px;
+    background-color: rgb(255, 242, 218);
+    border:none ;
+}
+.btn_send:hover{
+    background-color: white;
+}

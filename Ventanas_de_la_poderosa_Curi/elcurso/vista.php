@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../elcurso/vista.css">
     <link rel="stylesheet" href="../Navegacion/nav.css">
+    <link rel="stylesheet" href="../Curso/caja_comment.css">
 </head>
 <body>    
     <div class="div">   
@@ -50,15 +51,88 @@
                         <div class="contenedor_info " id="componentes_cabecra">
                             <div class="contenido_informacion">
                                 <div class="descripcion_general">
-                                    <H1>Duracion</H1>
-                                    <h1>Descripcion</h1>
+                                    <div class="container_des">
+                                        <div class="sep">  
+                                            <H1>Duracion:</H1>
+                                            <div class="sub_texto">                                                
+                                                <h2>24 hr</h2>
+                                            </div>
+                                        </div>                                        
+                                        <div class="sep">
+                                            <h1>Estudiantes inscritos:</h1>   
+                                            <h2 class=des>450</h2>     
+                                        </div>
+                                        <div class="sep">
+                                            <h1>Descripcion:</h1> 
+                                            <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis quibusdam id ex numquam cupiditate sunt eum sapiente voluptate nesciunt! Voluptas molestias nihil corporis odit quisquam iusto aperiam animi natus ex?</h2></div>
+                                        <div class="actualizacion">
+                                            <h3 class="date_update">Actualizado el:</h3>
+                                            <h3 class="date_update">3 de octubre 2019</h3>
+                                        </div>                                                        
+                                    </div>
+                                </div>
+                                <div class="Calificacion_curso">
+                                    <div class="bloque_calificacion">
+                                        <div class="cuadro_informativo">
+                                        <i class="far fa-heart"></i> 
+                                        <h2>524</h2>
+                                        <h2> personas les gusto este curso</h2>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                             <div class="contenido_archivos"  id="componentes_cabecra">
-                                <h3>hola</h3>
+                                <div class="bloque_clases_info">                                        
+                                    <div class="informacion_clases contenedor_sep">
+                                        <div class="bloque_todos_cap">                                            
+                                            *aqui van las clases*
+                                        </div>
+                                    </div>
+                                    <div class="arcchivos_descargar contenedor_sep">
+                                        <div class="contenedor_archivo">
+                                                <div class="img_box">
+                                                    <div class="btn_img">
+                                                        <h1> Descargar archivos</h1>
+                                                        <input type="file" name="imagensubida" accept="video/*"" class="btn_enviar" >
+                                                    </div>                                               
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
                             </div>
                             <div class="contenido_comentarios"  id="componentes_cabecra">
-                                <h4>hola</h4>
+                                <div class="bloque_comentarios">
+                                        <div class="cajadecomentarios">  
+                                            <div class="contenedor_coment">
+                                                <div class="fotoynick">                                                    
+                                                    <img src="../Multimedia/a.gif" alt="" class="perfil"> 
+                                                    <h3>Nick name</h3>
+                                                </div>  
+                                                <div class="coment_bloque">
+                                                    <textarea name="comment" id="comentario" cols="10" rows="5" class="comment_add"></textarea>
+                                                    <button class="btn_send"><i class="far fa-paper-plane"></i> </button>
+                                                </div>
+                                                
+
+                                            </div>
+                                            <div class="contenedor_coment">
+                                                <?php include ("../Curso/caja_comment.php");?>     
+                                            </div>    
+                                            <div class="contenedor_coment">
+                                                <?php include ("../Curso/caja_comment.php");?>     
+                                            </div>    
+                                            <div class="contenedor_coment">
+                                                <?php include ("../Curso/caja_comment.php");?>     
+                                            </div>    
+                                        </div>                  
+                                    
+                                        </div>    
+                                </div>  
+                                        
+                            </div>                               
+                                
                             </div>
 
                         </div>
