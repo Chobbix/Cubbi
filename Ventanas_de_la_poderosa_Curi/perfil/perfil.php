@@ -42,11 +42,17 @@
                                         </div>
                                         <div class="bloque-menu"  id="Registro">
                                         <scroll-container>
-
                                             <div class="bloque-contenido">
                                                 <div class="contenedor-Preg" >
                                                     <div class="bloque-editar">
-                                                        <img src="../Multimedia/a.gif" alt="" class="perfilus">
+                                                        <div class="bloque_ftperfil">
+                                                            <div class="ft_perfil">                                                            
+                                                                <img src="../Multimedia/a.gif" alt="" class="perfilus">
+                                                                <button class="btn_enviar"> <input type="file" name="imagensubida" accept="image/png, .jpeg, .jpg"  ></button>    
+                                                            </div>
+                                                        </div>
+
+                                                        
                                                         <div class="divisorio">
                                                             <h1 class="selector" id="type">Nick name</h1> 
                                                             <input type="text">  

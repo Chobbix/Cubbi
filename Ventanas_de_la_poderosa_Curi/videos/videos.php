@@ -13,13 +13,19 @@
 <body>
     <div class="contenedor">
         <div class="bloque_contenedor">
-            <div class="video">
-                <img src="../Multimedia/c.gif" alt="" class="video_contenido">
+            <div class="video">                    
+                    <video class="video_contenido" controls>
+                        <source src="../Multimedia/Campaña 'Cuidado con el perro' - Recojo la caca.mp4" type="video/mp4">                    
+                    </video>
+                
             </div>
             <div class="informacion">
                 <div class="cabecera">
+                    <a href="../elcurso/vista.php"> <i class="fas fa-arrow-left"></i></button</a>    
                     <div class="separacion">
-                        <a href="#"> <img src="../Multimedia/logo.png" alt="" class="logo"></a>
+                        <div class="cont_video">
+                            <a href="#"> <img src="../Multimedia/logo.png" alt="" class="logo"></a>                             
+                        </div>                        
                     </div>
                     <div class="perfil">
                         <?php include ("../Navegacion/perfil.php");?>
@@ -29,7 +35,8 @@
                     <div class="tema">                        
                         <?php include ("../accordion/accordion.php");?>     
                     </div>
-                </div>            
+                </div>   
+
             </div>
         </div>
     </div>

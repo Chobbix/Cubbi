@@ -362,3 +362,22 @@ input[type="radio"]{
 #Favorito:checked ~ #Registro .contenedor-resp{
     display:none;
 }
+
+/**/
+
+.ft_perfil{    
+    position:relative;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.btn_enviar{
+    position: absolute ;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom:0px ;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}

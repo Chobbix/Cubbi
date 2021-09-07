@@ -92,11 +92,12 @@
                                     </div>
                                     <div class="arcchivos_descargar contenedor_sep">
                                         <div class="contenedor_archivo">
-                                                <div class="img_box">
+                                                <div class="img_box">                                             
                                                     <div class="btn_img">
-                                                        <h1> Descargar archivos</h1>
-                                                        <input type="file" name="imagensubida" accept="video/*"" class="btn_enviar" >
-                                                    </div>                                               
+                                                        <a href="../Multimedia/f.gif" download>
+                                                            <h1> Descargar archivos</h1>
+                                                        </a>
+                                                    </div>                                                                                  
                                                 </div>
                                         </div>
                                     </div>

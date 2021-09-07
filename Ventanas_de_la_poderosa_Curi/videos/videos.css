@@ -12,16 +12,17 @@
     height: 100vh;
 }
 .informacion{    
-    background-color:#ffffff;
     height: 100vh;
     width: 20%;
 }
 .cabecera{
     height: 10%;
-    display: flex;    
+    display:flex; 
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
     border-bottom: 1px solid;
 }
-
 .separacion{
     width: 50%;
     height: 100%;
@@ -35,6 +36,7 @@
     height: 50%;
 }
 .video_contenido{
+    
     width: 100%;
     height: 100%;
 }
@@ -50,4 +52,8 @@
 }
 .tema{
     width: 100%;
+}
+.btn_regreso{ 
+    margin: 0 auto;
+    display: flex;
 }
