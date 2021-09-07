@@ -100,15 +100,14 @@ input[type="radio"]{
     height: 100%;
     opacity: 0;
 }
-.cabecera_nivel{
-    display: flex;
-}
 .cabecera_nivel input{
     width: 80%;
 }
 .capitulos{
     width: 100%;
     background-color: #DEE0E9;
+    padding: 10px;
+    margin: 10px;
 }
 .nombre_del_subcapitulo{
     display: flex;
