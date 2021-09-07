@@ -1,48 +1,105 @@
-.contenedor{
-    display: flex;
-    justify-content: center;
+body{
+    background-color: #F0F2F8 !important;
 }
-.bloque{    
-    align-items: center;
-    margin-top: 25px;
-    width: 90vw;
-}
-.cabecera{
-    display: flex;
 
+.container-Titulo{
+    display: flex;
+    background-color: #B8B7C9;
+    max-width: 85%;
+    height: auto;
+    margin: 0 auto;
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 15px;
 }
 .carrito{
-    width: 50%;
+    width: 100%;
+    content: center;
 }
-h1{
-    color: #dad8e6;
-}
-.a-pagar{
-    width: 50%;
 
+.contenedor-productos{
     display: flex;
-    justify-content:  right;
-}
-.contenido{    
+    max-width: 85%;
+    height: auto;
     margin: 0 auto;
-}
-.lista{
-    display: flex;
-    height: 150px;
-    overflow: auto;
-}
-.descripcion{
-    display: flex;
-    align-items: center;
-    width: 100vw;
-    padding:25px;
-}
-.texto{
-    display: flex;
-    justify-content: right;
-}
-hr{
-    margin-top: 25px ;
-    border:solid 1px;
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-color: #DEE0E9;
 }
 
+.cabecera{
+    display: flex;
+}
+
+.img{
+    display: flex;
+    width: 20%;
+}
+
+.descripcion{
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    display: flex;
+    width: 65%;
+}
+
+.precio{
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    display: flex;
+    width: 15%;
+}
+
+.img-propiedades{
+    width: 75%;
+    height: auto;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+}
+
+button.btn-eliminar {
+    display: flex;
+    max-width: 85%;
+    background-color: transparent;
+    border-style: none;
+    font-size: 2rem;
+    transition: all ease .3s;
+}
+
+button.btn-eliminar:hover{
+    opacity: .5 !important;
+}
+
+button.btn-confirmar{
+    display: flex;
+    background-color: transparent;
+    max-width: 85%;
+    height: auto;
+    margin: 0 auto;
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: none;
+    border-right-style: none;
+    border-color: #DEE0E9;
+    transition: all ease .3s;
+}
+
+button.btn-confirmar:hover {
+    opacity: .5 !important;
+    font-size: 1.2em;
+}

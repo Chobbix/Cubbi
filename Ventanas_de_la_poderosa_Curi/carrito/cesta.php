@@ -6,31 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Navegacion/nav.css">
     <link rel="stylesheet" href="./cesta.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../../JavaScript/Carrito.js"></script>
     <title>Document</title>
 </head>
 <body>
     <div class="div">
         <?php include ("../Navegacion/Nav.php");?>
     </div>
-    <div class="contenedor">
-        <div class="bloque">
-            <div class="cabecera">
-                <div class="carrito">
-                    <h1>Tu carrito de compras</h1>
-                </div>
-                <div class="a-pagar"> 
-                    <h1>Total:</h1>
-                </div>
-            </div>
-            <div class="contenido">
-                <div class="lista">
-                    <img src="../Multimedia/a.gif" alt="" class="" >
-                    <div class="descripcion">Contenido</div>
-                    <div class="descripcion texto"> Precio</div>
-                </div>
-                <hr>
-            </div>
+
+    <div class="container-Titulo">
+        <div class="carrito">
+            <h1>Carrito de Compras</h1>
+        </div>
     </div>
+
+    <div class="contenedor-productos">
+        <div class="img">
+            <button class="btn-eliminar">
+                <i class="fas fa-times"></i>
+                <img src="../Multimedia/a.gif" alt="" class="img-propiedades">
+            </button>
+        </div>
+        <div class="descripcion">
+            <h1>Nombre del curso</h1>
+        </div>
+        <div class="precio">
+            <h1>10000.00$</h1>
+        </div>
     </div>
+
+    <div class="contenedor-productos">
+        <div class="img">
+            <button class="btn-eliminar">
+                <i class="fas fa-times"></i>
+                <img src="../Multimedia/a.gif" alt="" class="img-propiedades">
+            </button>
+        </div>
+        <div class="descripcion">
+            <h1>Nombre del curso</h1>
+        </div>
+        <div class="precio">
+            <h1>10000.00$</h1>
+        </div>
+    </div>
+
+        <div class="contenedor-productos">
+        <div class="img">
+            <button class="btn-eliminar">
+                <i class="fas fa-times"></i>
+                <img src="../Multimedia/a.gif" alt="" class="img-propiedades">
+            </button>
+        </div>
+        <div class="descripcion">
+            <h1>Nombre del curso</h1>
+        </div>
+        <div class="precio">
+            <h1>10000.00$</h1>
+        </div>
+    </div>
+
+    <button  class="btn-confirmar">
+        <h2><a href="../Cursos/cursos.php"> Confirmar compra</a></h2>
+    </button>
 </body>
 </html>
