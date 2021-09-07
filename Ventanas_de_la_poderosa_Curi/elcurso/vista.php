@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../elcurso/vista.css">
     <link rel="stylesheet" href="../Navegacion/nav.css">
     <link rel="stylesheet" href="../Curso/caja_comment.css">
+    <link rel="stylesheet" href="../accordion/accordion.css">
 </head>
 <body>    
     <div class="div">   
@@ -86,7 +87,7 @@
                                 <div class="bloque_clases_info">                                        
                                     <div class="informacion_clases contenedor_sep">
                                         <div class="bloque_todos_cap">                                            
-                                            *aqui van las clases*
+                                            <?php include ("../accordion/accordion.php");?>     
                                         </div>
                                     </div>
                                     <div class="arcchivos_descargar contenedor_sep">
