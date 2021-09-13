@@ -30,9 +30,11 @@ int_Niveles,
 txt_Descripcion,
 f_Promedio,
 isPrecioGeneral,
+isEdited,
 f_Precio,
 blob_img,
-isAcitvo
+isAcitvo,
+txt_TiempoEstimado
 
 
 PROMEDIOS_CURSOS:
@@ -40,6 +42,9 @@ ID_Promedio,
 ID_Curso,
 ID_Usuario,
 int_Calificacion
+blob_img,
+blob_archivo
+
 
 
 NIVELES:
