@@ -1,20 +1,26 @@
 <?php
     require("conexion.php");
     class Usuario extends DB {
+        private $id_Rol;
         private $txt_NomUser;
         private $txt_Contra;
         private $txt_Nom;
         private $txt_ApePat;
         private $txt_Email;
+        private $txt_Genero;
+        private $date_FchaNac;
         private $date_FchaRegistro;
         private $date_FchaUltiCambio;
 
-        public function __construct($txt_NomUser, $txt_Contra, $txt_Nom, $txt_ApePat, $txt_Email) {
+        public function __construct($id_Rol, $txt_NomUser, $txt_Contra, $txt_Nom, $txt_ApePat, $txt_Email, $txt_Genero, $date_FchaNac) {
+            $this->id_Rol = $id_Rol;
             $this->txt_NomUser = $txt_NomUser;
             $this->txt_Contra = $txt_Contra;
             $this->txt_Nom = $txt_Nom;
             $this->txt_ApePat = $txt_ApePat;
             $this->txt_Email = $txt_Email;
+            $this->txt_Genero = $txt_Genero;
+            $this->date_FchaNac = $date_FchaNac;
         }
 
         function set_NomUser($txt_NomUser) { $this->txt_NomUser = $txt_NomUser; }
@@ -43,7 +49,7 @@
         function query_insert_Usuario() {
             $database = new DB;
             $conexion = $database->ConectarDB();
-            mysqli_query($conexion, "call sp_Usuarios('A', null, 1, '{$this->txt_NomUser}', '{$this->txt_Contra}', '{$this->txt_Nom}', '{$this->txt_ApePat}', '{$this->txt_Email}', NOW(), NOW(), null)");
+            mysqli_query($conexion, "call sp_Usuarios('A', null, {$this->id_Rol}, '{$this->txt_NomUser}', '{$this->txt_Contra}', '{$this->txt_Nom}', '{$this->txt_ApePat}', '{$this->txt_Email}', '{$this->txt_Genero}', '{$this->date_FchaNac}', NOW(), NOW(), null)");
             mysqli_close($conexion);
         }
     }

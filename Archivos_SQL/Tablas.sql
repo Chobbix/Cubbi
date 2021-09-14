@@ -23,6 +23,8 @@ CREATE TABLE Usuarios (
 	txt_Nom				VARCHAR(30),
 	txt_ApePat			VARCHAR(30),
 	txt_Email			VARCHAR(40),
+    txt_Genero          VARCHAR(20),
+    date_FchaNac        DATE,
 	date_FchaRegistro	DATE,
 	date_FchaUltiCambio	DATE,
 	blob_img			MEDIUMBLOB NULL,
