@@ -12,4 +12,6 @@ SELECT * FROM Diplomas;
 INSERT INTO Roles (txt_Nombre) values ('Estudiante');
 INSERT INTO Roles (txt_Nombre) values ('Escuela');
 
+SELECT usuarios.ID_Usuario, usuarios.txt_NomUser FROM usuarios WHERE usuarios.txt_Email = 'bre@gmail.com' AND usuarios.txt_Contra = 'Rito';
 
+call sp_Consultas ('Login', 0, 0, 'bre@gmail.com', 'Rito');

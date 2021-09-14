@@ -2,14 +2,14 @@
 
 require("../PHP_Classes/usuarios.php");
 
-echo $rol = $_POST["tipous"];
-echo $nickname = $_POST["nickname"];
-echo $nombre = $_POST["nombre"];
-echo $apes = $_POST["apellidos"];
-echo $correo = $_POST["correo"];
-echo $genero = $_POST["genero"];
-echo $fNac = $_POST["trip-start"]; 
-echo $password = $_POST["password"];
+$rol = $_POST["tipous"];
+$nickname = $_POST["nickname"];
+$nombre = $_POST["nombre"];
+$apes = $_POST["apellidos"];
+$correo = $_POST["correo"];
+$genero = $_POST["genero"];
+$fNac = $_POST["trip-start"]; 
+$password = $_POST["password"];
 
 $user = new Usuario($rol, $nickname, $password, $nombre, $apes, $correo, $genero, $fNac);
 $user->query_insert_Usuario();

@@ -16,27 +16,23 @@
         <title>Document</title>
     </head>
 <body>
-    <form action="index.php">
-        
-        <label>Nombre Completo: </label>
-        <input type="text" name="txt_Nombre" id="1" valid="vacio"><br>
+<?php
+    $conex;
 
-        <label>Genero: </label>
-        <input type="text" name="genero" id="2" valid="vacio"><br>
-        
-        <label>Fecha de Nacimiento: </label>
-        <input type="date" name="date_Fnac" id="3" valid="vacio"><br>
-        
-        <label>Nombre de Usuario: </label>
-        <input type="text" name="txt_Usuario" id="4" valid="vacio"><br>
+    if ($conex){
+        echo "Conexion exitosa <br><br>";
+    }
+    else {
+        echo "valiste Pito";
+    }
 
-        <label>Email: </label>
-        <input type="text" name="txt_Email" id="5" valid="vacio"><br>
-        
-        <label>Contraseña: </label>
-        <input type="text" name="txt_Password" id="6" valid="vacio"><br>
-        
-        <button id="btn_Aceptar">Aceptar</button>
-    </form>
+    $resultados= mysqli_query($conex, "SELECT * FROM Roles");
+
+    while($consulta= mysqli_fetch_array($resultados)){
+        echo $consulta['txt_Nombre'] . "<br>";
+    }
+
+    mysqli_close($conex);
+?>
 </body>
 </html>
