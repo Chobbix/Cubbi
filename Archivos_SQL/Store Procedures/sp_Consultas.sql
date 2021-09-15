@@ -14,6 +14,11 @@ BEGIN
         SELECT usuarios.ID_Usuario, usuarios.txt_NomUser FROM usuarios 
             WHERE usuarios.txt_Email = txt1 AND usuarios.txt_Contra = txt2;
     END IF;
+
+    IF opc = 'Perfil' THEN
+        SELECT ID, Rol, Usuario, Contrasenia, Nombre_Completo, Email, Genero, Fecha_Nacimiento, Edad, Fecha_Registro, Fecha_Cambio, Foto_Perfil FROM View_Usuarios 
+            WHERE ID = id1;
+    END IF;
 END
 $$
 DELIMITER ;

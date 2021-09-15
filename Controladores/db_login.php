@@ -1,5 +1,6 @@
 <?php
 
+require("../PHP_Classes/conexion.php");
 require("../PHP_Classes/consultas.php");
 
 $correo = $_POST["correo"];
@@ -10,17 +11,14 @@ $select->setTxt_email($correo);
 $select->setTxt_password($password);
 
 $resultados = $select->query_select_Usuario_by_login();
+$id_usu;
 
-echo $resultados['txt_NomUser'] . "<br>";
-echo $resultados['ID_Usuario'] . "<br>";
+while($consulta = mysqli_fetch_array($resultados)){
+    $id_usu = $consulta['ID_Usuario'];
+}
 
-//foreach($resultados as $columna => $val){
-//    if($columna == "txt_NomUser") echo $val .'<br>';
-//    if($columna == "ID_Usuario") echo $val .'<br>';
-//}
+session_start();
 
-//$user = new Usuario($rol, $nickname, $password, $nombre, $apes, $correo, $genero, $fNac);
-//$user->query_insert_Usuario();
-
-header('location: ../Ventanas_de_la_poderosa_Curi/principal/h.php');
+$_SESSION['ses_usuario'] = $id_usu;
+header('location: ../Ventanas_de_la_poderosa_Curi/perfil/perfil.php');
 ?>

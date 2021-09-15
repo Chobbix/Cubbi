@@ -1,5 +1,4 @@
 <?php
-    require("conexion.php");
     class Consulta extends DB {
         private $id_Rol;
         private $id_Usuario;
@@ -27,9 +26,17 @@
             $database = new DB;
             $conexion = $database->ConectarDB();
             $resultados = mysqli_query($conexion, "call sp_Consultas ('Login', 0, 0, '{$this->txt_email}', '{$this->txt_password}')");
-            $consulta= mysqli_fetch_array($resultados);
             mysqli_close($conexion);
 
-            return $consulta;
+            return $resultados;
+        }
+
+        function query_select_Usuario_by_Perfil() {
+            $database = new DB;
+            $conexion = $database->ConectarDB();
+            $resultados = mysqli_query($conexion, "call sp_Consultas ('Perfil', '{$this->id_Usuario}', 0, '', '')");
+            mysqli_close($conexion);
+
+            return $resultados;
         }
     }
