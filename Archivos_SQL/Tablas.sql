@@ -39,15 +39,40 @@ CREATE TABLE Cursos (
     ID_Categoria		INT,
     int_Niveles			INT,
     txt_Descripcion		VARCHAR(200),
+    txt_Duracion        VARCHAR(10),
 	f_Promedio			FLOAT,
     isPrecioGeneral		BOOL,
     f_Precio			FLOAT,
 	blob_img			MEDIUMBLOB,
+    blob_vid      		MEDIUMBLOB,
     isAcitvo			BOOL,
+    isEdited            BOOL,
     
 	CONSTRAINT pk_cur PRIMARY KEY (ID_Curso),
     CONSTRAINT fk_cur_usu FOREIGN KEY (ID_Usuario) REFERENCES Usuarios (ID_Usuario),
     CONSTRAINT fk_cur_cat FOREIGN KEY (ID_Categoria) REFERENCES Categorias (ID_Categoria)
+);
+
+CREATE TABLE Secciones (
+	ID_Seccion			INT,
+	ID_Curso			INT,
+    
+	CONSTRAINT pk_niv PRIMARY KEY (ID_Curso, ID_Seccion),
+    CONSTRAINT fk_niv_cur FOREIGN KEY (ID_Curso) REFERENCES Cursos (ID_Curso)
+);
+
+CREATE TABLE Capitulos (
+    ID_Capitulo         INT,
+	ID_Seccion			INT,
+	ID_Curso			INT,
+    txt_Titulo  		VARCHAR(200),
+    f_Precio			FLOAT,
+	blob_vid			MEDIUMBLOB,
+	blob_docs			MEDIUMBLOB,
+    
+	CONSTRAINT pk_niv PRIMARY KEY (ID_Curso, ID_Seccion, ID_Capitulo),
+    CONSTRAINT fk_niv_cur FOREIGN KEY (ID_Curso) REFERENCES Cursos (ID_Curso),
+    CONSTRAINT fk_niv_sec FOREIGN KEY (ID_Seccion) REFERENCES Secciones (ID_Seccion)
 );
 
 CREATE TABLE Promedios (
@@ -61,28 +86,10 @@ CREATE TABLE Promedios (
     CONSTRAINT fk_pro_usu FOREIGN KEY (ID_Usuario) REFERENCES Usuarios (ID_Usuario)
 );
 
-CREATE TABLE Niveles (
-	ID_Nivel			INT AUTO_INCREMENT,
-	ID_Curso			INT,
-    int_Nivel			INT,
-    txt_Descripcion		VARCHAR(200),
-    f_Precio			FLOAT,
-	blob_img1			MEDIUMBLOB,
-	blob_img2			MEDIUMBLOB,
-	blob_img3			MEDIUMBLOB,
-    blob_img4			MEDIUMBLOB,
-	blob_img5			MEDIUMBLOB,
-	blob_vid1			MEDIUMBLOB,
-	blob_vid2			MEDIUMBLOB,
-    
-	CONSTRAINT pk_niv PRIMARY KEY (ID_Nivel),
-    CONSTRAINT fk_niv_cur FOREIGN KEY (ID_Curso) REFERENCES Cursos (ID_Curso)
-);
-
 CREATE TABLE Cursos_Registrados (
 	ID_Usuario			INT,
     ID_Curso			INT,
-    int_NivelActual		INT,
+    int_SeccionActual	INT,
     isTerminado			BOOL,
     isBaja				BOOL,
     date_FchaTerm		DATE,
@@ -90,7 +97,7 @@ CREATE TABLE Cursos_Registrados (
 	CONSTRAINT pk_curreg PRIMARY KEY (ID_Usuario, ID_Curso),
     CONSTRAINT fk_curreg_usu FOREIGN KEY (ID_Usuario) REFERENCES Usuarios (ID_Usuario),
     CONSTRAINT fk_curreg_cur FOREIGN KEY (ID_Curso) REFERENCES Cursos (ID_Curso),
-    CONSTRAINT fk_curreg_niv FOREIGN KEY (int_NivelActual) REFERENCES Niveles (int_Nivel)
+    CONSTRAINT fk_curreg_niv FOREIGN KEY (int_SeccionActual) REFERENCES Secciones (ID_Seccion)
 );
 
 
@@ -120,7 +127,7 @@ CREATE TABLE Comentarios_Cursos (
 CREATE TABLE Carrito (
 	ID_Usuario			INT,
     ID_Curso			INT,
-    int_NivelActual		INT,
+    int_SeccionActual	INT,
     isTerminado			BOOL,
     isBaja				BOOL,
     date_FchaTerm		DATE,
@@ -128,5 +135,5 @@ CREATE TABLE Carrito (
 	CONSTRAINT pk_curreg PRIMARY KEY (ID_Usuario, ID_Curso),
     CONSTRAINT fk_curreg_usu FOREIGN KEY (ID_Usuario) REFERENCES Usuarios (ID_Usuario),
     CONSTRAINT fk_curreg_cur FOREIGN KEY (ID_Curso) REFERENCES Cursos (ID_Curso),
-    CONSTRAINT fk_curreg_niv FOREIGN KEY (int_NivelActual) REFERENCES Niveles (int_Nivel)
+    CONSTRAINT fk_curreg_niv FOREIGN KEY (int_SeccionActual) REFERENCES Secciones (ID_Seccion)
 );
