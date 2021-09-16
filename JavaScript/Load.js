@@ -57,11 +57,11 @@ $(document).ready(function(){
         return html;
     }
 
-    $('.btd_addchap').on('click', '.btn_cap', function(){
-            console.log($(this));
-            var padre= $(this).parent();
-            var previo= $(padre).prev();
-            $(previo).append(AgregarNivel());
+    $('.caja_cap').on('click', '.btn_cap', function(){
+        console.log($(this));
+        var padre= $(this).parent();
+        var previo= $(padre).prev();
+        $(previo).append(AgregarNivel());
     });
 
     $(".btn_addsec").click(function(){

@@ -89,3 +89,67 @@ date_FchaEnvio
 CARRITO:
 ID_Usuario,
 ID_Curso
+
+
+div class='bloque_nivel'>
+<h1>Seccion1</h1>
+<div class='cabecera_nivel'>
+<div class='capitulos'>
+<h1>Capitulo 1</h1>
+<div class='contenido'>
+<div class='nombre_del_subcapitulo'>
+<h2>Titulo</h2>
+<input type='text' placeholder=' Titulo del nivel'>
+</div>
+<div class='btn_contenidos'>
+<div class='btn_video1'>
+<h1> Subir video</h1>
+<input type='file' name='imagensubida' accept='video/*' class=' btn_enviar'>
+</div>
+<div class='btn_video'>
+<h1> Subir documentos</h1>
+<input type='file' name='imagensubida' accept='' class='btn_enviar'>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='btd_addchap'>
+<button class='plus btn_cap'>
+<i class='fas fa-plus-circle'></i>
+<h5>Agregar otro capitulo</h5>
+</button>
+</div>
+</div>
+
+
+<div class="bloque_nivel">
+<h1>Seccion1</h1>
+<div class="cabecera_nivel">
+<div class="capitulos">
+<h1>Capitulo 1</h1>
+<div class="contenido">
+<div class="nombre_del_subcapitulo">
+<h2>Titulo</h2>
+<input type="text" placeholder=" Titulo del nivel">
+</div>
+<div class="btn_contenidos">
+<div class="btn_video1">
+<h1> Subir video</h1>
+<input type="file" name="imagensubida" accept="video/*"" class=" btn_enviar">
+</div>
+<div class="btn_video">
+<h1> Subir documentos</h1>
+<input type="file" name="imagensubida" accept="" class="btn_enviar">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="btd_addchap">
+<button class="plus btn_cap">
+<i class="fas fa-plus-circle"></i>
+<h5>Agregar otro capitulo</h5>
+</button>
+</div>
+</div>
