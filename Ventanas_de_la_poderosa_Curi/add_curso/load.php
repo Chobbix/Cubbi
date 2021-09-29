@@ -67,7 +67,8 @@
                                         <h1>Tipo de pago:</h1>
                                         <select name="Tipodepago" id="categorias"  class="text_input">
                                             <option value="Pago1">Gratis</option>
-                                            <option value="Pago2">Pago</option>
+                                            <option value="Pago2">Curso completo</option>
+                                            <option value="Pago2">Pago por nivel</option>
                                         </select>
                                         
                                     </div>
