@@ -1,0 +1,89 @@
+.bloque_chat{
+    display: flex;
+    height: 100vh;
+}
+/*
+.bloque-divdos{
+
+    width: 50%;
+    padding: 26px;
+}*/
+.menus{
+    width: 100%;
+    display: flex;
+}
+
+.bloque-menu{
+    display: flex;
+    width: 90%;
+    height: 100%;
+}
+.bloque-contenido{
+    width: 100%;
+    display: flex;
+}
+input[type="radio"]{
+    display: none;
+}
+.contenedor-categoria{
+    background-color: rgb(214, 215, 231);
+    width: 10%;
+}
+.design-tittle{
+    margin-left: 15px;
+    font-size: 35px;
+}
+.contenedor-categoria label{
+    padding: 10px 10px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contenedor-categoria label:hover{
+    opacity: 0.8;
+}
+
+
+.file{
+    position: absolute;
+    width: 95px;
+}
+::-webkit-file-upload-button{
+    width: 95px;
+    padding: 8px 15px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    background:transparent;
+    color: transparent;
+    border: none;
+    border-radius: 50px;
+    outline:none;
+}
+.file:active{
+    outline:none;
+}
+
+.block{
+    width: 100%;
+}
+
+#chat1:checked ~ #id .contenedor-chat2,
+#chat1:checked ~ #id .contenedor-chat3,
+#chat1:checked ~ #id .contenedor-chat4{
+    display:none;
+}
+#chat2:checked ~ #id .contenedor-chat1,
+#chat2:checked ~ #id .contenedor-chat3,
+#chat2:checked ~ #id .contenedor-chat4{
+    display:none;
+}
+#chat3:checked ~ #id .contenedor-chat1,
+#chat3:checked ~ #id .contenedor-chat2,
+#chat3:checked ~ #id .contenedor-chat4{
+    display:none;
+}
+#chat4:checked ~ #id .contenedor-chat1,
+#chat4:checked ~ #id .contenedor-chat2,
+#chat4:checked ~ #id .contenedor-chat3{
+    display:none;
+}

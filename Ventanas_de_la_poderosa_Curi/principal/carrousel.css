@@ -1,0 +1,27 @@
+
+.container{
+    margin-top: 23px;
+    width: 60%;
+}
+.carousel-item{
+    height: 400px;
+}
+.carousel-inner{
+    margin: none;
+}
+
+.d-block{
+    border-radius: 5px;
+    height: 400px;
+}
+
+
+.preguntas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.texto{
+    background-color:rgba(255, 255, 255, 0.432) ;
+    color: #521d75;
+}

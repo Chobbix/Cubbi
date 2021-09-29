@@ -4,14 +4,12 @@
 }
 .bloque_contenedor{
     width: 100%;
-    height: 80%;
     display: flex;
 }
 .video{
     width: 80%;
-    height: 100vh;
 }
-.informacion{    
+.informacion{  
     height: 100vh;
     width: 20%;
 }
@@ -36,9 +34,8 @@
     height: 50%;
 }
 .video_contenido{
-    
+    margin-top: 25px;
     width: 100%;
-    height: 100%;
 }
 .subtema{
     width: 100%;
@@ -56,4 +53,20 @@
 .btn_regreso{ 
     margin: 0 auto;
     display: flex;
+}
+
+.end_curso{
+    background-color: white;
+    width: 50%;
+    height: 50px;
+    border: none;
+    align-content: center;
+    text-align: center;
+}
+.end_curso:hover{
+    background-color:wheat;
+}
+.end_curso:active{
+    width: 45%;
+    height: 45px;
 }

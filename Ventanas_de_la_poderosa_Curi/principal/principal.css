@@ -158,28 +158,5 @@ scroll-container {
     right: -240px;
     top:-2px
 }
+
 /*Carrusel*/
-.container{
-    margin-top: 25px;
-    width: 50%;
-    height: 50%;
-
-}
-.carousel-inner{
-    margin: none;
-}
-
-.d-block{
-    border-radius: 5px;
-}
-
-.preguntas{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.texto{
-    background-color:rgba(255, 255, 255, 0.432) ;
-    color: #521d75;
-}

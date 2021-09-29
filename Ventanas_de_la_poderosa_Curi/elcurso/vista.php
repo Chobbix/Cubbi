@@ -48,6 +48,8 @@
                             <label for="Visualizacion" class="design"><h3 class=ds_btm>Informacion</h3></label>
                             <label for="Archivos" class="design"> <h3 class=ds_btm>Clases y Archivos</h3> </label>
                             <label for="Comentarios" class="design"> <h3 class=ds_btm>Comentarios</h3> </label>
+                            <label for="Comentarios" class="design"> <a href="../chat/chat.php"> <h3 class=ds_btm>Mensaje privado </h3> </a> </label>
+                            
                         </div>
                         <div class="contenedor_info " id="componentes_cabecra">
                             <div class="contenido_informacion">

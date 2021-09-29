@@ -184,11 +184,15 @@ input[type="radio"]{
     justify-items: center;
     align-items: center;
 }
+.perfil{
+    margin-right: 15px;
+}
 .fotoynick{
     display: flex;
     justify-items: center;
     align-items: center;
 }
+
 .comment_add{
     background-color: #DEE0E9;
     border: none;

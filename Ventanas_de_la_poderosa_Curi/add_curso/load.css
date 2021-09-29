@@ -165,7 +165,11 @@ input[type="radio"]{
     margin-bottom: 10px; 
     justify-content: space-between;
 }
-
+.btn_edicion{
+    margin-top: 5px;
+    width: 150px;
+    margin-right: 5px;
+}
 .ds_delete{
     background-color:white;
     width: 100%;
@@ -252,6 +256,8 @@ input[type="radio"]{
 .puntuacion{
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-right: 15px;
 }
 .puntuacion i{
     margin-right: 15px;

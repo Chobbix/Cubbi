@@ -1,0 +1,69 @@
+.cabecera_ms{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+.contenido_cabecera{
+    width: 90%;
+    height: 50px;
+    background-color: #DAD8E6;
+}
+.contenido_cabecera h1{
+    margin-left: 15px;
+}
+strcoll-container{
+    display: block;
+    width: 90%;
+    height: 81vh;
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+.cont_mss{
+    margin-top: 15px;
+    width: 90%;
+}
+.mensaje_us{
+    display: flex;
+    width: 100%;
+    justify-content: right;
+}
+.mensaje_maestro{
+    display: flex;
+    width: 100%;
+}
+.mss_us{
+    background-color: #DEE0E9;
+    border-radius: 5px;
+    padding: 15px;
+    width: 45%;
+}
+.send_mss{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+}
+.ds_mss{
+    display: flex;
+    width: 90%;
+}
+.comment_add{
+    width: 90%;
+    border:none;
+    border-top: 3px solid #DEE0E9;
+    resize: none;
+    font-size: 25px;
+}
+.enviar{
+    margin-left: 15px;
+    background-color: transparent;
+    border: none;
+}
+.enviar:active{
+    width: 35px;
+}
+.fa-paper-plane{
+    font-size: 35px;
+}

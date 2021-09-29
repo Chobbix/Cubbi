@@ -1,0 +1,96 @@
+.modal{
+    position: fixed;
+    left: 0;
+    background: rgba(88, 58, 102, 0.575);
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+
+}
+
+.modal .contenido-modal{
+    width: 100%;
+    max-width: 650px; 
+    height: 420px;
+    position: fixed;
+    left: 50%;
+    transition: top .35s ease;
+    margin-left: -250px;
+    background: rgb(255, 242, 218);
+    border-radius:5px;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+header h1{
+    width: 100%;
+    margin-left: 25px;
+    color: #dad8e6;
+}
+.modal article{
+    height: 300px;    
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.modal:target{
+    opacity: 1;
+    top: 0;
+}
+.modal .btn-cerrar{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.modal:target .contenido-modal{
+    top: 30%;
+    transition: top .35s ease;
+}
+/*  */
+.x{
+    margin-top: 15px;
+    width: 50%;
+    padding: 5px;
+    margin-right: 15px;
+    
+}
+.cerrar{
+    text-align: right;
+}
+article{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.btones{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.btones i{
+    font-size: 40px;
+}
+.question{
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.bloque-editar {
+    width: 50%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.fas:hover{
+    color: #dad8e6;
+}
+.fas:active{
+    font-size: 35px;
+}

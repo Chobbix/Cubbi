@@ -191,10 +191,11 @@ input[type="radio"]{
     height: 100%;
 }
 .miniatura{
-    height: 46%;
+    height: 80%;
     
 }
 .titulo,.porcentaje{
+    font-size: 25px;
     text-align: center;
     height:16%;
     max-height: 16%;
@@ -202,7 +203,7 @@ input[type="radio"]{
 }
 .tittle-text{
     text-align: left;   
-    font-size: 20px;
+    font-size: 29px;
 }
 .texto{
     color: #c2bad4;

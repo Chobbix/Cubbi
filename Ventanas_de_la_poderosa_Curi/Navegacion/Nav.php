@@ -47,6 +47,7 @@
                 <li><a href="../Cursos/cursos.php" class="nav-item buscador "> <i class="fas fa-search"></i></a></li>
                 <li><a href="../carrito/cesta.php" class="nav-item"> <button class="btn-carrito "> <i class="fas fa-shopping-cart" class=""></i></button> </a></li>
                 <li><a href="../pag-us/info.php">  <i class="fas fa-graduation-cap"></i> </a></li>
+                <li><a href="../chat/chat.php"><i class="fas fa-comment"></i></a></li>
                 <?php include ("../Navegacion/perfil.php");?>
             
             </ul>
