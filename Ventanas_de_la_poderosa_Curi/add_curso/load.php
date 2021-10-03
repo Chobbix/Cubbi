@@ -98,7 +98,8 @@
                                 <div class="caja">
                                     <div class="subcaja caja_cap">
                                         <div class="bloque_nivel">
-                                            <h1>Seccion1</h1>
+                                            <h1>Tema1</h1>
+                                            
                                             <div class="cabecera_nivel">
                                                 <div class="capitulos">
                                                     <h1>Capitulo 1</h1>
@@ -115,6 +116,10 @@
                                                             <div class="btn_video">
                                                                 <h1> Subir documentos</h1>
                                                                 <input type="file" name="imagensubida" accept="" class="btn_enviar">
+                                                            </div>
+                                                            <div class="costo" id="boxcosto">
+                                                                <h1>Costo:</h1>
+                                                                <input type="text">
                                                             </div>
                                                         </div>
                                                     </div>

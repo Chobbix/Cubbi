@@ -369,3 +369,15 @@ input[type="radio"]{
     align-items: center;
     justify-items: center;
 }
+
+/**/
+.costo{
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+.costo input{
+    margin-left: 15px;
+    height: 50px;
+    font-size: 25px;
+}
