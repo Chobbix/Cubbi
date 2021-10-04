@@ -14,4 +14,16 @@ SELECT Usuarios.ID_Usuario as ID,
             from Usuarios
         inner join Roles on Roles.ID_Rol = Usuarios.ID_Rol;
 
+CREATE VIEW View_VideosCursos AS
+SELECT Capitulos.ID_Capitulo as ID,
+            Secciones.ID_Seccion as ID_Seccion,
+            Cursos.txt_Descripcion as Descripcion,
+            Capitulos.txt_Titulo as Titulo_Capitulo,
+            Capitulos.blob_vid as Video,
+            Capitulos.blob_docs as Imagen
+            from Capitulos
+        inner join Secciones on Secciones.ID_Seccion = Capitulos.ID_Seccion
+        inner join Cursos on Cursos.ID_Curso = Capitulos.ID_Curso;
+
 drop view View_Usuarios;
+drop VIEW View_VideosCursos;

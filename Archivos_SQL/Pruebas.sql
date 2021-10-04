@@ -1,5 +1,8 @@
 USE db_bdmm_pwci;
 
+DROP DATABASE db_bdmm_pwci;
+CREATE DATABASE db_bdmm_pwci;
+
 SELECT * FROM Roles;
 SELECT * FROM Categorias;
 SELECT * FROM Usuarios;
