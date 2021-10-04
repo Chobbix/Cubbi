@@ -13,14 +13,16 @@ body{
     background-color: #dce0f067;
 }
 .header{
-    background-color: #B8B7C9;
     height: 150px;
     width: 100%;
     position: static;
 }
 .nav{ 
+
+    
+    background-color: #B8B7C9;
     height: 150px;
-    width: 90%;
+    width: 100%;
     align-content: center;
     align-items: center;
     margin-left: 0;

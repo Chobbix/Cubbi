@@ -49,11 +49,9 @@
                 <li><a href="../pag-us/info.php">  <i class="fas fa-graduation-cap"></i> </a></li>
                 <li><a href="../chat/chat.php"><i class="fas fa-comment"></i></a></li>
                 <?php include ("../Navegacion/perfil.php");?>
-            
             </ul>
         </nav>
     </header>
-   
 
 </body>
 </html>

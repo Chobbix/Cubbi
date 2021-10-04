@@ -13,16 +13,27 @@
         <input type="radio" id="chat4" name="categoria" value="chat4">
         <div class="contenedor-categoria">
             <label for="chat1">
-                <h6 class="design-tittle">Chat1</h6>
+                <div class="chats">
+                    <h6 class="design-tittle">Chat1</h6>
+                </div>
             </label>
             <label for="chat2">
-                <h6 class="design-tittle">Chat2</h6>
+                <div class="chats">
+                    <h6 class="design-tittle">Chat2</h6>
+                </div>
+
             </label>
             <label for="chat3">
-                <h6 class="design-tittle">Chat3</h6>
+                <div class="chats">
+                    <h6 class="design-tittle">Chat3</h6>
+                </div>
+
             </label>
             <label for="chat4">
-                <h6 class="design-tittle"> Chat4</h6>
+                <div class="chats">
+                    <h6 class="design-tittle"> Chat4</h6>
+                </div>
+
             </label>
         </div>
         <div class="bloque-menu" id="id">
