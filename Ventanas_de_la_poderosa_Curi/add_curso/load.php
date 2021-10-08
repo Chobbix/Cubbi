@@ -98,7 +98,7 @@
                                 <div class="caja">
                                     <div class="subcaja caja_cap">
                                         <div class="bloque_nivel">
-                                            <h1>Tema1</h1>
+                                            <h1>Tema 1</h1>
                                             
                                             <div class="cabecera_nivel">
                                                 <div class="capitulos">
@@ -126,7 +126,7 @@
                                                 </div>
                                             </div>
                                             <div class="btd_addchap">
-                                                <button class="plus btn_cap">
+                                                <button class="plus btn_cap" NumeroSec="1" NumeroCap="1">
                                                     <i class="fas fa-plus-circle"></i>
                                                     <h5>Agregar otro capitulo</h5>
                                                 </button>
@@ -134,7 +134,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="btn_addsec">
+                                <div class="btn_addsec" NumeroSec="1">
                                     <button class="plus"><i class="fas fa-plus-circle"></i></button>
                                     <h5>Agregar otra seccion</h5>
                                 </div>
