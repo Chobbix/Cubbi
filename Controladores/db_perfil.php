@@ -12,12 +12,13 @@ $resultados = $select->query_select_Usuario_by_Perfil();
 $user;
 
 foreach($resultados as $row){
-    $user = new Usuario('', $row['Usuario'], $row['Contrasenia'], $row['Nombre_Completo'],  $row['Nombre_Completo'],  $row['Email'],  $row['Genero'], '');
+    $user = new Usuario('', $row['Usuario'], $row['Contrasenia'], $row['Nombre_Completo'],  $row['Nombre_Completo'],  $row['Email'],  $row['Genero'], $row['Fecha_Nacimiento']);
     $user->set_idUsuario($row['ID']);
     $user->set_Rol($row['Rol']);
-    $user->set_Edad($row['Genero']);
+    $user->set_Genero($row['Genero']);
     $user->set_Edad($row['Edad']);
     $user->set_FchaRegistro($row['Fecha_Registro']);
+    $user->set_FchaUltiCambio($row['Fecha_Cambio']);
     $user->set_img($row['Foto_Perfil']);
 }
 

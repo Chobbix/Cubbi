@@ -62,6 +62,9 @@
         function set_FchaUltiCambio($date_FchaUltiCambio) { $this->date_FchaUltiCambio = $date_FchaUltiCambio; }
         function get_FchaUltiCambio() { return $this->date_FchaUltiCambio; }
 
+        function set_FchaNac($date_FchaNac) { $this->date_FchaNac = $date_FchaNac; }
+        function get_FchaNac() { return $this->date_FchaNac; }
+
         function set_img($blob_img) { $this->blob_img = $blob_img; }
         function get_img() { return $this->blob_img; }
 
