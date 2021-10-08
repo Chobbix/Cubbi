@@ -25,18 +25,28 @@
         function query_select_Usuario_by_login() {
             $database = new DB;
             $conexion = $database->ConectarDB();
-            $resultados = mysqli_query($conexion, "call sp_Consultas ('Login', 0, 0, '{$this->txt_email}', '{$this->txt_password}')");
-            mysqli_close($conexion);
+            $sql = "call sp_Consultas ('Login', 0, 0, ?, ?)";
+            $statementSelect = $conexion->prepare($sql);
+            $statementSelect->execute(array($this->txt_email, $this->txt_password));
+            $rows = $statementSelect->fetchAll();
 
-            return $resultados;
+            //$resultados = mysqli_query($conexion, "call sp_Consultas ('Login', 0, 0, '{$this->txt_email}', '{$this->txt_password}')");
+            //mysqli_close($conexion);
+
+            return $rows;
         }
 
         function query_select_Usuario_by_Perfil() {
             $database = new DB;
             $conexion = $database->ConectarDB();
-            $resultados = mysqli_query($conexion, "call sp_Consultas ('Perfil', '{$this->id_Usuario}', 0, '', '')");
-            mysqli_close($conexion);
+            $sql = "call sp_Consultas ('Perfil', ?, 0, '', '')";
+            $statementSelect = $conexion->prepare($sql);
+            $statementSelect->execute(array($this->id_Usuario));
+            $rows = $statementSelect->fetchAll();
+            
+            //$resultados = mysqli_query($conexion, "call sp_Consultas ('Perfil', '{$this->id_Usuario}', 0, '', '')");
+            //mysqli_close($conexion);
 
-            return $resultados;
+            return $rows;
         }
     }

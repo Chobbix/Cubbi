@@ -6,14 +6,18 @@
         public $db;
 
         public function __construct() {
-            $this->servidor= "localhost";
+            $this->db= "db_bdmm_pwci";
+            $this->servidor= "mysql:host=localhost;dbname=$this->db";
             $this->usuario= "root";
             $this->contrasenia= "";
-            $this->db= "db_bdmm_pwci";
         }
 
         public function ConectarDB(){
-            $cnx= mysqli_connect($this->servidor, $this->usuario, $this->contrasenia, $this->db);
+            try{
+                $cnx= new PDO($this->servidor, $this->usuario, $this->contrasenia);
+            } catch(PDOException $e){
+                echo $e->getMessage();
+            }
             return $cnx;
         }
     }

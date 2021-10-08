@@ -1,7 +1,4 @@
 <!--Hola, soy un archivo PHP creado por Victor. Provecho Brenda-->
-<?php
-    require("PHP_Classes/usuarios.php");
-?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -17,22 +14,7 @@
     </head>
 <body>
 <?php
-    $conex;
-
-    if ($conex){
-        echo "Conexion exitosa <br><br>";
-    }
-    else {
-        echo "valiste Pito";
-    }
-
-    $resultados= mysqli_query($conex, "SELECT * FROM Roles");
-
-    while($consulta= mysqli_fetch_array($resultados)){
-        echo $consulta['txt_Nombre'] . "<br>";
-    }
-
-    mysqli_close($conex);
+    $a = 15;
 ?>
 </body>
 </html>

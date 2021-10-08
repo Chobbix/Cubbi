@@ -30,7 +30,6 @@ $(document).ready(function(){
         console.log(f);
 
         var mes = (f.getMonth() + 1).toString();
-        mes = "0" + mes;
 
         var dia = f.getDate().toString();
         dia = "0" + dia;
@@ -81,6 +80,7 @@ $(document).ready(function(){
         var isApesValid= expresiones.nombre.test($("[vali=apes]").val());
         var isEmailValid= expresiones.correo.test($("[vali=email]").val());
         var isFNacValid= ValidarFechaActual($("[vali=Fnac]").val());
+        console.log($("[vali=Fnac]").val());
 
         if(!isUsuarioValid) {
             MostrarMsgBox('Nombre de usuario Invalido', 'No se permiten caracteres especiales mas que el guion y guion bajo', 'error');
