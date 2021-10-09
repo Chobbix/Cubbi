@@ -92,9 +92,50 @@ $(document).ready(function(){
     });
 
     $(".save_btn").click(function(){
-        
-        $("[NumeroCap=1]").each(function(index, element){
-            alert($(element).text());
+        var titulo = $("#Titulo").val();
+        var descripcion = $("#Descripcion").val();
+        var categoria = $("#Categoria").val();
+        var duracion = $("#Duracion").val();
+        var costo = $("#Costo").val();
+        var tipoPago = $("#tipodepago").val();
+
+        var form_data = new FormData();
+        form_data.append('Titulo', titulo);
+        form_data.append('Descripcion', descripcion);
+        form_data.append('Categoria', categoria);
+        form_data.append('Duracion', duracion);
+        form_data.append('Costo', costo);
+        form_data.append('TipoPago', tipoPago);
+        form_data.append("img", document.getElementById('id_imgCurso').files[0]);
+
+        console.log(form_data);
+        $.ajax({
+            data: form_data,
+            url: '/Cubbi_BDM_PWCI/Controladores/db_agregar_curso.php',
+            method: 'POST',
+            contentType: false,
+            processData: false,
+        })
+        .done(function(result){
+            console.log(result);
+        })
+
+        .fail(function(result){
+            console.log("fallo");
         });
+
+        //$("[NumeroCap=1]").each(function(index, element){
+        //    alert($(element).text());
+        //});
     });
 });
+
+function sendRequest() {
+    var theObject = new XMLHttpRequest();
+    theObject.open('GET', '/Cubbi_BDM_PWCI/Controladores/db_agregar_curso.php', true);
+    theObject.setRequestHeader('Content-Type', 'aplication/x-ww-form-urlencoded');
+    theObject.onreadystatechange = function() {
+        console.log(theObject.responseText);
+    }
+    theObject.send();
+}

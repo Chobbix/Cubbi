@@ -22,3 +22,8 @@ call sp_Consultas ('Login', 0, 0, 'bre@gmail.com', 'Rito');
 SELECT * FROM view_usuarios;
 
 call sp_Usuarios('A', null, 1, 'Curi_23', '123', 'Brenda', 'Hernandez Garcia', 'bre@gmail.com', 'Femenino', '05/10/2021', NOW(), NOW(), null);
+
+INSERT INTO `db_bdmm_pwci`.`Categorias` (`ID_Categoria`, `txt_Nombre`, `txt_Descrpcion`) VALUES ('1', 'Programacion', 'Para la realizacion de buenos programas');
+
+call sp_Cursos('A', null, 2, 1, 5, 'titulo', 'descripcion', '20hrs', true, 250, null, null, true, false);
+
