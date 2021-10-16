@@ -49,4 +49,26 @@
 
             return $rows;
         }
+
+        function query_select_comentarios_by_curso($id_curso) {
+            $database = new DB;
+            $conexion = $database->ConectarDB();
+            $sql = "call sp_Consultas ('Comentarios', ?, 0, '', '')";
+            $statementSelect = $conexion->prepare($sql);
+            $statementSelect->execute(array($id_curso));
+            $rows = $statementSelect->fetchAll();
+            
+            return $rows;
+        }
+
+        function query_select_curso_by_id($id_curso) {
+            $database = new DB;
+            $conexion = $database->ConectarDB();
+            $sql = "call sp_Consultas ('Curso', ?, 0, '', '')";
+            $statementSelect = $conexion->prepare($sql);
+            $statementSelect->execute(array($id_curso));
+            $rows = $statementSelect->fetchAll();
+            
+            return $rows;
+        }
     }

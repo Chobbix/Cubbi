@@ -28,3 +28,7 @@ INSERT INTO `db_bdmm_pwci`.`Categorias` (`ID_Categoria`, `txt_Nombre`, `txt_Desc
 call sp_Cursos('A', null, 2, 1, 5, 'titulo', 'descripcion', '20hrs', true, 250, null, null, true, false);
 
 ALTER TABLE Cursos CHANGE blob_vid ruta_vid VARCHAR(200);
+
+select * from view_comentarios where ID_Curso = 1;
+
+call sp_Consultas('Comentarios', 1, 0, '', '');
