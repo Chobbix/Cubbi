@@ -44,7 +44,7 @@ CREATE TABLE Cursos (
     isPrecioGeneral		BOOL                    NOT NULL COMMENT 'En caso de que el precio del curso sea general se marca en esta columna',
     f_Precio			FLOAT                   NULL     COMMENT 'El precio en caso de que el precio del curso sea general',
 	blob_img			MEDIUMBLOB              NOT NULL COMMENT 'Imagen representativa del curso',
-    blob_vid      		MEDIUMBLOB              NULL     COMMENT 'Video de presentacion sobre el curso',
+    ruta_vid            VARCHAR(200)            NULL     COMMENT 'Video de presentacion sobre el curso',
     isAcitvo			BOOL    DEFAULT true    NOT NULL COMMENT 'Variable para ver si el curso sigue estando activo a inscripciones',
     isEdited            BOOL    DEFAULT false   NOT NULL COMMENT 'Variable para saber si la informacion del curso fue modificada',
     

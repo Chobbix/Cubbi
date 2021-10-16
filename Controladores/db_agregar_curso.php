@@ -24,9 +24,14 @@ $curso->set_isPrecioGeneral(true);
 $curso->set_precio($costo);
 
 $imgData =addslashes(file_get_contents($_FILES['img']['tmp_name']));
+
+$directorio = "../Archivos/Videos/";
+$archivo = $directorio.basename($_FILES['vid']['name']);
+move_uploaded_file($_FILES['img']['tmp_name'], $archivo);
+
 $curso->set_img($imgData);
 
 
-echo $curso->query_insert_curso();
+$curso->query_insert_curso();
 
 ?>

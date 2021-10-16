@@ -60,7 +60,7 @@
             try{
                 $database = new DB;
                 $conexion = $database->ConectarDB();
-                $sql = "call sp_Cursos('A', null, ?, ?, ?, ?, ?, ?, ?, ?, '{$this->blob_img}', null, true, false)";
+                $sql = "call sp_Cursos('A', null, ?, ?, ?, ?, ?, ?, ?, ?, '{$this->blob_img}', 'ruta', true, false)";
                 $statement = $conexion->prepare($sql);
                 $statement->execute(array($this->ID_Usuario, $this->ID_Categoria, $this->int_Niveles, $this->txt_Titulo, $this->txt_Descripcion, $this->txt_Duracion, $this->isPrecioGeneral, $this->f_Precio));
                 $statement->closeCursor();

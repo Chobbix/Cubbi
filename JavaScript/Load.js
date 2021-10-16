@@ -107,6 +107,7 @@ $(document).ready(function(){
         form_data.append('Costo', costo);
         form_data.append('TipoPago', tipoPago);
         form_data.append("img", document.getElementById('id_imgCurso').files[0]);
+        form_data.append("vid", document.getElementById('id_vidCurso').files[0]);
 
         console.log(form_data);
         $.ajax({
@@ -121,7 +122,7 @@ $(document).ready(function(){
         })
 
         .fail(function(result){
-            console.log("fallo");
+            console.log(result);
         });
 
         //$("[NumeroCap=1]").each(function(index, element){

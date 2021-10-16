@@ -27,3 +27,4 @@ INSERT INTO `db_bdmm_pwci`.`Categorias` (`ID_Categoria`, `txt_Nombre`, `txt_Desc
 
 call sp_Cursos('A', null, 2, 1, 5, 'titulo', 'descripcion', '20hrs', true, 250, null, null, true, false);
 
+ALTER TABLE Cursos CHANGE blob_vid ruta_vid VARCHAR(200);
