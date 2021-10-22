@@ -145,6 +145,29 @@ $(document).ready(function(){
                 console.log(vidCap);
                 console.log(docsCap);
                 console.log(costoCap);
+
+                var form_dataCap = new FormData();
+                form_dataCap.append('ID_Seccion', i);
+                form_dataCap.append('ID_Capitulo', iDos);
+                form_dataCap.append('Titulo', tituloCap);
+                form_dataCap.append('Costo', costoCap);
+                form_dataCap.append('Video', vidCap);
+                form_dataCap.append('Doc', docsCap);
+
+                $.ajax({
+                    data: form_dataCap,
+                    url: '/Cubbi_BDM_PWCI/Controladores/db_agregar_temas_capitulos.php',
+                    method: 'POST',
+                    contentType: false,
+                    processData: false,
+                })
+                .done(function(result){
+                    console.log(result);
+                })
+                
+                .fail(function(result){
+                    console.log(result);
+                });
             });
         });
     });
