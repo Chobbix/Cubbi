@@ -46,5 +46,5 @@ SELECT Comentarios_Cursos.txt_Comentario as Comentario,
 
 drop view View_Usuarios;
 drop VIEW View_VideosCursos;
+drop VIEW View_Curso;
 drop VIEW View_Comentarios;
-drop View_Curso;

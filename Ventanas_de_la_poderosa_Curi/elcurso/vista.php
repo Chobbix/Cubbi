@@ -38,7 +38,7 @@ require('../../Controladores/db_curso.php');
                 </div>
                 <div class="sub_bloque_contenido">
                     <h1 class="dis_bloque">
-                        <a href="../videos/videos.php">  <img src="../Multimedia/b.gif" alt="" class="miniatura"> </a>
+                        <a href="../videos/videos.php">  <img src="data:image/png;base64,<?php echo base64_encode($curso->get_img()); ?>" alt="" class="miniatura"> </a>
                     </h1>
                 </div>
             </div>

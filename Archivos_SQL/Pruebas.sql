@@ -32,3 +32,22 @@ ALTER TABLE Cursos CHANGE blob_vid ruta_vid VARCHAR(200);
 select * from view_comentarios where ID_Curso = 1;
 
 call sp_Consultas('Comentarios', 1, 0, '', '');
+
+INSERT INTO secciones (ID_Seccion, ID_Curso) VALUES (1, 5);
+INSERT INTO secciones (ID_Seccion, ID_Curso) VALUES (2, 5);
+INSERT INTO secciones (ID_Seccion, ID_Curso) VALUES (3, 5);
+INSERT INTO secciones (ID_Seccion, ID_Curso) VALUES (4, 5);
+
+INSERT INTO Capitulos (ID_Capitulo, ID_Seccion, ID_Curso, txt_Titulo, f_Precio, ruta_vid, ruta_docs) 
+	VALUES (1, 1, 5, 'Titulo', 25.5, 'ruta de video', 'ruta de documentos');
+INSERT INTO Capitulos (ID_Capitulo, ID_Seccion, ID_Curso, txt_Titulo, f_Precio, ruta_vid, ruta_docs) 
+	VALUES (2, 1, 5, 'Titulo', 25.5, 'ruta de video', 'ruta de documentos');
+INSERT INTO Capitulos (ID_Capitulo, ID_Seccion, ID_Curso, txt_Titulo, f_Precio, ruta_vid, ruta_docs) 
+	VALUES (3, 2, 5, 'Titulo', 25.5, 'ruta de video', 'ruta de documentos');
+INSERT INTO Capitulos (ID_Capitulo, ID_Seccion, ID_Curso, txt_Titulo, f_Precio, ruta_vid, ruta_docs) 
+	VALUES (4, 2, 5, 'Titulo', 25.5, 'ruta de video', 'ruta de documentos');
+
+ALTER TABLE Capitulos CHANGE blob_vid ruta_vid VARCHAR(200);
+ALTER TABLE Capitulos CHANGE blob_docs ruta_docs VARCHAR(200);
+
+select * from view_curso;

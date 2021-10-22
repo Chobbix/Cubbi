@@ -38,6 +38,7 @@ if($_GET["curso"]) {
         $curso->set_titulo($row['Titulo']);
         $curso->set_descripcion($row['Descripcion']);
         $curso->set_duracion($row['Duracion']);
+        $curso->set_img($row['Imagen']);
     }
 }
 

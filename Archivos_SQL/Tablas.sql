@@ -67,8 +67,8 @@ CREATE TABLE Capitulos (
 	ID_Curso			INT             NOT NULL COMMENT 'Clave foranea del curso del capitulo',
     txt_Titulo  		VARCHAR(200)    NOT NULL COMMENT 'Titulo del capitulo',
     f_Precio			FLOAT           NULL     COMMENT 'Precio del capitulo',
-	blob_vid			MEDIUMBLOB      NOT NULL COMMENT 'Video del capitulo',
-	blob_docs			MEDIUMBLOB      NOT NULL COMMENT 'Documento relacionado al capitulo',
+	ruta_vid			VARCHAR(200)    NOT NULL COMMENT 'Video del capitulo',
+	ruta_docs			VARCHAR(200)    NOT NULL COMMENT 'Documento relacionado al capitulo',
     
 	CONSTRAINT pk_cap PRIMARY KEY (ID_Curso, ID_Seccion, ID_Capitulo),
     CONSTRAINT fk_cap_sec FOREIGN KEY (ID_Curso, ID_Seccion) REFERENCES Secciones (ID_Curso, ID_Seccion)

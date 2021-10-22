@@ -110,24 +110,43 @@ $(document).ready(function(){
         form_data.append("vid", document.getElementById('id_vidCurso').files[0]);
 
         console.log(form_data);
-        $.ajax({
-            data: form_data,
-            url: '/Cubbi_BDM_PWCI/Controladores/db_agregar_curso.php',
-            method: 'POST',
-            contentType: false,
-            processData: false,
-        })
-        .done(function(result){
-            console.log(result);
-        })
-
-        .fail(function(result){
-            console.log(result);
-        });
-
-        //$("[NumeroCap=1]").each(function(index, element){
-        //    alert($(element).text());
+        //$.ajax({
+        //    data: form_data,
+        //    url: '/Cubbi_BDM_PWCI/Controladores/db_agregar_curso.php',
+        //    method: 'POST',
+        //    contentType: false,
+        //    processData: false,
+        //})
+        //.done(function(result){
+        //    console.log(result);
+        //})
+        
+        //.fail(function(result){
+        //    console.log(result);
         //});
+
+        $(".bloque_nivel").each(function(index, element){
+            var i = index + 1;
+            alert("Tema: " + i);
+
+            $($(element).children(".cabecera_nivel").children()).each(function(index, element){
+                var iDos = index + 1;
+                alert("Capitulo: " + iDos);
+
+                var divContenido = $(element).children(".contenido");
+                var divContenidos = $(divContenido).children(".btn_contenidos");
+
+                var tituloCap = $($(divContenido).children(".nombre_del_subcapitulo").children("input")).val();
+                var vidCap = $($(divContenidos).children(".btn_video1").children("input"))[0].files[0];
+                var docsCap = $($(divContenidos).children(".btn_video").children("input"))[0].files[0];
+                var costoCap = $($(divContenidos).children(".costo").children("input")).val();
+
+                console.log(tituloCap);
+                console.log(vidCap);
+                console.log(docsCap);
+                console.log(costoCap);
+            });
+        });
     });
 });
 

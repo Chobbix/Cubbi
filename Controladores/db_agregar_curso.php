@@ -27,9 +27,10 @@ $imgData =addslashes(file_get_contents($_FILES['img']['tmp_name']));
 
 $directorio = "../Archivos/Videos/";
 $archivo = $directorio.basename($_FILES['vid']['name']);
-move_uploaded_file($_FILES['img']['tmp_name'], $archivo);
+move_uploaded_file($_FILES['vid']['tmp_name'], $archivo);
 
 $curso->set_img($imgData);
+$curso->set_video($_FILES['vid']['name']);
 
 
 $curso->query_insert_curso();
