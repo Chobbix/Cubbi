@@ -56,3 +56,5 @@ select MAX(ID_Curso), txt_titulo from cursos;
 
 CALL sp_Capitulos('A', 3, 2, 6, 'Titulo', '-25.5', 'ruta de video', 'ruta de documentos');
 drop trigger insertar_seccion;
+
+call sp_Secciones('A', 0, 8);

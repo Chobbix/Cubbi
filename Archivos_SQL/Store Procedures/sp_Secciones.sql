@@ -9,7 +9,7 @@ CREATE PROCEDURE sp_Secciones (
 )
 BEGIN
 	IF opc = 'A' THEN
-		INSERT INTO Secciones (Capitulos.ID_Seccion, Capitulos.ID_Curso) 
+		INSERT INTO Secciones (Secciones.ID_Seccion, Secciones.ID_Curso) 
             VALUES (ID_Seccion, Max_Cursos());
     END IF;
 END

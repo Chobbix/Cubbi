@@ -110,24 +110,42 @@ $(document).ready(function(){
         form_data.append("vid", document.getElementById('id_vidCurso').files[0]);
 
         console.log(form_data);
-        //$.ajax({
-        //    data: form_data,
-        //    url: '/Cubbi_BDM_PWCI/Controladores/db_agregar_curso.php',
-        //    method: 'POST',
-        //    contentType: false,
-        //    processData: false,
-        //})
-        //.done(function(result){
-        //    console.log(result);
-        //})
+        $.ajax({
+            data: form_data,
+            url: '/Cubbi_BDM_PWCI/Controladores/db_agregar_curso.php',
+            method: 'POST',
+            contentType: false,
+            processData: false,
+        })
+        .done(function(result){
+            console.log(result);
+        })
         
-        //.fail(function(result){
-        //    console.log(result);
-        //});
+        .fail(function(result){
+            console.log(result);
+        });
 
         $(".bloque_nivel").each(function(index, element){
             var i = index + 1;
             alert("Tema: " + i);
+
+            var form_datasec = new FormData();
+            form_datasec.append('ID_Seccion', i);
+
+            $.ajax({
+                data: form_datasec,
+                url: '/Cubbi_BDM_PWCI/Controladores/db_agregar_temas.php',
+                method: 'POST',
+                contentType: false,
+                processData: false,
+            })
+            .done(function(result){
+                console.log(result);
+            })
+            
+            .fail(function(result){
+                console.log(result);
+            });
 
             $($(element).children(".cabecera_nivel").children()).each(function(index, element){
                 var iDos = index + 1;
@@ -156,7 +174,7 @@ $(document).ready(function(){
 
                 $.ajax({
                     data: form_dataCap,
-                    url: '/Cubbi_BDM_PWCI/Controladores/db_agregar_temas_capitulos.php',
+                    url: '/Cubbi_BDM_PWCI/Controladores/db_agregar_capitulos.php',
                     method: 'POST',
                     contentType: false,
                     processData: false,
