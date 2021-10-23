@@ -3,7 +3,6 @@
 session_start();
 
 require("../PHP_Classes/conexion.php");
-require("../PHP_Classes/consultas.php");
 require("../PHP_Classes/capitulos.php");
 
 $ID_Seccion = $_POST['ID_Seccion'];

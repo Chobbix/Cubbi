@@ -51,3 +51,8 @@ ALTER TABLE Capitulos CHANGE blob_vid ruta_vid VARCHAR(200);
 ALTER TABLE Capitulos CHANGE blob_docs ruta_docs VARCHAR(200);
 
 select * from view_curso;
+
+select MAX(ID_Curso), txt_titulo from cursos;
+
+CALL sp_Capitulos('A', 3, 2, 6, 'Titulo', '-25.5', 'ruta de video', 'ruta de documentos');
+drop trigger insertar_seccion;
