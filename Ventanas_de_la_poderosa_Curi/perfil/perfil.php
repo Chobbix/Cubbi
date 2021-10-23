@@ -20,7 +20,7 @@ require('../../Controladores/db_perfil.php');
     </div>
     <div class="contenedor">
         <div class="cabecera">
-            <img src="../Multimedia/a.gif" alt="" class="usperfil ">
+            <img src="data:image/png;base64,<?php echo base64_encode($user->get_img()); ?>" alt="" class="usperfil ">
             <h1 class="usname"><?php echo $user->get_NomUser(); ?></h1>
         </div>
         <div class="grupo">

@@ -58,3 +58,5 @@ CALL sp_Capitulos('A', 3, 2, 6, 'Titulo', '-25.5', 'ruta de video', 'ruta de doc
 drop trigger insertar_seccion;
 
 call sp_Secciones('A', 0, 8);
+
+call sp_Usuarios('img', 3, 0, 'juan231', '', '', '', '', '', null, null, null, null)

@@ -91,14 +91,20 @@
             }catch(Exception $e) {
                 echo $e;
             }
+        }
 
+        function query_update_imgPerfil_nickname() {
+            try{
+                $database = new DB;
+                $conexion = $database->ConectarDB();
+                $sql = "call sp_Usuarios('img', ?, 0, ?, '', '', '', '', '', null, null, null, '{$this->blob_img}')";
+                $statement = $conexion->prepare($sql);
+                $statement->execute(array($this->id_Usuario, $this->txt_NomUser));
+                $statement->closeCursor();
 
-
-            //$conexion->query("call sp_Usuarios('A', null, {$this->id_Rol}, '{$this->txt_NomUser}', '{$this->txt_Contra}', '{$this->txt_Nom}', '{$this->txt_ApePat}', '{$this->txt_Email}', '{$this->txt_Genero}', '{$this->date_FchaNac}', NOW(), NOW(), null)");
-
-
-            //mysqli_query($conexion, "call sp_Usuarios('A', null, {$this->id_Rol}, '{$this->txt_NomUser}', '{$this->txt_Contra}', '{$this->txt_Nom}', '{$this->txt_ApePat}', '{$this->txt_Email}', '{$this->txt_Genero}', '{$this->date_FchaNac}', NOW(), NOW(), null)");
-            //mysqli_close($conexion);
+            }catch(Exception $e) {
+                echo $e;
+            }
         }
     }
 ?>
