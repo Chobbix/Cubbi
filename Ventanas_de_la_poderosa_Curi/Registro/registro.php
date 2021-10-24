@@ -57,7 +57,7 @@
                         <h1>Confirmar contraseña</h1>
                         <input type="password" id="inputsearch" placeholder="Contraseña" class="diseno-input" vali="contraConfi">
                     </div>
-                    <a href="../Cursos/cursos.php"> <button class="btn-inicio"> Registrarse</button> </a>
+                    <button class="btn-inicio"> Registrarse</button>
                 </form>
             </div>
         </div>

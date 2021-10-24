@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+
+<?php
+require('../../Controladores/db_perfil.php');
+?>
+
 <html lang="en">
 
 <head>
@@ -21,15 +25,15 @@
     </div>
     <div class="contenedor">
         <div class="cabecera">
-            <img src="../Multimedia/a.gif" alt="" class="usperfil ">
-            <h1 class="usname">nombre</h1>
+            <img src="data:image/png;base64,<?php echo base64_encode($user->get_img()); ?>" alt="" class="usperfil ">
+            <h1 class="usname"><?php echo $user->get_NomUser(); ?></h1>
         </div>
         <div class="grupo">
             <div class="subgrupo-info-us">
                 <div class="info-personal">
                     <h1> Informacion personal</h1>
-                    <h3>Cuenta creada desde el 2021</h3>
-                    <h3>Fecha de nacimiento:</h3>
+                    <h3>Cuenta creada desde el: <?php echo $user->get_FchaRegistro(); ?> </h3>
+                    <h3>Fecha de nacimiento: <?php echo $user->get_FchaNac(); ?> </h3>
                     <hr>
                     <div class="responder">
                         <a href="#modal" id="mostrar">
@@ -38,7 +42,7 @@
                     </div>
 
                     <hr>
-                    <h5>Ultimo cambio realizado: 01 sep 2021</h5>
+                    <h5>Ultimo cambio realizado: <?php echo $user->get_FchaUltiCambio(); ?></h5>
                 </div>
             </div>
             <div class="subgrupo-info-cursos">

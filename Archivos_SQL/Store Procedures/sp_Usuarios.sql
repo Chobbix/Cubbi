@@ -3,7 +3,7 @@ DROP PROCEDURE sp_Usuarios;
 
 DELIMITER $$
 CREATE PROCEDURE sp_Usuarios (
-	in opc					VARCHAR(1),
+	in opc					VARCHAR(20),
     in ID_Usuario			INT,
     in ID_Rol				INT,
     in txt_NomUser			VARCHAR(20),
@@ -27,6 +27,10 @@ BEGIN
     
 	IF opc = 'B' THEN
 		DELETE FROM Usuarios WHERE Usuarios.ID_Usuario = ID_Usuario;
+    END IF;
+
+    IF opc = 'img' THEN
+		UPDATE Usuarios SET Usuarios.blob_img= blob_img WHERE Usuarios.ID_Usuario= ID_Usuario;
     END IF;
 END
 $$

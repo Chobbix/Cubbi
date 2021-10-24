@@ -62,15 +62,49 @@
         function set_FchaUltiCambio($date_FchaUltiCambio) { $this->date_FchaUltiCambio = $date_FchaUltiCambio; }
         function get_FchaUltiCambio() { return $this->date_FchaUltiCambio; }
 
+        function set_FchaNac($date_FchaNac) { $this->date_FchaNac = $date_FchaNac; }
+        function get_FchaNac() { return $this->date_FchaNac; }
+
         function set_img($blob_img) { $this->blob_img = $blob_img; }
         function get_img() { return $this->blob_img; }
 
 
         function query_insert_Usuario() {
-            $database = new DB;
-            $conexion = $database->ConectarDB();
-            mysqli_query($conexion, "call sp_Usuarios('A', null, {$this->id_Rol}, '{$this->txt_NomUser}', '{$this->txt_Contra}', '{$this->txt_Nom}', '{$this->txt_ApePat}', '{$this->txt_Email}', '{$this->txt_Genero}', '{$this->date_FchaNac}', NOW(), NOW(), null)");
-            mysqli_close($conexion);
+            try{
+                $id = 0;
+                $database = new DB;
+                $conexion = $database->ConectarDB();
+                $sql = "call sp_Usuarios('A', null, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW(), null)";
+                $statement = $conexion->prepare($sql);
+                $statement->execute(array($this->id_Rol, $this->txt_NomUser, $this->txt_Contra, $this->txt_Nom, $this->txt_ApePat, $this->txt_Email, $this->txt_Genero, $this->date_FchaNac));
+                $statement->closeCursor();
+
+                $sqlSelct = "call sp_Consultas ('Login', 0, 0, ?, ?)";
+                $statementSelect = $conexion->prepare($sqlSelct);
+                $statementSelect->execute(array($this->txt_Email, $this->txt_Contra));
+                while($row=$statementSelect->fetch(PDO::FETCH_ASSOC)) {
+                    $id = $row['ID_Usuario'];
+                }
+                $statementSelect->closeCursor();
+
+                return $id;
+            }catch(Exception $e) {
+                echo $e;
+            }
+        }
+
+        function query_update_imgPerfil_nickname() {
+            try{
+                $database = new DB;
+                $conexion = $database->ConectarDB();
+                $sql = "call sp_Usuarios('img', ?, 0, ?, '', '', '', '', '', null, null, null, '{$this->blob_img}')";
+                $statement = $conexion->prepare($sql);
+                $statement->execute(array($this->id_Usuario, $this->txt_NomUser));
+                $statement->closeCursor();
+
+            }catch(Exception $e) {
+                echo $e;
+            }
         }
     }
 ?>

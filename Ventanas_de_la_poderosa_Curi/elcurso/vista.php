@@ -1,3 +1,7 @@
+<?php
+require('../../Controladores/db_curso.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +24,7 @@
                 <div class="sub_bloque_contenido">
                     <div class="dis_bloque">
                         <div class="cabecera_titulo">                            
-                            <div class=""> <h1 class="text">*Nombre curso*</h1></div>
+                            <div class=""> <h1 class="text"> <?php echo $curso->get_titulo(); ?> </h1></div>
                             <div class=""> *impartido por: Brenda*</div>
                         </div>
                         <div class="">
@@ -34,7 +38,7 @@
                 </div>
                 <div class="sub_bloque_contenido">
                     <h1 class="dis_bloque">
-                        <a href="../videos/videos.php">  <img src="../Multimedia/b.gif" alt="" class="miniatura"> </a>
+                        <a href="../videos/videos.php?curso=<?php echo $curso->get_idCurso();?>&tem=1&cap=1">  <img src="data:image/png;base64,<?php echo base64_encode($curso->get_img()); ?>" alt="" class="miniatura"> </a>
                     </h1>
                 </div>
             </div>
@@ -67,7 +71,7 @@
                                         </div>
                                         <div class="sep">
                                             <h1>Descripcion:</h1> 
-                                            <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis quibusdam id ex numquam cupiditate sunt eum sapiente voluptate nesciunt! Voluptas molestias nihil corporis odit quisquam iusto aperiam animi natus ex?</h2></div>
+                                            <h2> <?php echo $curso->get_descripcion(); ?> </h2></div>
                                         <div class="actualizacion">
                                             <h3 class="date_update">Actualizado el:</h3>
                                             <h3 class="date_update">3 de octubre 2019</h3>
@@ -121,16 +125,21 @@
                                                 
 
                                             </div>
-                                            <div class="contenedor_coment">
-                                                <?php include ("../Curso/caja_comment.php");?>     
-                                            </div>    
-                                            <div class="contenedor_coment">
-                                                <?php include ("../Curso/caja_comment.php");?>     
-                                            </div>    
-                                            <div class="contenedor_coment">
-                                                <?php include ("../Curso/caja_comment.php");?>     
-                                            </div>    
-                                        </div>                  
+
+                                            <?php 
+                                            
+                                            if($_GET['curso']){
+                                                $consulta = new Consulta();
+                                                $resultados = $consulta->query_select_comentarios_by_curso($_GET['curso']);
+
+                                                foreach($resultados as $row) {
+                                                    include ("../Curso/caja_comment.php");
+                                                }
+                                            }
+
+                                            ?>
+
+                                        </div>
                                     
                                         </div>    
                                 </div>  

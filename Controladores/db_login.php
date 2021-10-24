@@ -13,8 +13,8 @@ $select->setTxt_password($password);
 $resultados = $select->query_select_Usuario_by_login();
 $id_usu;
 
-while($consulta = mysqli_fetch_array($resultados)){
-    $id_usu = $consulta['ID_Usuario'];
+foreach($resultados as $row){
+    $id_usu = $row['ID_Usuario'];
 }
 
 session_start();
