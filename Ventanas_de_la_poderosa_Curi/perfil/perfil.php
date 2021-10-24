@@ -1,13 +1,18 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="./perfil.css">
-    <link rel="stylesheet" href="/Cubbi_BDM_PWCI/Ventanas_de_la_poderosa_Curi/Navegacion/nav.css">
+    <link rel="stylesheet" href="../Navegacion/nav.css">
+    
     <link rel="stylesheet" href="../modal/contmodal.css">
     <title>Document</title>
+    
 </head>
 
 <body>

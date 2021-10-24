@@ -54,7 +54,7 @@
                                         <h1>Categoria</h1>
                                         <input type="text" placeholder="Programacion, manualidades, etc." class="text_input">
                                         <h1>Categoria</h1>
-                                        <select name="Categorias" id="categorias"  class="text_input">
+                                        <select name="Categorias" id="categorias"  class="text_input" multiple>
                                             <option value="curso1">Curso1</option>
                                             <option value="curso2">Curso2</option>
                                             <option value="curso3">Curso3</option>

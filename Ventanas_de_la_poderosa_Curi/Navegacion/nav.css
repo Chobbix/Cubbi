@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -7,11 +8,11 @@
     
 }
 
+
 body{
     border: none;
     list-style: none;
     text-decoration: none;
-
     background-color: #dce0f067;
 
 }
@@ -52,6 +53,7 @@ ul {
 .nav-item{
     width: max-content;
 }
+
 
 .fas{
     color: #7c7096;
@@ -212,6 +214,7 @@ scroll-container {
 }
 
 /*--------------------------------*/
+
 .nav-perfil li a{  
     text-decoration: none;
     padding: 10px 15px;

@@ -25,7 +25,7 @@ $(document).ready(function(){
 
     function AgregarSeccion(){
         var html = "<div class='bloque_nivel'>";
-            html += "<h1>Seccion1</h1>";
+            html += "<h1>Tema1</h1>";
             html += "<div class='cabecera_nivel'>";
             html += "<div class='capitulos'>";
             html += "<h1>Capitulo 1</h1>";

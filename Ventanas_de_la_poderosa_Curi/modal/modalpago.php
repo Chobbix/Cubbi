@@ -1,7 +1,7 @@
 <aside id="modal" class="modal"> 
     <div class="contenido-modal"> 
         <header>
-            <h1>Editor</h1>
+            <h1>Pago</h1>
             <a href="#" class="cerrar"> <h3 class="x"> <i class="fas fa-times-circle"></i> </h3> </a>
         </header>
         <article>
@@ -13,7 +13,7 @@
                     <label for="Respuestas"><h6 class="design-tittle">Paypal</h6> </label>                                      
                 </div>
                 <div class="bloque-menu"  id="Registro">
-                <scroll-container>
+                <scroll-container class="modal_scroll">
                     <div class="bloque-contenido">
                         <div class="contenedor-Preg" >
                             <div class="bloque-editar">
