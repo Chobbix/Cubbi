@@ -15,15 +15,12 @@ SELECT Usuarios.ID_Usuario as ID,
         inner join Roles on Roles.ID_Rol = Usuarios.ID_Rol;
 
 CREATE VIEW View_VideosCursos AS
-SELECT Capitulos.ID_Capitulo as ID,
-            Secciones.ID_Seccion as ID_Seccion,
-            Cursos.txt_Descripcion as Descripcion,
-            Capitulos.txt_Titulo as Titulo_Capitulo,
-            Capitulos.ruta_vid as Video,
-            Capitulos.ruta_docs as Imagen
-            from Capitulos
-        inner join Secciones on Secciones.ID_Seccion = Capitulos.ID_Seccion
-        inner join Cursos on Cursos.ID_Curso = Capitulos.ID_Curso;
+SELECT Capitulos.ID_Curso as Curso,
+            Capitulos.ID_Seccion as Tema,
+            Capitulos.ID_Capitulo as Capitulo,
+            Capitulos.txt_Titulo as Titulo,
+            Capitulos.ruta_vid as Video
+            from Capitulos;
 
 CREATE VIEW View_Curso AS
 SELECT Cursos.ID_Curso as ID,

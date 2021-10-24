@@ -29,6 +29,21 @@ BEGIN
         SELECT Comentario, Fecha, Usuario, img, ID_Curso, ID_Usuario FROM View_Comentarios
             WHERE ID_Curso = id1;
     END IF;
+
+    IF opc = 'Videos' THEN
+        SELECT Curso, Tema, Capitulo, Titulo, Video FROM View_VideosCursos
+            WHERE Curso = id1;
+    END IF;
+
+    IF opc = 'Videos_Mostrar' THEN
+        SELECT Curso, Tema, Capitulo, Titulo, Video FROM View_VideosCursos
+            WHERE Curso = id1 AND Tema = $id2;
+    END IF;
+
+    IF opc = 'Secciones' THEN
+        SELECT ID_Seccion FROM Secciones
+            WHERE ID_Curso = id1;
+    END IF;
 END
 $$
 DELIMITER ;

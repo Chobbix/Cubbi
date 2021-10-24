@@ -71,4 +71,26 @@
             
             return $rows;
         }
+
+        function query_select_capitulos_by_curso($id_curso) {
+            $database = new DB;
+            $conexion = $database->ConectarDB();
+            $sql = "call sp_Consultas ('Videos', ?, 0, '', '')";
+            $statementSelect = $conexion->prepare($sql);
+            $statementSelect->execute(array($id_curso));
+            $rows = $statementSelect->fetchAll();
+            
+            return $rows;
+        }
+
+        function query_select_secciones_by_curso($id_curso) {
+            $database = new DB;
+            $conexion = $database->ConectarDB();
+            $sql = "call sp_Consultas ('Secciones', ?, 0, '', '')";
+            $statementSelect = $conexion->prepare($sql);
+            $statementSelect->execute(array($id_curso));
+            $rows = $statementSelect->fetchAll();
+            
+            return $rows;
+        }
     }

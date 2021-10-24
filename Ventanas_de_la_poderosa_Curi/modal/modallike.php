@@ -2,7 +2,7 @@
     <div class="contenido-modal">
         <header>
             <h1></h1>
-            <a href="#" class="cerrar">
+            <a href="" class="cerrar">
                 <h3 class="x"> <i class="fas fa-times-circle"></i> </h3>
             </a>
         </header>
