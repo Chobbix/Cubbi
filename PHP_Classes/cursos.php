@@ -13,6 +13,7 @@
         private $blob_vid;
         private $isAcitvo;
         private $isEdited;
+        private $txt_profesor;
 
         public function __construct() {
         }
@@ -55,6 +56,9 @@
 
         function set_isEdited($isEdited) { $this->isEdited = $isEdited; }
         function get_isEdited() { return $this->isEdited; }
+
+        public function set_profesor($txt_profesor) { $this->txt_profesor = $txt_profesor; }
+        public function get_profesor() { return $this->txt_profesor; }
 
         public function query_insert_curso() {
             try{

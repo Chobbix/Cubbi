@@ -39,6 +39,7 @@ if(isset($_GET["curso"])) {
         $curso->set_descripcion($row['Descripcion']);
         $curso->set_duracion($row['Duracion']);
         $curso->set_img($row['Imagen']);
+        $curso->set_profesor($row['Profesor']);
     }
 }
 
