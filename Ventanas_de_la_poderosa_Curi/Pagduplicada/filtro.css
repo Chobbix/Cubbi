@@ -1,0 +1,50 @@
+
+.accordion{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.accordion-item{
+    margin-bottom: 5px;
+}
+.accordion-link{
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.answer{                      /*se cierra*/
+    display: flex;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden; /*ocultamos  la palabra capitulo*/
+    position: relative;
+}
+
+.accordion-item:target .answer{  /*van apareciendo los cuadros*/
+    max-height: 20rem; 
+}
+
+.bloque_filtro{
+    width: 100%;
+    margin-right: 80px;
+}
+.bloque_filtro a{
+    font-size: 25px;
+}
+.contenido_filto{
+    width: 100%;
+    display: flex;
+}
+.busq{
+    display:flex ;
+    justify-content: center;
+    margin-top: 25px;
+}
+.us_busq{
+    width: 50%;
+    height:50px;
+    border: 1px white solid;
+    background-color: rgb(255, 242, 218) ;
+}

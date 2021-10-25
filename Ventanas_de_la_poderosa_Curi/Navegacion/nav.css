@@ -151,16 +151,16 @@ ul {
 .longitud {
     height: 204px;
 }
-scroll-container {
+.scroll_nav {
     display: block;
     height: 200px;
     overflow-y: scroll;
     scroll-behavior: smooth;
 }
-::-webkit-scrollbar {
+.scroll_nav::-webkit-scrollbar {
     width: 2px;
 }  
-::-webkit-scrollbar-thumb {
+.scroll_nav::-webkit-scrollbar-thumb {
     background: rgb(0, 0, 0); 
     border-radius: 5px;
 }

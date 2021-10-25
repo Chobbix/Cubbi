@@ -1,0 +1,40 @@
+
+h1{
+    font-family: 'Yusei Magic', sans-serif;
+}
+h2{
+    font-family: 'Harmattan', sans-serif;
+}
+.cubo1 {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.cubo1 .Estudiante{
+    position: absolute;
+    top: 280px;
+    left: 30%;
+    font-size: 70px;
+    color: #ce9f7b
+}
+.cubo1 .Curso{
+    position: absolute;
+    top: 580px;
+    left: 35%;
+    font-size: 50px;
+    color:#7073ab;
+}
+.cubo1 .Fecha{
+    position: absolute;
+    top: 725px;
+    left: 21%;
+    font-size: 50px;
+    color:#7073ab;
+}
+.cubo1 .Maesto{
+    position: absolute;
+    top: 849px;
+    left: 31%;
+    font-size: 50px;
+    color:#7073ab;
+}

@@ -13,9 +13,10 @@
 .columla{
     display: flex;
     justify-content: center;
+    
 }
 .contenedor{   
-    height: 380px;
+    height: 450px;
     width: 25%;
     margin-right: 25px;
 }  

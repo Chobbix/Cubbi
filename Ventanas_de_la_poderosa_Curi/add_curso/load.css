@@ -68,6 +68,28 @@ input[type="radio"]{
     border: none;
     background-color: #ffffff;
 }
+.select{
+    width: 50%;
+    height: 90px;
+    font-size: 30px;
+    border: none;
+    background-color: #ffffff;
+}
+
+.scroll_select {
+    
+    display: block;
+    height: 200px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+.scroll_select::-webkit-scrollbar {
+    width: 2px;
+}  
+.scroll_select::-webkit-scrollbar-thumb {
+    background: rgb(189, 59, 59); 
+    border-radius: 5px;
+}
 .subcaja{
     width: 100%;
     height: 100%;

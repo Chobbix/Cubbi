@@ -20,7 +20,7 @@
                         <ul class="longitud">
                             <li><a href="#" >Categorias </a>                            
                                 <ul class="diseno">
-                                    <scroll-container>
+                                    <scroll-container class="scroll_nav">
                                         <li><a href="../Cursos/cursos.php"> Azucar </a></li>
                                         <li><a href="../Cursos/cursos.php">leche</a></li>
                                         <li><a href="../Cursos/cursos.php">huevos</a></li>
@@ -31,7 +31,7 @@
                             </li>
                             <li class="a"><a href="#">Lo mas nuevo </a>
                                 <ul class="diseno">
-                                    <scroll-container>
+                                    <scroll-container class="scroll_nav">
                                         <li><a href="#">dinero</a></li>
                                         <li><a href="#">dinero</a></li>
                                         <li><a href="#">dinero</a></li>
@@ -43,8 +43,8 @@
                     </li>
                     
                 </ul>               
-                <li><a href="#" class="nav-item buscador " > <input type="text"  id="inputsearch" placeholder="¿Que vas a aprender?"class="search"> </li>
-                <li><a href="../Cursos/cursos.php" class="nav-item buscador "> <i class="fas fa-search"></i></a></li>
+                <li><a href="" class="nav-item buscador " > <input type="text"  id="inputsearch" placeholder="¿Que vas a aprender?"class="search"> </li>
+                <li><a href="../Pagduplicada/busqueda.php" class="nav-item buscador "> <i class="fas fa-search"></i></a></li>
                 <li><a href="../carrito/cesta.php" class="nav-item"> <button class="btn-carrito "> <i class="fas fa-shopping-cart" class=""></i></button> </a></li>
                 <li><a href="../pag-us/info.php">  <i class="fas fa-graduation-cap"></i> </a></li>
                 <li><a href="../chat/chat.php"><i class="fas fa-comment"></i></a></li>
