@@ -72,5 +72,6 @@
         <h2><a href="#modal" id="mostrar"> Confirmar compra</a></h2>
     </button>
     <?php include("../modal/modalpago.php")?>
+    <?php include("paypal.php")?>
 </body>
 </html>
