@@ -13,6 +13,8 @@ require('../../Controladores/db_curso.php');
     <link rel="stylesheet" href="../Navegacion/nav.css">
     <link rel="stylesheet" href="../Curso/caja_comment.css">
     <link rel="stylesheet" href="../accordion/accordion.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../../JavaScript/Comentarios.js"></script>
 </head>
 <body>    
     <div class="div">   
@@ -25,7 +27,7 @@ require('../../Controladores/db_curso.php');
                     <div class="dis_bloque">
                         <div class="cabecera_titulo">                            
                             <div class=""> <h1 class="text"> <?php echo $curso->get_titulo(); ?> </h1></div>
-                            <div class=""> *impartido por: Brenda*</div>
+                            <div class=""> Impartida por: <?php echo $curso->get_profesor(); ?> </div>
                         </div>
                         <div class="">
                             <h1>Clase 1.- *Titulo del capitulo*</h1>
@@ -62,7 +64,7 @@ require('../../Controladores/db_curso.php');
                                         <div class="sep">  
                                             <H1>Duracion:</H1>
                                             <div class="sub_texto">                                                
-                                                <h2>24 hr</h2>
+                                                <h2> <?php echo $curso->get_duracion(); ?> </h2>
                                             </div>
                                         </div>                                        
                                         <div class="sep">
@@ -115,14 +117,13 @@ require('../../Controladores/db_curso.php');
                                         <div class="cajadecomentarios">  
                                             <div class="contenedor_coment">
                                                 <div class="fotoynick">                                                    
-                                                    <img src="../Multimedia/a.gif" alt="" class="perfil"> 
-                                                    <h3>Nick name</h3>
-                                                </div>  
+                                                    <img src="data:image/png;base64,<?php echo base64_encode($user->get_img()); ?>" alt="" class="perfil"> 
+                                                    <h3><?php echo $user->get_NomUser(); ?></h3>
+                                                </div>
                                                 <div class="coment_bloque">
                                                     <textarea name="comment" id="comentario" cols="10" rows="5" class="comment_add"></textarea>
-                                                    <button class="btn_send"><i class="far fa-paper-plane"></i> </button>
+                                                    <button class="btn_send" curso="<?php echo $_GET['curso']; ?>"><a href=""><i class="far fa-paper-plane"></i></a> </button>
                                                 </div>
-                                                
 
                                             </div>
 

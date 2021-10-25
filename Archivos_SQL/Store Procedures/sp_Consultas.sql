@@ -21,7 +21,7 @@ BEGIN
     END IF;
 
     IF opc = 'Curso' THEN
-        SELECT ID, Titulo, Descripcion, Duracion, Imagen FROM View_Curso
+        SELECT ID, Titulo, Descripcion, Duracion, Imagen, Profesor FROM View_Curso
             WHERE ID = id1;
     END IF;
 

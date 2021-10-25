@@ -1,6 +1,6 @@
 <div class="contenedor_coment">
     <div class="sub_caja">
-        <img src="../Multimedia/a.gif" alt="" class="perfil">
+        <img src="data:image/png;base64,<?php echo base64_encode($row['img']); ?>" alt="" class="perfil">
         <div class="caja_perfil">
             <div class="caja_nickname">
                 <h3> <?php echo $row['Usuario']; ?> </h3>

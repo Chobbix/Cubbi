@@ -28,11 +28,11 @@
                         </div> 
                         <div class="contenedor-resp" id="Registro" >
                             <div class="bloque-editar">
-                                <h1> *aqui ira la opcion de paypal* </h1>
+                                <div id="paypal-button-container"></div>
                             </div>                                                                                        
                         </div> 
                         <div class="btn-guardado">
-                            <a href="../Cursos/cursos.php" class="save-modal">  <button  class="btn-guarda">Pagar</button>   </a>
+                            <a href="../Cursos/cursos.php" class="save-modal">  <button  class="btn-guarda"></button>   </a>
                         </div>   
                     </div>                                      
                 </scroll-container>                                      
