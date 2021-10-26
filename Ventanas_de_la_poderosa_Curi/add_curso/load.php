@@ -2,8 +2,8 @@
 <link rel="stylesheet" href="./load.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="../../JavaScript/Load2.js"></script>
-<?php include("../Navegacion/Nav.php"); ?>
 <?php include("../../Controladores/db_load.php"); ?>
+<?php include("../Navegacion/Nav.php"); ?>
 
 <div class="contenedor">
     <div class="menus">

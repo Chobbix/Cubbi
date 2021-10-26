@@ -1,3 +1,9 @@
+<?php
+
+require("../../Controladores/db_busquedas.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
