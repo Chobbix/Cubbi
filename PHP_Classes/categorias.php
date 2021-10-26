@@ -26,6 +26,20 @@ class Categorias extends DB {
             return $e;
         }
     }
+
+    public function query_insert_categoria_curso() {
+        try{
+            $database = new DB;
+            $conexion = $database->ConectarDB();
+            $sql = "call sp_Categorias('cat_cur', ?, '')";
+            $statement = $conexion->prepare($sql);
+            $statement->execute(array($this->ID_Categoria));
+            $statement->closeCursor();
+
+        }catch(Exception $e) {
+            return $e;
+        }
+    }
 }
 
 ?>

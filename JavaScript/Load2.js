@@ -125,15 +125,17 @@ $(document).ready(function(){
     $(".save_btn").click(function(){
         var titulo = $("#Titulo").val();
         var descripcion = $("#Descripcion").val();
-        var categoria = $("#Categoria").val();
+        var categoria = $("#Cat_select").val();
         var duracion = $("#Duracion").val();
         var costo = $("#Costo").val();
         var tipoPago = $("#tipodepago").val();
 
+        console.log(categoria);
+
         var form_data = new FormData();
         form_data.append('Titulo', titulo);
         form_data.append('Descripcion', descripcion);
-        form_data.append('Categoria', categoria);
+        form_data.append('Cat_select', categoria);
         form_data.append('Duracion', duracion);
         form_data.append('Costo', costo);
         form_data.append('TipoPago', tipoPago);

@@ -4,10 +4,11 @@ session_start();
 
 require("../PHP_Classes/conexion.php");
 require("../PHP_Classes/cursos.php");
+require("../PHP_Classes/categorias.php");
 
 $titulo = $_POST['Titulo'];
 $descripcion = $_POST['Descripcion'];
-$categoria = $_POST["Categoria"];
+echo $categoria = $_POST["Cat_select"];
 $duracion = $_POST["Duracion"];
 $costo = $_POST["Costo"];
 $tipoPago = $_POST["TipoPago"];
@@ -34,5 +35,14 @@ $curso->set_video($_FILES['vid']['name']);
 
 
 $curso->query_insert_curso();
+
+$newCategoria = new Categorias();
+
+$array = explode(",", $categoria);
+
+foreach($array as $value) {
+    $newCategoria->set_idCategoria($value);
+    $newCategoria->query_insert_categoria_curso();
+}
 
 ?>
