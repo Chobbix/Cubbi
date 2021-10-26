@@ -64,3 +64,5 @@ call sp_Usuarios('img', 3, 0, 'juan231', '', '', '', '', '', null, null, null, n
 ALTER TABLE Categorias DROP COLUMN txt_Descrpcion;
 
 call sp_Categorias('A', 0, 'Manualidades');
+
+ALTER TABLE Cursos CHANGE isPrecioGeneral isPrecioGeneral INT;

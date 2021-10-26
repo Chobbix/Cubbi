@@ -21,7 +21,7 @@ $curso->set_niveles(5);
 $curso->set_titulo($titulo);
 $curso->set_descripcion($descripcion);
 $curso->set_duracion($duracion);
-$curso->set_isPrecioGeneral(true);
+$curso->set_isPrecioGeneral($tipoPago);
 $curso->set_precio($costo);
 
 $imgData =addslashes(file_get_contents($_FILES['img']['tmp_name']));

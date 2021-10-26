@@ -40,7 +40,7 @@ CREATE TABLE Cursos (
     txt_Titulo  		VARCHAR(30)             NOT NULL COMMENT 'Titulo del curso',
     txt_Descripcion		VARCHAR(200)            NOT NULL COMMENT 'Clave foranea de la categoria del curso',
     txt_Duracion        VARCHAR(10)             NULL     COMMENT 'Duracion aproximada del curso establecida por el creador',
-    isPrecioGeneral		BOOL                    NOT NULL COMMENT 'En caso de que el precio del curso sea general se marca en esta columna',
+    isPrecioGeneral		INT	                    NOT NULL COMMENT 'En caso de que el precio del curso sea general se marca en esta columna',
     f_Precio			FLOAT                   NULL     COMMENT 'El precio en caso de que el precio del curso sea general',
 	blob_img			MEDIUMBLOB              NOT NULL COMMENT 'Imagen representativa del curso',
     ruta_vid            VARCHAR(200)            NULL     COMMENT 'Video de presentacion sobre el curso',

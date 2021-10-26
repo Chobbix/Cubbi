@@ -69,7 +69,7 @@
                                         </select>
                                         <h1>Duracion</h1>
                                         <input id="Duracion" type="text" placeholder="tiempo estimado" class="text_input">
-                                        <h1>Costo:</h1>
+                                        <h1 id="Costoh1">Costo:</h1>
                                         <input id="Costo" type="text" placeholder="Asigna un precio" class="text_input">
                                         <h1>Tipo de pago:</h1>
                                         <select name="Tipodepago" id="tipodepago" class="text_input">

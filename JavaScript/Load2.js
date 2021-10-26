@@ -1,6 +1,15 @@
 
 $(document).ready(function(){
 
+    if($('#tipodepago').val() == 1 || $('#tipodepago').val() == 3){
+        $('#Costo').hide();
+        $('#Costoh1').hide();
+    }
+
+    if($('#tipodepago').val() == 1 || $('#tipodepago').val() == 2){
+        $('.costo').hide();
+    }
+
     function AgregarNivel(NumeroCap){
         var html = "<div class='capitulos'>";
             html += "<h1>Capitulo " + NumeroCap +"</h1>";
@@ -98,6 +107,27 @@ $(document).ready(function(){
         console.log(valor);
     });
 
+    $('#tipodepago').on('change',function(){
+        var valor = $(this).val();
+        if(valor == 1) {
+            $('#Costo').hide();
+            $('#Costoh1').hide();
+            $('.costo').hide();
+        }
+
+        if(valor == 3) {
+            $('#Costo').hide();
+            $('#Costoh1').hide();
+            $('.costo').show();
+        }
+
+        if(valor == 2) {
+            $('#Costo').show();
+            $('#Costoh1').show();
+            $('.costo').hide();
+        }
+    });
+
     $('.caja_cap').on('click', '.btn_cap', function(){
         console.log($(this));
         var padre= $(this).parent();
@@ -110,6 +140,10 @@ $(document).ready(function(){
         $(this).attr("NumeroCap", NuemroCapInt);
 
         $(previo).append(AgregarNivel(NuemroCapInt));
+
+        if($('#tipodepago').val() == 1 || $('#tipodepago').val() == 2){
+            $('.costo').hide();
+        }
     });
 
     $(".btn_addsec").click(function(){
@@ -120,6 +154,10 @@ $(document).ready(function(){
         $(this).attr("NumeroSec", NumeroTemaInt);
 
         $('.caja_cap').append(AgregarSeccion(NumeroTemaInt));
+        
+        if($('#tipodepago').val() == 1 || $('#tipodepago').val() == 2){
+            $('.costo').hide();
+        }
     });
 
     $(".save_btn").click(function(){
@@ -130,6 +168,7 @@ $(document).ready(function(){
         var costo = $("#Costo").val();
         var tipoPago = $("#tipodepago").val();
 
+        if(tipoPago == 1 || tipoPago == 3) { costo = 0; }
         console.log(categoria);
 
         var form_data = new FormData();
@@ -196,6 +235,10 @@ $(document).ready(function(){
                 console.log(vidCap);
                 console.log(docsCap);
                 console.log(costoCap);
+
+                if($('#tipodepago').val() == 1 || $('#tipodepago').val() == 2){
+                    costoCap = 0;
+                }
 
                 var form_dataCap = new FormData();
                 form_dataCap.append('ID_Seccion', i);
