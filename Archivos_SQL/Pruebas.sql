@@ -59,4 +59,8 @@ drop trigger insertar_seccion;
 
 call sp_Secciones('A', 0, 8);
 
-call sp_Usuarios('img', 3, 0, 'juan231', '', '', '', '', '', null, null, null, null)
+call sp_Usuarios('img', 3, 0, 'juan231', '', '', '', '', '', null, null, null, null);
+
+ALTER TABLE Categorias DROP COLUMN txt_Descrpcion;
+
+call sp_Categorias('A', 0, 'Manualidades');

@@ -3,6 +3,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="../../JavaScript/Load2.js"></script>
 <?php include("../Navegacion/Nav.php"); ?>
+<?php include("../../Controladores/db_load.php"); ?>
 
 <div class="contenedor">
     <div class="menus">
@@ -48,33 +49,34 @@
                                 <div class="caja">
                                     <div class="subcaja">
 
-                                        <form id="formAjax" method="POST">
-                                            <h1>Titulo</h1>
-                                            <input name="Titulo" id="Titulo" type="text" placeholder="Ingresa titulo" class="text_input">
-                                            <h1>Descripcion</h1>
-                                            <input name="Descripcion" id="Descripcion" type="text" placeholder="Ingresa descripcion" class="text_input">
-                                            <h1>Categoria</h1>
+                                        <h1>Titulo</h1>
+                                        <input name="Titulo" id="Titulo" type="text" placeholder="Ingresa titulo" class="text_input">
+                                        <h1>Descripcion</h1>
+                                        <input name="Descripcion" id="Descripcion" type="text" placeholder="Ingresa descripcion" class="text_input">
+                                        <h1>Agregar Categoria</h1>
 
-                                            <input name="Categoria" id="Categoria" type="text" placeholder="Programacion, manualidades, etc." class="text_input">
-                                            <button class="plus"><i class="fas fa-plus-circle"></i></button>
-                                            <h1>Categoria</h1>
-                                            <select id="Cat_select" class="select"  multiple="multiple">
-                                                    <option value="curso1">Curso1</option>
-                                                    <option value="curso2">Curso2</option>
-                                                    <option value="curso3">Curso3</option>
-                                                    <option value="curso4">Curso4</option>
-                                            </select>
-                                            <h1>Duracion</h1>
-                                            <input id="Duracion" type="text" placeholder="tiempo estimado" class="text_input">
-                                            <h1>Costo:</h1>
-                                            <input id="Costo" type="text" placeholder="Asigna un precio" class="text_input">
-                                            <h1>Tipo de pago:</h1>
-                                            <select name="Tipodepago" id="tipodepago" class="text_input">
-                                                <option value="1">Gratis</option>
-                                                <option value="2">Curso completo</option>
-                                                <option value="3">Pago por nivel</option>
-                                            </select>
-                                        </form>
+                                        <input name="Categoria" id="Categoria" type="text" placeholder="Programacion, manualidades, etc." class="text_input">
+                                        <button class="plus add_categoria"><i class="fas fa-plus-circle"></i></button>
+                                        <h1>Selecciona Categorias</h1>
+                                        <select id="Cat_select" class="select"  multiple="multiple">
+                                        <?php
+
+                                        foreach($resCategorias as $row) {
+                                            echo "<option value=". $row['ID_Categoria'] .'>'. $row['txt_Nombre'] ."</option>";
+                                        }
+                                        
+                                        ?>
+                                        </select>
+                                        <h1>Duracion</h1>
+                                        <input id="Duracion" type="text" placeholder="tiempo estimado" class="text_input">
+                                        <h1>Costo:</h1>
+                                        <input id="Costo" type="text" placeholder="Asigna un precio" class="text_input">
+                                        <h1>Tipo de pago:</h1>
+                                        <select name="Tipodepago" id="tipodepago" class="text_input">
+                                            <option value="1">Gratis</option>
+                                            <option value="2">Curso completo</option>
+                                            <option value="3">Pago por nivel</option>
+                                        </select>
 
                                     </div>
                                     <div class="subcaja">

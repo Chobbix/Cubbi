@@ -10,7 +10,6 @@ CREATE TABLE Roles(
 CREATE TABLE Categorias (
 	ID_Categoria		INT AUTO_INCREMENT      NOT NULL COMMENT 'Clave primaria de la categoria',
     txt_Nombre			VARCHAR(30)             NOT NULL COMMENT 'Nombre de la categoria',
-    txt_Descrpcion		VARCHAR(200)            NOT NULL COMMENT 'Descripcion primaria de la categoria',
     
     CONSTRAINT pk_cat PRIMARY KEY (ID_Categoria)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -72,6 +71,15 @@ CREATE TABLE Capitulos (
     
 	CONSTRAINT pk_cap PRIMARY KEY (ID_Curso, ID_Seccion, ID_Capitulo),
     CONSTRAINT fk_cap_sec FOREIGN KEY (ID_Curso, ID_Seccion) REFERENCES Secciones (ID_Curso, ID_Seccion)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE Categorias_cursos (
+	ID_Categoria		INT      NOT NULL COMMENT 'Clave foranea de la categoria',
+    ID_Curso			INT      NOT NULL COMMENT 'Clave foranea del curso',
+    
+    CONSTRAINT pk_cat_cur PRIMARY KEY (ID_Categoria, ID_Curso),
+    CONSTRAINT fk_cat_cur_cat FOREIGN KEY (ID_Categoria) REFERENCES Categorias (ID_Categoria),
+    CONSTRAINT fk_cat_cur_cur FOREIGN KEY (ID_Curso) REFERENCES Cursos (ID_Curso)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE Promedios (

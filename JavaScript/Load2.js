@@ -66,6 +66,38 @@ $(document).ready(function(){
         return html;
     }
 
+    $('.add_categoria').click(function(){
+        var txt_Cat = $('#Categoria').val()
+        console.log(txt_Cat);
+        var cantidad = $('#Cat_select option').length;
+        var newCantidad = cantidad + 1;
+        $('#Cat_select').append('<option value='+ newCantidad +'>'+ txt_Cat +'</option>');
+        $('#Categoria').val('');
+
+        var form_categoria = new FormData();
+        form_categoria.append('txt_categoria', txt_Cat);
+
+        $.ajax({
+            data: form_categoria,
+            url: '/Cubbi_BDM_PWCI/Controladores/db_agregar_categoria.php',
+            method: 'POST',
+            contentType: false,
+            processData: false,
+        })
+        .done(function(result){
+            console.log(result);
+        })
+        
+        .fail(function(result){
+            console.log(result);
+        });
+    });
+
+    $('#Cat_select').on('change',function(){
+        var valor = $(this).val();
+        console.log(valor);
+    });
+
     $('.caja_cap').on('click', '.btn_cap', function(){
         console.log($(this));
         var padre= $(this).parent();
