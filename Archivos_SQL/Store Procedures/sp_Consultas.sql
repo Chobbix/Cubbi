@@ -39,6 +39,10 @@ BEGIN
         SELECT ID_Seccion FROM Secciones
             WHERE ID_Curso = id1;
     END IF;
+
+    IF opc = 'All_categorias' THEN
+        SELECT ID_Categoria, txt_Nombre FROM Categorias;
+    END IF;
 END
 $$
 DELIMITER ;

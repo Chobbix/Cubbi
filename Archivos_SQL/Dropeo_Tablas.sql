@@ -1,5 +1,6 @@
 USE db_bdmm_pwci;
 
+DROP TABLE Categorias_cursos;
 DROP TABLE Carrito;
 DROP TABLE Comentarios_Cursos;
 DROP TABLE Mensajes_Cursos;

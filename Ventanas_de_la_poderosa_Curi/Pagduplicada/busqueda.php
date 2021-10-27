@@ -1,3 +1,9 @@
+<?php
+
+require("../../Controladores/db_busquedas.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -222,30 +228,8 @@
                         </div>
                         <a href="../carrito/cesta.php"> <button class="add-carrito"> Agregar al carro</button></a>
                     </div>
-                    <div class="contenedor">
-                        <a href="#"> <img src="../Multimedia/a.gif" alt="" class="video"> </a>
-                        <div class="cabecera">
-                            <a href="../Curso/curso.php">
-                                <h1>Bordado</h1>
-                            </a>
-                        </div>
-                        <h5>Impartida por: brenda</h5>
-                        <div class="informacion_megusta">
-                            <div class="me_gusta informacion_megusta">
-                                <i class="far fa-heart"></i>
-                                <h6>126</h6>
-                            </div>
-                            <div class="personas informacion_megusta">
-                                <i class="far fa-user"></i>
-                                <h6>126</h6>
-                            </div>
-                        </div>
-                        <a href="../carrito/cesta.php"> <button class="add-carrito"> Agregar al carro</button></a>
-                    </div>
-
                 </div>
             </div>
-
         </div>
     </div>
 </body>

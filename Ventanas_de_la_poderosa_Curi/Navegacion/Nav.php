@@ -1,3 +1,9 @@
+<?php
+
+require("../../Controladores/db_nav.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,10 +27,13 @@
                             <li><a href="#" >Categorias </a>                            
                                 <ul class="diseno">
                                     <scroll-container class="scroll_nav">
-                                        <li><a href="../Cursos/cursos.php"> Azucar </a></li>
-                                        <li><a href="../Cursos/cursos.php">leche</a></li>
-                                        <li><a href="../Cursos/cursos.php">huevos</a></li>
-                                        <li><a href="../Cursos/cursos.php">Azucar</a></li>                                                                                     
+                                    <?php 
+                                    foreach($resCategorias as $row) {
+                                        ?> 
+                                            <li><a href="../Cursos/cursos.php"> <?php echo $row['txt_Nombre'] ?> </a></li>
+                                        <?php
+                                    }
+                                    ?>
                                     </scroll-container>
                                     
                                 </ul>
@@ -42,8 +51,8 @@
                         </ul>
                     </li>
                     
-                </ul>               
-                <li><a href="" class="nav-item buscador " > <input type="text"  id="inputsearch" placeholder="¿Que vas a aprender?"class="search"> </li>
+                </ul>
+                <li><a class="nav-item buscador " > <input type="text"  id="inputsearch" placeholder="¿Que vas a aprender?"class="search"> </li>
                 <li><a href="../Pagduplicada/busqueda.php" class="nav-item buscador "> <i class="fas fa-search"></i></a></li>
                 <li><a href="../carrito/cesta.php" class="nav-item"> <button class="btn-carrito "> <i class="fas fa-shopping-cart" class=""></i></button> </a></li>
                 <li><a href="../pag-us/info.php">  <i class="fas fa-graduation-cap"></i> </a></li>

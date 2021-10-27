@@ -10,7 +10,6 @@ CREATE TABLE Roles(
 CREATE TABLE Categorias (
 	ID_Categoria		INT AUTO_INCREMENT      NOT NULL COMMENT 'Clave primaria de la categoria',
     txt_Nombre			VARCHAR(30)             NOT NULL COMMENT 'Nombre de la categoria',
-    txt_Descrpcion		VARCHAR(200)            NOT NULL COMMENT 'Descripcion primaria de la categoria',
     
     CONSTRAINT pk_cat PRIMARY KEY (ID_Categoria)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -41,7 +40,7 @@ CREATE TABLE Cursos (
     txt_Titulo  		VARCHAR(30)             NOT NULL COMMENT 'Titulo del curso',
     txt_Descripcion		VARCHAR(200)            NOT NULL COMMENT 'Clave foranea de la categoria del curso',
     txt_Duracion        VARCHAR(10)             NULL     COMMENT 'Duracion aproximada del curso establecida por el creador',
-    isPrecioGeneral		BOOL                    NOT NULL COMMENT 'En caso de que el precio del curso sea general se marca en esta columna',
+    isPrecioGeneral		INT	                    NOT NULL COMMENT 'En caso de que el precio del curso sea general se marca en esta columna',
     f_Precio			FLOAT                   NULL     COMMENT 'El precio en caso de que el precio del curso sea general',
 	blob_img			MEDIUMBLOB              NOT NULL COMMENT 'Imagen representativa del curso',
     ruta_vid            VARCHAR(200)            NULL     COMMENT 'Video de presentacion sobre el curso',
@@ -72,6 +71,15 @@ CREATE TABLE Capitulos (
     
 	CONSTRAINT pk_cap PRIMARY KEY (ID_Curso, ID_Seccion, ID_Capitulo),
     CONSTRAINT fk_cap_sec FOREIGN KEY (ID_Curso, ID_Seccion) REFERENCES Secciones (ID_Curso, ID_Seccion)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE Categorias_cursos (
+	ID_Categoria		INT      NOT NULL COMMENT 'Clave foranea de la categoria',
+    ID_Curso			INT      NOT NULL COMMENT 'Clave foranea del curso',
+    
+    CONSTRAINT pk_cat_cur PRIMARY KEY (ID_Categoria, ID_Curso),
+    CONSTRAINT fk_cat_cur_cat FOREIGN KEY (ID_Categoria) REFERENCES Categorias (ID_Categoria),
+    CONSTRAINT fk_cat_cur_cur FOREIGN KEY (ID_Curso) REFERENCES Cursos (ID_Curso)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE Promedios (

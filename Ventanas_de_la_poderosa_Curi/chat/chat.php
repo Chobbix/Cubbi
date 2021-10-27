@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="../Navegacion/nav.css">
 <link rel="stylesheet" href="./chat.css">
 <link rel="stylesheet" href="./mensajes.css">
+<?php require("../../Controladores/db_chat.php"); ?>
 <?php include("../Navegacion/Nav.php"); ?>
 
 <div class="bloque_chat">

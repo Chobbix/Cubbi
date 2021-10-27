@@ -93,4 +93,26 @@
             
             return $rows;
         }
+
+        function query_select_all_cursos() {
+            $database = new DB;
+            $conexion = $database->ConectarDB();
+            $sql = "call sp_Consultas ('All_cursos', 0, 0, '', '')";
+            $statementSelect = $conexion->prepare($sql);
+            $statementSelect->execute();
+            $rows = $statementSelect->fetchAll();
+            
+            return $rows;
+        }
+
+        function query_select_all_categorias() {
+            $database = new DB;
+            $conexion = $database->ConectarDB();
+            $sql = "call sp_Consultas ('All_categorias', 0, 0, '', '')";
+            $statementSelect = $conexion->prepare($sql);
+            $statementSelect->execute();
+            $rows = $statementSelect->fetchAll();
+            
+            return $rows;
+        }
     }
