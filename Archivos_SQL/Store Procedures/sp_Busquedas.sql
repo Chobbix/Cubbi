@@ -13,13 +13,16 @@ CREATE PROCEDURE sp_Busquedas (
 )
 BEGIN
     IF opc = '6' THEN
-		select * from View_Curso
-				where 	if(txt_Curso IS NULL, 1, View_Curso.Titulo LIKE CONCAT('%', txt_Curso, '%')) 
-                and		if(Categoria='Random', 1, View_Preguntas.Categoria = Categoria)
-                and		View_Preguntas.Utiles > uti
-                and		View_Preguntas.Favoritos > fav
-                and		View_Preguntas.Eliminado = 0
-				ORDER BY View_Preguntas.FReg DESC limit pag, 10;
+        IF txt_Categoria = 'Todos' THEN
+            select * from View_Curso
+                    where 	if(txt_Curso IS NULL, 1, View_Curso.Titulo LIKE CONCAT('%', txt_Curso, '%'))
+                    ORDER BY View_Curso.ID;
+        ELSE
+            select * from View_Curso_Categoria
+                    where 	if(txt_Curso IS NULL, 1, View_Curso_Categoria.Titulo LIKE CONCAT('%', txt_Curso, '%')) 
+                    and		View_Curso_Categoria.Categoria = txt_Categoria
+                    ORDER BY View_Curso_Categoria.ID;
+        END IF;
     END IF;
     
 END

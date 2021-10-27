@@ -66,4 +66,13 @@ ALTER TABLE Categorias DROP COLUMN txt_Descrpcion;
 call sp_Categorias('A', 0, 'Manualidades');
 
 ALTER TABLE Cursos CHANGE isPrecioGeneral isPrecioGeneral INT;
-call sp_Consultas ('All_categorias', 0, 0, '', '')
+call sp_Consultas ('All_categorias', 0, 0, '', '');
+
+call sp_Busquedas('6', '', 'Programacion', '', 0, NOW(), NOW());
+opc			
+txt_Curso    
+txt_Categoria
+txt_NomUser  
+opcFiltro   	
+date_ini    	
+date_fin     

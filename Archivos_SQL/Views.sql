@@ -32,6 +32,20 @@ SELECT Cursos.ID_Curso as ID,
             from Cursos
             inner join Usuarios on Usuarios.ID_Usuario = Cursos.ID_Usuario;
 
+CREATE VIEW View_Curso_Categoria AS
+SELECT Cursos.ID_Curso as ID,
+            Cursos.txt_Titulo as Titulo,
+            Cursos.txt_Descripcion as Descripcion,
+            Cursos.txt_Duracion as Duracion,
+            Cursos.blob_img as Imagen,
+            Usuarios.txt_NomUser as Profesor,
+            Categorias_cursos.ID_Categoria as ID_Categoria,
+            Categorias.txt_Nombre as Categoria
+            from Categorias_cursos
+            inner join Cursos on Cursos.ID_Curso = Categorias_cursos.ID_Curso
+            inner join Categorias on Categorias.ID_Categoria = Categorias_cursos.ID_Categoria
+            inner join Usuarios on Usuarios.ID_Usuario = Cursos.ID_Usuario;
+
 CREATE VIEW View_Comentarios AS
 SELECT Comentarios_Cursos.txt_Comentario as Comentario,
             Comentarios_Cursos.date_FchaEnvio as Fecha,
@@ -47,4 +61,5 @@ SELECT Comentarios_Cursos.txt_Comentario as Comentario,
 drop view View_Usuarios;
 drop VIEW View_VideosCursos;
 drop VIEW View_Curso;
+drop VIEW View_Curso_Categoria;
 drop VIEW View_Comentarios;

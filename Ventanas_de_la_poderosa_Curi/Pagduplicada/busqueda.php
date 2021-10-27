@@ -38,7 +38,7 @@ require("../../Controladores/db_busquedas.php");
                         <div class="bloque_filtro">
                             <h2>Fecha de publicacion</h2>
                             <hr>
-                            <li><a href="">Hoy</a></li>
+                            <li> <a href="../Pagduplicada/busqueda.php?categoria=<?php echo $row['txt_Nombre']."&opc=".$opcFiltroGet."&user=".$userGet."&busqueda=".$txtBusquedaGet;?>">Hoy</a></li>
                             <li> <a href="">Esta semana</a></li>
                             <li> <a href="">Este mes</a></li>
                             <li> <a href="">Este año</a></li>
@@ -57,180 +57,50 @@ require("../../Controladores/db_busquedas.php");
                 </div>
             </div>
             <h1><?php echo $categoriaGet ?></h1>
+            
+            <?php
+            require('../../Controladores/db_generar_busquedas.php');
+            $contador = 0;
 
-            <div class="fila">
-                <div class="columla">
-                    <div class="contenedor">
-                        <a href="#"> <img src="../Multimedia/a.gif" alt="" class="video"> </a>
-                        <div class="cabecera">
-                            <a href="../Curso/curso.php">
-                                <h1>Bordado</h1>
-                            </a>
-                        </div>
-                        <h5>Impartida por: brenda</h5>
-                        <div class="informacion_megusta">
-                            <div class="me_gusta informacion_megusta">
-                                <i class="far fa-heart"></i>
-                                <h6>126</h6>
-                            </div>
-                            <div class="personas informacion_megusta">
-                                <i class="far fa-user"></i>
-                                <h6>126</h6>
-                            </div>
-                        </div>
-                        <button class="add-carrito"> Agregar al carro</button>
-                    </div>
-                    <div class="contenedor">
-                        <a href="#"> <img src="../Multimedia/a.gif" alt="" class="video"> </a>
-                        <div class="cabecera">
-                            <a href="../Curso/curso.php">
-                                <h1>Bordado</h1>
-                            </a>
-                        </div>
-                        <h5>Impartida por: brenda</h5>
-                        <div class="informacion_megusta">
-                            <div class="me_gusta informacion_megusta">
-                                <i class="far fa-heart"></i>
-                                <h6>126</h6>
-                            </div>
-                            <div class="personas informacion_megusta">
-                                <i class="far fa-user"></i>
-                                <h6>126</h6>
-                            </div>
-                        </div>
-                        <a href="../carrito/cesta.php"> <button class="add-carrito"> Agregar al carro</button></a>
-                    </div>
-                    <div class="contenedor">
-                        <a href="#"> <img src="../Multimedia/a.gif" alt="" class="video"> </a>
-                        <div class="cabecera">
-                            <a href="../Curso/curso.php">
-                                <h1>Bordado</h1>
-                            </a>
-                        </div>
-                        <h5>Impartida por: brenda</h5>
-                        <div class="informacion_megusta">
-                            <div class="me_gusta informacion_megusta">
-                                <i class="far fa-heart"></i>
-                                <h6>126</h6>
-                            </div>
-                            <div class="personas informacion_megusta">
-                                <i class="far fa-user"></i>
-                                <h6>126</h6>
-                            </div>
-                        </div>
-                        <a href="../carrito/cesta.php"> <button class="add-carrito"> Agregar al carro</button></a>
-                    </div>
-                </div>
-            </div>
-            <div class="fila">
-                <div class="columla">
-                    <div class="contenedor">
-                        <a href="#"> <img src="../Multimedia/a.gif" alt="" class="video"> </a>
-                        <div class="cabecera">
-                            <a href="../Curso/curso.php">
-                                <h1>Bordado</h1>
-                            </a>
-                        </div>
-                        <h5>Impartida por: brenda</h5>
-                        <div class="informacion_megusta">
-                            <div class="me_gusta informacion_megusta">
-                                <i class="far fa-heart"></i>
-                                <h6>126</h6>
-                            </div>
-                            <div class="personas informacion_megusta">
-                                <i class="far fa-user"></i>
-                                <h6>126</h6>
-                            </div>
-                        </div>
-                        <a href="../carrito/cesta.php"> <button class="add-carrito"> Agregar al carro</button></a>
-                    </div>
-                    <div class="contenedor">
-                        <a href="#"> <img src="../Multimedia/a.gif" alt="" class="video"> </a>
-                        <div class="cabecera">
-                            <a href="../Curso/curso.php">
-                                <h1>Bordado</h1>
-                            </a>
-                        </div>
-                        <h5>Impartida por: brenda</h5>
-                        <div class="informacion_megusta">
-                            <div class="me_gusta informacion_megusta">
-                                <i class="far fa-heart"></i>
-                                <h6>126</h6>
-                            </div>
-                            <div class="personas informacion_megusta">
-                                <i class="far fa-user"></i>
-                                <h6>126</h6>
-                            </div>
-                        </div>
-                        <a href="../carrito/cesta.php"> <button class="add-carrito"> Agregar al carro</button></a>
-                    </div>
-                    <div class="contenedor">
-                        <a href="#"> <img src="../Multimedia/a.gif" alt="" class="video"> </a>
-                        <div class="cabecera">
-                            <a href="../Curso/curso.php">
-                                <h1>Bordado</h1>
-                            </a>
-                        </div>
-                        <h5>Impartida por: brenda</h5>
-                        <div class="informacion_megusta">
-                            <div class="me_gusta informacion_megusta">
-                                <i class="far fa-heart"></i>
-                                <h6>126</h6>
-                            </div>
-                            <div class="personas informacion_megusta">
-                                <i class="far fa-user"></i>
-                                <h6>126</h6>
-                            </div>
-                        </div>
-                        <a href="../carrito/cesta.php"> <button class="add-carrito"> Agregar al carro</button></a>
-                    </div>
+            foreach($resBusqueda as $row) {
+                if($contador == 0) {
+                    echo "<div class='fila'>";
+                    echo "<div class='columla'>";
+                }
+                ?>
 
-                </div>
-            </div>
-            <div class="fila">
-                <div class="columla">
-                    <div class="contenedor">
-                        <a href="#"> <img src="../Multimedia/a.gif" alt="" class="video"> </a>
-                        <div class="cabecera">
-                            <a href="../Curso/curso.php">
-                                <h1>Bordado</h1>
-                            </a>
-                        </div>
-                        <h5>Impartida por: brenda</h5>
-                        <div class="informacion_megusta">
-                            <div class="me_gusta informacion_megusta">
-                                <i class="far fa-heart"></i>
-                                <h6>126</h6>
-                            </div>
-                            <div class="personas informacion_megusta">
-                                <i class="far fa-user"></i>
-                                <h6>126</h6>
-                            </div>
-                        </div>
-                        <a href="../carrito/cesta.php"> <button class="add-carrito"> Agregar al carro</button></a>
+                <div class="contenedor">
+                    <a href="#"> <img src="data:image/png;base64,<?php echo base64_encode($row['Imagen']); ?>" alt="" class="video"> </a>
+                    <div class="cabecera">
+                        <a href="../Curso/curso.php">
+                            <h1><?php echo $row['Titulo']; ?></h1>
+                        </a>
                     </div>
-                    <div class="contenedor">
-                        <a href="#"> <img src="../Multimedia/a.gif" alt="" class="video"> </a>
-                        <div class="cabecera">
-                            <a href="../Curso/curso.php">
-                                <h1>Bordado</h1>
-                            </a>
+                    <h5>Impartida por: <?php echo $row['Profesor']; ?></h5>
+                    <div class="informacion_megusta">
+                        <div class="me_gusta informacion_megusta">
+                            <i class="far fa-heart"></i>
+                            <h6>126</h6>
                         </div>
-                        <h5>Impartida por: brenda</h5>
-                        <div class="informacion_megusta">
-                            <div class="me_gusta informacion_megusta">
-                                <i class="far fa-heart"></i>
-                                <h6>126</h6>
-                            </div>
-                            <div class="personas informacion_megusta">
-                                <i class="far fa-user"></i>
-                                <h6>126</h6>
-                            </div>
+                        <div class="personas informacion_megusta">
+                            <i class="far fa-user"></i>
+                            <h6>126</h6>
                         </div>
-                        <a href="../carrito/cesta.php"> <button class="add-carrito"> Agregar al carro</button></a>
                     </div>
+                    <button class="add-carrito"> Agregar al carro</button>
                 </div>
-            </div>
+
+                <?php
+                $contador ++;
+                if($contador == 3) {
+                    echo "</div>";
+                    echo "</div>";
+                    $contador = 0;
+                }
+            }
+
+            ?>
+            
         </div>
     </div>
     <?php include("../modal/modalfiltro.php") ?>
