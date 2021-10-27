@@ -1,7 +1,3 @@
-<?php
-require('../../Controladores/db_videos.php');
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,18 +18,7 @@ require('../../Controladores/db_videos.php');
         <div class="bloque_de_video">
             <div class="video">
                 <video class="video_contenido" controls>
-                    <?php
-                    
-                    foreach($capitulosRes as $row2){
-                        if($row2['Tema'] == $_GET["tem"] && $row2['Capitulo'] == $_GET["cap"] && $row2['Curso'] == $_GET["curso"]){
-                        ?>
-                            <source src="../../Archivos/Videos/<?php echo $row2['Video'] ?>" type="video/mp4" id="id">
-                        <?php
-                        }
-                    }
-                    
-                    ?>
-
+                    <source src="../Multimedia/Campaña 'Cuidado con el perro' - Recojo la caca.mp4" type="video/mp4" id="id">
                 </video>
             </div>
         </div>
@@ -48,47 +33,31 @@ require('../../Controladores/db_videos.php');
                     </div>
                     <div class="perfil_link a ">
                         <?php include("../Navegacion/perfil.php"); ?>
-                        <div class="perfil">
-
-                        </div>
+                    </div>
                 </div>
                 <div class="bloque_contenedor">
                     <div class="tema">
                         <div class="container">
                             <div class="accordion">
-                                <?php
-                                foreach($seccionesRes as $row){
-                                ?>
-
-                                    <div class="accordion-item" id="question<?php echo $row['ID_Seccion']?>">
-                                        <a class="accordion-link" href="#question<?php echo $row['ID_Seccion']?>">
-                                            <h3>Tema <?php echo $row['ID_Seccion']?></h3>
-                                            <i class="fas fa-angle-down"></i>
-                                            <i class="fas fa-angle-up"></i>
-                                        </a>
-                                        <div class="answer">
-                                            <div class="capitulo">
-                                                <?php
-                                                foreach($capitulosRes as $row2){
-                                                    if($row2['Tema'] == $row['ID_Seccion']){
-                                                        $url = "videos.php?curso=". $_GET['curso'] ."&tem=". $row2['Tema'] ."&cap=". $row2['Capitulo'] ."#question". $row2['Tema'];
-                                                    ?>
-                                                        <div class="sub_temas">
-                                                            <i class="fas fa-circle-notch"></i>
-                                                            <a href=" <?php echo $url ?> "><p><?php echo $row2['Titulo']?></p></a>
-                                                        </div>
-                                                    <?php
-                                                    }
-                                                }
-                                                ?>
+                                <div class="accordion-item" id="question1">
+                                    <a class="accordion-link" href="#question1">
+                                        <h3>Tema1</h3>
+                                        <i class="fas fa-angle-down"></i>
+                                        <i class="fas fa-angle-up"></i>
+                                    </a>
+                                    <div class="answer">
+                                        <div class="capitulo">
+                                            <div class="sub_temas ">
+                                                <i class="fas fa-circle-notch"></i>
+                                                <p class="completado">Capitulo1</p>
                                             </div>
-
+                                            <div class="sub_temas">
+                                                <i class="fas fa-circle-notch"></i>
+                                                <p>Capitulo2</p>
+                                            </div>
                                         </div>
                                     </div>
-
-                                <?php
-                                }
-                                ?>
+                                </div>
                             </div>
                         </div>
                     </div>
