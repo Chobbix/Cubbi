@@ -28,36 +28,37 @@ require("../../Controladores/db_busquedas.php");
     <div class="Container">
         <div class="bloque">
 
-            <div class="fila">
-                <div class="accordion-item" id="question1">
-                    <a class="accordion-link" href="#question1">
-                        <i class="fas fa-sliders-h"></i>
-                        <H1>Filtro</H1>
-                    </a>
-                    <div class="answer">
-                        <div class="contenido_filto">
-                            <div class="bloque_filtro">
-                                <h2>Fecha de publicacion</h2>
-                                <hr>
-                                <li><a href="">Hoy</a></li>
-                                <li> <a href="">Esta semana</a></li>
-                                <li> <a href="">Este mes</a></li>
-                                <li> <a href="">Este año</a></li>
-                                <li> <a href="#modal"> Personalizado</a></li>
-                                <?php include("../modal/modalfiltro.php") ?>
-                            </div>
-                            <div class="bloque_filtro ">
-                                <h2>Autor del curso</h2>
-                                <hr>
-                                <div class="busq">
+            <div class="accordion-item" id="question1">
+                <a class="accordion-link" href="#question1">
+                    <i class="fas fa-sliders-h"></i>
+                    <H1>Filtro</H1>
+                </a>
+                <div class="answer">
+                    <div class="contenido_filto">
+                        <div class="bloque_filtro">
+                            <h2>Fecha de publicacion</h2>
+                            <hr>
+                            <li><a href="">Hoy</a></li>
+                            <li> <a href="">Esta semana</a></li>
+                            <li> <a href="">Este mes</a></li>
+                            <li> <a href="">Este año</a></li>
+                            <li> <a href="#modal"> Personalizado</a></li>
+                        </div>
+                        <div class="bloque_filtro ">
+                            <h2>Autor del curso</h2>
+                            <hr>
+                            <div class="busq">
 
-                                    <input type="text" class="us_busq">
-                                    <i class="fas fa-search"></i></a></li>
-                                </div>
+                                <input type="text" class="us_busq">
+                                <i class="fas fa-search"></i></a></li>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <h1><?php echo $categoriaGet ?></h1>
+
+            <div class="fila">
                 <div class="columla">
                     <div class="contenedor">
                         <a href="#"> <img src="../Multimedia/a.gif" alt="" class="video"> </a>
@@ -88,7 +89,8 @@ require("../../Controladores/db_busquedas.php");
                         </div>
                         <h5>Impartida por: brenda</h5>
                         <div class="informacion_megusta">
-                            <div class="me_gusta informacion_m                                <i class=" far fa-heart"></i>
+                            <div class="me_gusta informacion_megusta">
+                                <i class="far fa-heart"></i>
                                 <h6>126</h6>
                             </div>
                             <div class="personas informacion_megusta">
@@ -118,7 +120,6 @@ require("../../Controladores/db_busquedas.php");
                         </div>
                         <a href="../carrito/cesta.php"> <button class="add-carrito"> Agregar al carro</button></a>
                     </div>
-
                 </div>
             </div>
             <div class="fila">
@@ -232,6 +233,7 @@ require("../../Controladores/db_busquedas.php");
             </div>
         </div>
     </div>
+    <?php include("../modal/modalfiltro.php") ?>
 </body>
 
 </html>

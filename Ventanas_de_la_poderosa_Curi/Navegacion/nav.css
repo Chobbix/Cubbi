@@ -112,7 +112,8 @@ ul {
     background-color: transparent;
     border: none;
     border-right: white 2px solid;
-    margin-right: 10px;
+    margin-left: 50px;
+    ;
 }
 .menu-categorias{
     display: flex;

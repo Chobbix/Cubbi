@@ -8,7 +8,6 @@ BEGIN
 END;
 //
 
-
 select Max_Cursos();
 
 drop function Max_Cursos;

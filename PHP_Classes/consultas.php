@@ -115,4 +115,37 @@
             
             return $rows;
         }
+
+        function query_select_busqueda_opc6() {
+            $database = new DB;
+            $conexion = $database->ConectarDB();
+            $sql = "call sp_Consultas ('6', 0, 0, '', '')";
+            $statementSelect = $conexion->prepare($sql);
+            $statementSelect->execute();
+            $rows = $statementSelect->fetchAll();
+            
+            return $rows;
+        }
+
+        function query_select_busqueda_opc5() {
+            $database = new DB;
+            $conexion = $database->ConectarDB();
+            $sql = "call sp_Consultas ('5', 0, 0, '', '')";
+            $statementSelect = $conexion->prepare($sql);
+            $statementSelect->execute();
+            $rows = $statementSelect->fetchAll();
+            
+            return $rows;
+        }
+
+        function query_select_busqueda_opc4() {
+            $database = new DB;
+            $conexion = $database->ConectarDB();
+            $sql = "call sp_Consultas ('5', 0, 0, '', '')";
+            $statementSelect = $conexion->prepare($sql);
+            $statementSelect->execute();
+            $rows = $statementSelect->fetchAll();
+            
+            return $rows;
+        }
     }

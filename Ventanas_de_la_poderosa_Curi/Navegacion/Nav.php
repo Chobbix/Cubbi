@@ -6,6 +6,7 @@ require("../../Controladores/db_nav.php");
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,26 +17,28 @@ require("../../Controladores/db_nav.php");
     <link rel="stylesheet" href="nav.css">
     <title>Document</title>
 </head>
+
 <body>
     <header class="header">
-        <nav class="nav">           
-            <a href="../Cursos/cursos.php"> <img src="/Cubbi_BDM_PWCI/Ventanas_de_la_poderosa_Curi/Multimedia/logo.png" alt="logo" class="logo">  </a>   
-            <ul class="nav-menu">                 
+    <form action="<?php echo $url ?>" method="post">
+        <nav class="nav">
+            <a href="../Cursos/cursos.php"> <img src="/Cubbi_BDM_PWCI/Ventanas_de_la_poderosa_Curi/Multimedia/logo.png" alt="logo" class="logo"> </a>
+            <ul class="nav-menu">
                 <ul class="menu-categorias">
-                    <li><a href="#" class="clase-a">Cursos <i class="fas fa-angle-down"></i></a>                    
+                    <li><a href="#" class="clase-a">Cursos <i class="fas fa-angle-down"></i></a>
                         <ul class="longitud">
-                            <li><a href="#" >Categorias </a>                            
+                            <li><a href="#">Categorias </a>
                                 <ul class="diseno">
                                     <scroll-container class="scroll_nav">
-                                    <?php 
-                                    foreach($resCategorias as $row) {
-                                        ?> 
-                                            <li><a href="../Cursos/cursos.php"> <?php echo $row['txt_Nombre'] ?> </a></li>
+                                    <li><a href="../Pagduplicada/busqueda.php?categoria=Todos<?php echo "&opc=".$opcFiltroGet."&user=".$userGet."&busqueda=".$txtBusquedaGet;?>">Todos</a></li>
                                         <?php
-                                    }
-                                    ?>
+                                        foreach ($resCategorias as $row) {
+                                        ?>
+                                            <li><a href="../Pagduplicada/busqueda.php?categoria=<?php echo $row['txt_Nombre']."&opc=".$opcFiltroGet."&user=".$userGet."&busqueda=".$txtBusquedaGet;?>"> <?php echo $row['txt_Nombre'] ?> </a></li>
+                                        <?php
+                                        }
+                                        ?>
                                     </scroll-container>
-                                    
                                 </ul>
                             </li>
                             <li class="a"><a href="#">Lo mas nuevo </a>
@@ -44,23 +47,24 @@ require("../../Controladores/db_nav.php");
                                         <li><a href="#">dinero</a></li>
                                         <li><a href="#">dinero</a></li>
                                         <li><a href="#">dinero</a></li>
-                                        <li><a href="#">dinero</a></li>                                                                                     
+                                        <li><a href="#">dinero</a></li>
                                     </scroll-container>
-                                </ul>                                
-                            </li>                                
+                                </ul>
+                            </li>
                         </ul>
                     </li>
-                    
                 </ul>
-                <li><a class="nav-item buscador " > <input type="text"  id="inputsearch" placeholder="¿Que vas a aprender?"class="search"> </li>
-                <li><a href="../Pagduplicada/busqueda.php" class="nav-item buscador "> <i class="fas fa-search"></i></a></li>
-                <li><a href="../carrito/cesta.php" class="nav-item"> <button class="btn-carrito "> <i class="fas fa-shopping-cart" class=""></i></button> </a></li>
-                <li><a href="../pag-us/info.php">  <i class="fas fa-graduation-cap"></i> </a></li>
+                <li><a class="nav-item buscador "> <input type="text" name="busqueda" id="inputsearch" placeholder="¿Que vas a aprender?" value="<?php echo $txtBusquedaGet ?>" class="search"></li>
+                <li><button href="../Pagduplicada/busqueda.php" class="nav-item buscador "> <i class="fas fa-search"></i></button></li>
+                <li><a href="../carrito/cesta.php" class="nav-item btn-carrito"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="../pag-us/info.php"> <i class="fas fa-graduation-cap"></i> </a></li>
                 <li><a href="../chat/chat.php"><i class="fas fa-comment"></i></a></li>
-                <?php include ("../Navegacion/perfil.php");?>
+                <?php include("../Navegacion/perfil.php"); ?>
             </ul>
         </nav>
+    </form>
     </header>
 
 </body>
+
 </html>
