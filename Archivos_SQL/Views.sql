@@ -28,7 +28,10 @@ SELECT Cursos.ID_Curso as ID,
             Cursos.txt_Descripcion as Descripcion,
             Cursos.txt_Duracion as Duracion,
             Cursos.blob_img as Imagen,
-            Usuarios.txt_NomUser as Profesor
+            Usuarios.txt_NomUser as Profesor,
+            Cursos.isAcitvo as Activo,
+            Cursos.date_FchaRegistro as Registro,
+            Cursos.date_FchaUltiCambio as Cambio
             from Cursos
             inner join Usuarios on Usuarios.ID_Usuario = Cursos.ID_Usuario;
 
@@ -39,8 +42,11 @@ SELECT Cursos.ID_Curso as ID,
             Cursos.txt_Duracion as Duracion,
             Cursos.blob_img as Imagen,
             Usuarios.txt_NomUser as Profesor,
+            Cursos.isAcitvo as Activo,
             Categorias_cursos.ID_Categoria as ID_Categoria,
-            Categorias.txt_Nombre as Categoria
+            Categorias.txt_Nombre as Categoria,
+            Cursos.date_FchaRegistro as Registro,
+            Cursos.date_FchaUltiCambio as Cambio
             from Categorias_cursos
             inner join Cursos on Cursos.ID_Curso = Categorias_cursos.ID_Curso
             inner join Categorias on Categorias.ID_Categoria = Categorias_cursos.ID_Categoria

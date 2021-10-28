@@ -117,11 +117,13 @@
         }
 
         function query_select_busqueda($opc, $curso, $categoria, $usuario, $opcFiltro, $dateini, $dateFin) {
+            if($usuario == 'Todos') { $usuario = ''; }
+
             $database = new DB;
             $conexion = $database->ConectarDB();
-            $sql = "call sp_Busquedas (?, ?, ?, ?, ?, NOW(), NOW())";
+            $sql = "call sp_Busquedas (?, ?, ?, ?, ?, ?, ?)";
             $statementSelect = $conexion->prepare($sql);
-            $statementSelect->execute(array($opc, $curso, $categoria, $usuario, $opcFiltro));
+            $statementSelect->execute(array($opc, $curso, $categoria, $usuario, $opcFiltro, $dateini, $dateFin));
             $rows = $statementSelect->fetchAll();
             
             return $rows;

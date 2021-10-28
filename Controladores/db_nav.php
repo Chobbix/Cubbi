@@ -14,7 +14,11 @@ if (isset($_GET['opc'])) {
 }
 
 $userGet = 'Todos';
-if (isset($_GET['user'])) {
+
+if (isset($_POST['user'])) {
+    $userGet = $_POST['user'];
+} 
+else if (isset($_GET['user'])) {
     $userGet = $_GET['user'];
 }
 
@@ -27,6 +31,23 @@ else if (isset($_GET['busqueda'])) {
     $txtBusquedaGet = $_GET['busqueda'];
 }
 
-$url = "../Pagduplicada/busqueda.php?categoria=".$categoriaGet."&opc=".$opcFiltroGet."&user=".$userGet."&busqueda=".$txtBusquedaGet;
+$dateIni = '0000-01-01';
+$dateFin = '3000-01-01';
+
+if (isset($_POST['dateIni'])) {
+    $dateIni = $_POST['dateIni'];
+} 
+else if (isset($_GET['dateIni'])) {
+    $dateIni = $_GET['dateIni'];
+}
+
+if (isset($_POST['dateFin'])) {
+    $dateFin = $_POST['dateFin'];
+} 
+else if (isset($_GET['dateFin'])) {
+    $dateFin = $_GET['dateFin'];
+}
+
+$url = "../Pagduplicada/busqueda.php?categoria=".$categoriaGet."&opc=6&user=Todos&busqueda=".$txtBusquedaGet;
 
 ?>

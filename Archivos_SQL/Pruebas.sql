@@ -68,11 +68,18 @@ call sp_Categorias('A', 0, 'Manualidades');
 ALTER TABLE Cursos CHANGE isPrecioGeneral isPrecioGeneral INT;
 call sp_Consultas ('All_categorias', 0, 0, '', '');
 
-call sp_Busquedas('6', '', 'Programacion', '', 0, NOW(), NOW());
-opc			
-txt_Curso    
-txt_Categoria
-txt_NomUser  
-opcFiltro   	
-date_ini    	
-date_fin     
+call sp_Busquedas('6', '', 'Todos', '', 0, curdate(), curdate());
+
+call sp_Busquedas('4', '', 'Todos', 'chobbi', 0, '2021-09-17', curdate());
+
+select curdate();
+
+ALTER TABLE Cursos ADD date_FchaRegistro DATE;
+ALTER TABLE Cursos ADD date_FchaUltiCambio DATE;
+
+            select * from View_Curso
+                    where 	YEAR(NOW()) = YEAR(View_Curso.Registro)
+					and 	MONTH(NOW()) = MONTH(View_Curso.Registro)
+					and 	DAY(NOW()) = DAY(View_Curso.Registro)
+                    and		View_Curso.Activo = 1
+                    ORDER BY View_Curso.Registro DESC, View_Curso.ID DESC;

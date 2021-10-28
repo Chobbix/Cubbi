@@ -9,20 +9,20 @@
                 <div class="bloque-menu"  id="Registro">
                 <scroll-container class="modal_scroll">
                     <div class="bloque-contenido">
-                        <div class="contenedor-Preg" >
-                            <div class="bloque-editar">
-                                <h1>Fecha de inicio</h1>
-                                <input type="date" class="calendario_filtro" >
-                                <h1>Fecha final</h1>
-                                <input type="date" class="calendario_filtro">
-                                <h1></h1>
-                                
-
-                            </div>
-                        </div> 
-                        <div class="btn-guardado">
-                            <a href="../Pagduplicada/busqueda.php" class="save-modal">  <button  class="btn-guarda">Buscar</button>   </a>
-                        </div>   
+                        <form action="../Pagduplicada/busqueda.php?categoria=<?php echo $categoriaGet."&opc=4&user=".$userGet."&busqueda=".$txtBusquedaGet."&dateIni=".$dateIni."&dateFin=".$dateFin;?>" method="post">
+                            <div class="contenedor-Preg" >
+                                <div class="bloque-editar">
+                                    <h1>Fecha de inicio</h1>
+                                    <input type="date" name="dateIni" class="calendario_filtro" value="<?php echo $dataIni ?>">
+                                    <h1>Fecha final</h1>
+                                    <input type="date" name="dateFin" class="calendario_filtro" value="<?php echo $dataFin ?>">
+                                    <h1></h1>
+                                </div>
+                            </div> 
+                            <div class="btn-guardado">
+                                <a href="../Pagduplicada/busqueda.php" class="save-modal">  <button  class="btn-guarda">Buscar</button>   </a>
+                            </div>   
+                        </form>
                     </div>                                      
                 </scroll-container>                                      
             </div>                                     

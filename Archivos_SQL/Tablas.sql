@@ -46,6 +46,8 @@ CREATE TABLE Cursos (
     ruta_vid            VARCHAR(200)            NULL     COMMENT 'Video de presentacion sobre el curso',
     isAcitvo			BOOL    DEFAULT true    NOT NULL COMMENT 'Variable para ver si el curso sigue estando activo a inscripciones',
     isEdited            BOOL    DEFAULT false   NOT NULL COMMENT 'Variable para saber si la informacion del curso fue modificada',
+    date_FchaRegistro	DATE    				NOT NULL COMMENT 'Fecha de creacion del curso',
+	date_FchaUltiCambio DATE					NOT NULL COMMENT 'Fecha de la ultima modificacion del curso',
     
 	CONSTRAINT pk_cur PRIMARY KEY (ID_Curso),
     CONSTRAINT fk_cur_usu FOREIGN KEY (ID_Usuario) REFERENCES Usuarios (ID_Usuario),

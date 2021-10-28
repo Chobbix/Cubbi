@@ -38,20 +38,20 @@ require("../../Controladores/db_busquedas.php");
                         <div class="bloque_filtro">
                             <h2>Fecha de publicacion</h2>
                             <hr>
-                            <li> <a href="../Pagduplicada/busqueda.php?categoria=<?php echo $row['txt_Nombre']."&opc=".$opcFiltroGet."&user=".$userGet."&busqueda=".$txtBusquedaGet;?>">Hoy</a></li>
-                            <li> <a href="">Esta semana</a></li>
-                            <li> <a href="">Este mes</a></li>
-                            <li> <a href="">Este año</a></li>
+                            <li> <a href="../Pagduplicada/busqueda.php?categoria=<?php echo $categoriaGet."&opc=1&user=".$userGet."&busqueda=".$txtBusquedaGet;?>">Hoy</a></li>
+                            <li> <a href="../Pagduplicada/busqueda.php?categoria=<?php echo $categoriaGet."&opc=2&user=".$userGet."&busqueda=".$txtBusquedaGet;?>">Este mes</a></li>
+                            <li> <a href="../Pagduplicada/busqueda.php?categoria=<?php echo $categoriaGet."&opc=3&user=".$userGet."&busqueda=".$txtBusquedaGet;?>">Este año</a></li>
                             <li> <a href="#modal"> Personalizado</a></li>
                         </div>
                         <div class="bloque_filtro ">
                             <h2>Autor del curso</h2>
                             <hr>
-                            <div class="busq">
-
-                                <input type="text" class="us_busq">
-                                <i class="fas fa-search"></i></a></li>
-                            </div>
+                            <form action="../Pagduplicada/busqueda.php?categoria=<?php echo $categoriaGet."&opc=".$opcFiltroGet."&user=".$userGet."&busqueda=".$txtBusquedaGet."&dateIni=".$dateIni."&dateFin=".$dateFin;?>" method="post">
+                                <div class="busq">
+                                    <input type="text" name="user" class="us_busq" value="<?php echo $userGet ?>">
+                                    <button><i class="fas fa-search"></i></button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

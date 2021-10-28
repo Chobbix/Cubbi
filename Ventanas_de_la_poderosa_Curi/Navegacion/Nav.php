@@ -30,11 +30,11 @@ require("../../Controladores/db_nav.php");
                             <li><a href="#">Categorias </a>
                                 <ul class="diseno">
                                     <scroll-container class="scroll_nav">
-                                    <li><a href="../Pagduplicada/busqueda.php?categoria=Todos<?php echo "&opc=".$opcFiltroGet."&user=".$userGet."&busqueda=".$txtBusquedaGet;?>">Todos</a></li>
+                                    <li><a href="../Pagduplicada/busqueda.php?categoria=Todos<?php echo "&opc=6&user=Todos&busqueda=".$txtBusquedaGet;?>">Todos</a></li>
                                         <?php
                                         foreach ($resCategorias as $row) {
                                         ?>
-                                            <li><a href="../Pagduplicada/busqueda.php?categoria=<?php echo $row['txt_Nombre']."&opc=".$opcFiltroGet."&user=".$userGet."&busqueda=".$txtBusquedaGet;?>"> <?php echo $row['txt_Nombre'] ?> </a></li>
+                                            <li><a href="../Pagduplicada/busqueda.php?categoria=<?php echo $row['txt_Nombre']."&opc=6&user=Todos&busqueda=".$txtBusquedaGet;?>"> <?php echo $row['txt_Nombre'] ?> </a></li>
                                         <?php
                                         }
                                         ?>
