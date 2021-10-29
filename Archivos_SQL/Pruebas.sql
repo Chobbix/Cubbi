@@ -70,7 +70,7 @@ call sp_Consultas ('All_categorias', 0, 0, '', '');
 
 call sp_Busquedas('6', '', 'Todos', '', 0, curdate(), curdate());
 
-call sp_Busquedas('4', '', 'Todos', 'chobbi', 0, '2021-09-17', curdate());
+call sp_Busquedas('4', '', 'Todos', 'curi', 0, '2021-01-17', curdate());
 
 select curdate();
 

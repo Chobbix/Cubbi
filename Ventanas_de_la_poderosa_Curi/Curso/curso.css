@@ -70,7 +70,23 @@ hr{
     margin-bottom: 5px;
 }
 
+.btn_diseño_cap{
+    width: 50%;
+    height: 40px;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    border: none;
+    margin-bottom: 5px;
+    margin-left: 50px;
+}
+
 .btn_diseño:hover{
+    background-color:#7c7096;
+    color: white;
+}
+
+.btn_diseño_cap:hover{
     background-color:#7c7096;
     color: white;
 }

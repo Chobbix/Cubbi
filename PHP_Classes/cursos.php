@@ -13,7 +13,8 @@
         private $blob_vid;
         private $isAcitvo;
         private $isEdited;
-        private $txt_profesor;
+        private $date_registro;
+        private $date_cambio;
 
         public function __construct() {
         }
@@ -57,8 +58,14 @@
         function set_isEdited($isEdited) { $this->isEdited = $isEdited; }
         function get_isEdited() { return $this->isEdited; }
 
-        public function set_profesor($txt_profesor) { $this->txt_profesor = $txt_profesor; }
-        public function get_profesor() { return $this->txt_profesor; }
+        function set_profesor($txt_profesor) { $this->txt_profesor = $txt_profesor; }
+        function get_profesor() { return $this->txt_profesor; }
+
+        function set_registro($date_registro) { $this->date_registro = $date_registro; }
+        function get_registro() { return $this->date_registro; }
+
+        function set_cambio($date_cambio) { $this->date_cambio = $date_cambio; }
+        function get_cambio() { return $this->date_cambio; }
 
         public function query_insert_curso() {
             try{

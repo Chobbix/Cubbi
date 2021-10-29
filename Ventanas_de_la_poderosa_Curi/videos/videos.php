@@ -84,7 +84,7 @@ require('../../Controladores/db_videos.php');
 
                                 <?php
                                 }
-                                ?>
+                            ?>
                             </div>
                         </div>
                     </div>

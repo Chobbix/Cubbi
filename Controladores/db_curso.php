@@ -40,8 +40,15 @@ if(isset($_GET["curso"])) {
         $curso->set_duracion($row['Duracion']);
         $curso->set_img($row['Imagen']);
         $curso->set_profesor($row['Profesor']);
+        $curso->set_registro($row['Registro']);
+        $curso->set_cambio($row['Cambio']);
+        $curso->set_isPrecioGeneral($row['Tipo']);
+        $curso->set_precio($row['Precio']);
     }
 }
 
+$consulta = new Consulta();
+$capitulosRes = $consulta->query_select_capitulos_by_curso($_GET["curso"]);
+$seccionesRes = $consulta->query_select_secciones_by_curso($_GET["curso"]);
 
 ?>
