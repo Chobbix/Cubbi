@@ -101,6 +101,9 @@ CREATE TABLE Cursos_Registrados (
     int_SeccionActual	INT     NULL     COMMENT 'La seccion en la que se encuentra actualmente el usuario',
     isTerminado			BOOL    NOT NULL COMMENT 'Para afirmar que si usuario ha terminado o no el curso',
     isBaja				BOOL    NOT NULL COMMENT 'Para afirmar que si el usuario se ha dado de baja enel curso',
+    f_MontoPagado		FLOAT   NOT NULL COMMENT 'Monto que se ha pagado del curso hasta el momento',
+    int_TipoPago		INT	    NOT NULL COMMENT 'Tipo de pago utilizado',
+    date_FchaRegistro	DATE    NULL     COMMENT 'Fecha de registro del usuario en el curso',
     date_FchaTerm		DATE    NULL     COMMENT 'para mostrar la fecha del dia en que el alumno terminó el curso',
     
 	CONSTRAINT pk_curreg PRIMARY KEY (ID_Usuario, ID_Curso),
@@ -109,6 +112,15 @@ CREATE TABLE Cursos_Registrados (
     CONSTRAINT fk_curreg_niv FOREIGN KEY (ID_Curso, int_SeccionActual) REFERENCES Secciones (ID_Curso, ID_Seccion)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+CREATE TABLE Accesos (
+	ID_Usuario			INT      NOT NULL COMMENT 'Clave foranea del usuario',
+    ID_Curso			INT      NOT NULL COMMENT 'Clave foranea del curso',
+    ID_Seccion			INT      NOT NULL COMMENT 'Clave foranea de la seccion que el usuario puede acceder',
+    
+    CONSTRAINT pk_acc PRIMARY KEY (ID_Usuario, ID_Curso, ID_Seccion),
+    CONSTRAINT fk_acc_usu_cur FOREIGN KEY (ID_Usuario, ID_Curso) REFERENCES Cursos_Registrados (ID_Usuario, ID_Curso),
+    CONSTRAINT fk_acc_cur_sec FOREIGN KEY (ID_Curso, ID_Seccion) REFERENCES Secciones (ID_Curso, ID_Seccion)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE Mensajes_Cursos (
     ID_Curso            INT             NOT NULL COMMENT 'Clave primaria del curso',

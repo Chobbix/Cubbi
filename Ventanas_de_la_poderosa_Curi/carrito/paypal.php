@@ -34,7 +34,7 @@
   //    </div>
   //  </div>
   //<script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=MXN" data-sdk-integration-source="button-factory"></script>
-  //<script>
+  <script>
   //  function initPayPalButton() {
   //    paypal.Buttons({
   //      style: {

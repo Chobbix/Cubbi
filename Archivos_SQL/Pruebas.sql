@@ -77,6 +77,10 @@ select curdate();
 ALTER TABLE Cursos ADD date_FchaRegistro DATE;
 ALTER TABLE Cursos ADD date_FchaUltiCambio DATE;
 
+ALTER TABLE Cursos_Registrados ADD f_MontoPagado FLOAT;
+ALTER TABLE Cursos_Registrados ADD int_TipoPago INT;
+ALTER TABLE Cursos_Registrados ADD date_FchaRegistro DATE;
+
             select * from View_Curso
                     where 	YEAR(NOW()) = YEAR(View_Curso.Registro)
 					and 	MONTH(NOW()) = MONTH(View_Curso.Registro)

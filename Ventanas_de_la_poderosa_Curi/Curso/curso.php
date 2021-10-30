@@ -12,6 +12,11 @@ require('../../Controladores/db_curso.php');
     <link rel="stylesheet" href="./curso.css">
     <link rel="stylesheet" href="./caja_comment.css">
     <link rel="stylesheet" href="../accordion/accordion.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AalL6GrPpgIxNDaDkesb_DED8QIEEMftQq_TFWnFh3Ty82OAreooXmMoedzVa2uVx7rBrSuzuxr5YZGV&enable-funding=venmo&currency=MXN" data-sdk-integration-source="button-factory"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../../JavaScript/Compras.js"></script>
+    <link rel="stylesheet" href="../modal/contmodal.css">
     <title>Document</title>
 </head>
 <body>
@@ -48,6 +53,7 @@ require('../../Controladores/db_curso.php');
                         <div class="accordion">
                             <?php
                                 foreach($seccionesRes as $row){
+                                    $precioSec = 0;
                                 ?>
                                     <div class="accordion-item" id="question<?php echo $row['ID_Seccion']?>">
                                         <a class="accordion-link" href="#question<?php echo $row['ID_Seccion']?>">
@@ -66,6 +72,13 @@ require('../../Controladores/db_curso.php');
                                                             <hr>
                                                             <i class="fas fa-circle-notch"></i>
                                                             <p><?php echo $row2['Titulo']?></p>
+                                                            <p>
+                                                            <?php 
+                                                                if($curso->get_isPrecioGeneral() == 3) { 
+                                                                    $precioSec = $precioSec + $row2['Precio']; 
+                                                                }
+                                                            ?>
+                                                            </p>
                                                             <hr>
                                                         </div>
                                                     <?php
@@ -73,7 +86,19 @@ require('../../Controladores/db_curso.php');
                                                 }
                                                 ?>
                                             </div>
-                                            <button class="btn_diseño_cap">Comprar ahora</button>
+                                            <?php
+                                            if($curso->get_isPrecioGeneral() == 3){
+                                                ?>
+                                                    
+                                                    <button class="btn_diseño_cap"><a href="#modal" id="mostrar" Curso="<?php echo $curso->get_idCurso(); ?>" Tema="<?php echo $row['ID_Seccion'] ?>" Precio="<?php echo $precioSec ?>">Comprar ahora</a></button>
+                                                    <p>
+                                                    <?php 
+                                                        if($curso->get_isPrecioGeneral() == 3) { echo "$".number_format($precioSec, 2); }
+                                                    ?>
+                                                    </p>
+                                                <?php
+                                            }
+                                            ?>
                                         </div>
                                     </div>
 
@@ -82,23 +107,28 @@ require('../../Controladores/db_curso.php');
                             ?>
                         </div>
                     </div>
-                <hr>
-                    <div class="Precio">
-                        <div class="bloque_precio">
-                            <div class="contenedor_precio">
-                                <div class="ayuda">
-                                    <h1>$<?php echo $curso->get_precio(); ?></h1>
-                                </div>
-                                <a href="../carrito/cesta.php">
-                                    <div class="ayuda">                                        
-                                        <button class="btn_diseño">Comprar ahora</button>
+                <?php
+                    if($curso->get_isPrecioGeneral() != 3){
+                        ?>
+                            <hr>
+                                <div class="Precio">
+                                    <div class="bloque_precio">
+                                        <div class="contenedor_precio">
+                                            <div class="ayuda">
+                                                <h1>$<?php echo number_format($curso->get_precio(), 2); ?></h1>
+                                            </div>
+                                            <a href="#modal" id="mostrar">
+                                                <div class="ayuda">                                        
+                                                    <button class="btn_diseño">Comprar ahora</button>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-                <hr>
+                                </div>
+                            <hr>
+                        <?php
+                    }
+                ?>
                 <div class="caja_comentarios">
                 <?php 
                 
@@ -116,6 +146,7 @@ require('../../Controladores/db_curso.php');
             </div>
         </div>      
     </div>
-    
+    <link rel="stylesheet" href="./moda.css">
+    <?php include("../modal/modalpago.php")?>
 </body>
 </html>

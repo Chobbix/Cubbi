@@ -229,6 +229,9 @@ input[type="radio"]{
     margin-top:20px ;
     display: flex;
 }
+#paypal-button-container{
+    margin-top: 10%;
+}
 
 
 .contenedor-Preg, .contenedor-resp{

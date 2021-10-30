@@ -3,6 +3,7 @@
         <header>
             <h1>Pago</h1>
             <a href="#" class="cerrar"> <h3 class="x"> <i class="fas fa-times-circle"></i> </h3> </a>
+            <h3 class="temaComprar" idtema="0">Tema</h3>
         </header>
         <article>
             <div class="contenedor-answer">   
@@ -23,7 +24,6 @@
                                 <input type="text" placeholder="Fecha expiracion">
                                 <h1></h1>
                                 <input type="text" placeholder="Codigo seguridad">
-
                             </div>
                         </div> 
                         <div class="contenedor-resp" id="Registro" >

@@ -19,6 +19,7 @@ SELECT Capitulos.ID_Curso as Curso,
             Capitulos.ID_Seccion as Tema,
             Capitulos.ID_Capitulo as Capitulo,
             Capitulos.txt_Titulo as Titulo,
+            Capitulos.f_Precio as Precio,
             Capitulos.ruta_vid as Video
             from Capitulos;
 

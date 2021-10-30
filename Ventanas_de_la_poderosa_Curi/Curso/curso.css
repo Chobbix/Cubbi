@@ -71,14 +71,26 @@ hr{
 }
 
 .btn_diseño_cap{
-    width: 50%;
+    width: 60%;
     height: 40px;
     background-color: white;
     border-radius: 5px;
     font-size: 20px;
     border: none;
     margin-bottom: 5px;
-    margin-left: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.comprado{
+    width: 60%;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    margin-bottom: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
 }
 
 .btn_diseño:hover{
