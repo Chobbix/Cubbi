@@ -128,4 +128,15 @@
             
             return $rows;
         }
+
+        function query_select_accesos($curso, $usuario) {
+            $database = new DB;
+            $conexion = $database->ConectarDB();
+            $sql = "call sp_Consultas ('Accesos_User', ?, ?, '', '')";
+            $statementSelect = $conexion->prepare($sql);
+            $statementSelect->execute(array($curso, $usuario));
+            $rows = $statementSelect->fetchAll();
+            
+            return $rows;
+        }
     }

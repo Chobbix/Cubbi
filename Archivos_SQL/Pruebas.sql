@@ -87,3 +87,18 @@ ALTER TABLE Cursos_Registrados ADD date_FchaRegistro DATE;
 					and 	DAY(NOW()) = DAY(View_Curso.Registro)
                     and		View_Curso.Activo = 1
                     ORDER BY View_Curso.Registro DESC, View_Curso.ID DESC;
+
+
+call sp_Accesos('A', 1, 28, 1);
+
+drop table accesos
+
+SELECT Cursos.ID_Curso as ID,
+            Cursos.txt_Titulo as Titulo,
+            Cursos.txt_Descripcion as Descripcion,
+            Cursos.txt_Duracion as Duracion,
+            Usuarios.blob_img as Imagen,
+            Cursos.date_FchaUltiCambio as Cambio
+            from Accesos
+            inner join Usuarios on Usuarios.ID_Usuario = Accesos.ID_Usuario
+            inner join Cursos on Cursos.ID_Curso = Accesos.ID_Curso;

@@ -89,8 +89,20 @@ require('../../Controladores/db_curso.php');
                                             <?php
                                             if($curso->get_isPrecioGeneral() == 3){
                                                 ?>
-                                                    
-                                                    <button class="btn_diseño_cap"><a href="#modal" id="mostrar" Curso="<?php echo $curso->get_idCurso(); ?>" Tema="<?php echo $row['ID_Seccion'] ?>" Precio="<?php echo $precioSec ?>">Comprar ahora</a></button>
+                                                    <?php 
+                                                        $vali = false;
+                                                        if(isset($accesosRes)) { 
+                                                            foreach($accesosRes as $row3) {
+                                                                if($row3['ID_Seccion'] == $row['ID_Seccion']) { echo '<h2 class="comprado">Tema Comprado</h2>'; $vali = true; }
+                                                            }
+                                                        }
+
+                                                        if($vali == false) {
+                                                            ?>
+                                                            <button class="btn_diseño_cap"><a href="#modal" id="mostrar" Curso="<?php echo $curso->get_idCurso(); ?>" Tema="<?php echo $row['ID_Seccion'] ?>" Precio="<?php echo $precioSec ?>">Comprar ahora</a></button>
+                                                            <?php
+                                                        }
+                                                    ?>
                                                     <p>
                                                     <?php 
                                                         if($curso->get_isPrecioGeneral() == 3) { echo "$".number_format($precioSec, 2); }

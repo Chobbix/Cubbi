@@ -43,6 +43,11 @@ BEGIN
     IF opc = 'All_categorias' THEN
         SELECT ID_Categoria, txt_Nombre FROM Categorias;
     END IF;
+
+    IF opc = 'Accesos_User' THEN
+        SELECT ID_Curso, ID_Usuario, ID_Seccion FROM Accesos
+            WHERE ID_Curso = id1 and ID_Usuario = id2;
+    END IF;
 END
 $$
 DELIMITER ;

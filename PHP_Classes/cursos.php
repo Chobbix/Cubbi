@@ -3,6 +3,7 @@
         private $ID_Curso;
         private $ID_Usuario;
         private $ID_Categoria;
+        private $ID_Seccion;
         private $int_Niveles;
         private $txt_Titulo;
         private $txt_Descripcion;
@@ -27,6 +28,9 @@
 
         function set_idCategoria($ID_Categoria) { $this->ID_Categoria = $ID_Categoria; }
         function get_idCategoria() { return $this->ID_Categoria; }
+
+        function set_idSeccion($ID_Seccion) { $this->ID_Seccion = $ID_Seccion; }
+        function get_idSeccion() { return $this->ID_Seccion; }
 
         function set_titulo($txt_Titulo) { $this->txt_Titulo = $txt_Titulo; }
         function get_titulo() { return $this->txt_Titulo; }
@@ -74,6 +78,20 @@
                 $sql = "call sp_Cursos('A', null, ?, ?, ?, ?, ?, ?, ?, ?, '{$this->blob_img}', ?, true, false)";
                 $statement = $conexion->prepare($sql);
                 $statement->execute(array($this->ID_Usuario, $this->ID_Categoria, $this->int_Niveles, $this->txt_Titulo, $this->txt_Descripcion, $this->txt_Duracion, $this->isPrecioGeneral, $this->f_Precio, $this->blob_vid));
+                $statement->closeCursor();
+
+            }catch(Exception $e) {
+                return $e;
+            }
+        }
+
+        public function query_insert_acceso() {
+            try{
+                $database = new DB;
+                $conexion = $database->ConectarDB();
+                $sql = "call sp_Accesos('A', ?, ?, ?)";
+                $statement = $conexion->prepare($sql);
+                $statement->execute(array($this->ID_Usuario, $this->ID_Curso, $this->ID_Seccion));
                 $statement->closeCursor();
 
             }catch(Exception $e) {

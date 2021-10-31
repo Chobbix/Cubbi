@@ -34,41 +34,21 @@ $(document).ready(function(){
         },
 
         onApprove: function(data, actions) {
-            contador ++;
-            console.log(contador);
             MostrarMsgBox("Registrado y comprado con exito", "Espero que te guste el curso", "success");
-            $(location).attr('href','#');
             var padre = $("[Tema=" + idTema + "]").parent();
             $("[Tema=" + idTema + "]").remove();
             padre.replaceWith('<h2 class="comprado">Tema Comprado</h2>');
 
             if(isRegistrado == false){
                 isRegistrado = true;
-
-                var form_registro = new FormData();
-                form_registro.append('curso', idCurso);
-                form_registro.append('seccion', idTema);
-
-                $.ajax({
-                    data: form_registro,
-                    url: '/Cubbi_BDM_PWCI/Controladores/db_agregar_registro_curso.php',
-                    method: 'POST',
-                    contentType: false,
-                    processData: false,
-                })
-                .done(function(result){
-                    console.log(result);
-                })
-                
-                .fail(function(result){
-                    console.log(result);
-                });
+                AgregarRegistroAjax(idCurso, precio, 2);
             }
 
             if(isCursoPorCapitulos) {
-
+                AgregarAcceso(idCurso, idTema);
+                $(location).attr('href','#');
             } else {
-
+                $(location).attr('href','#');
             }
         },
 
@@ -87,6 +67,49 @@ $(document).ready(function(){
             icon: icono,
             background: '#B8B7C9',
             confirmButtonText: 'OK'
+        });
+    }
+
+    function AgregarRegistroAjax(curso, precio, tPago) {
+        var form_registro = new FormData();
+        form_registro.append('curso', curso);
+        form_registro.append('precio', precio);
+        form_registro.append('tPago', tPago);
+
+        $.ajax({
+            data: form_registro,
+            url: '/Cubbi_BDM_PWCI/Controladores/db_agregar_registro_curso.php',
+            method: 'POST',
+            contentType: false,
+            processData: false,
+        })
+        .done(function(result){
+            console.log(result);
+        })
+        
+        .fail(function(result){
+            alert(result);
+        });
+    }
+
+    function AgregarAcceso(curso, tema) {
+        var form_registro = new FormData();
+        form_registro.append('curso', curso);
+        form_registro.append('seccion', tema);
+
+        $.ajax({
+            data: form_registro,
+            url: '/Cubbi_BDM_PWCI/Controladores/db_agregar_accesos.php',
+            method: 'POST',
+            contentType: false,
+            processData: false,
+        })
+        .done(function(result){
+            console.log(result);
+        })
+        
+        .fail(function(result){
+            alert(result);
         });
     }
 
