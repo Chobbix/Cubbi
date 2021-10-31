@@ -18,6 +18,11 @@ $(document).ready(function(){
         isCursoPorCapitulos = true;
     });
 
+    $(".btn_diseño").click(function(){
+        precio = $(this).attr("Precio");
+        idCurso = $(this).attr("Curso");
+    });
+
     paypal.Buttons({
         
         style: {
@@ -34,21 +39,23 @@ $(document).ready(function(){
         },
 
         onApprove: function(data, actions) {
-            MostrarMsgBox("Registrado y comprado con exito", "Espero que te guste el curso", "success");
-            var padre = $("[Tema=" + idTema + "]").parent();
-            $("[Tema=" + idTema + "]").remove();
-            padre.replaceWith('<h2 class="comprado">Tema Comprado</h2>');
-
             if(isRegistrado == false){
                 isRegistrado = true;
                 AgregarRegistroAjax(idCurso, precio, 2);
             }
 
             if(isCursoPorCapitulos) {
+                var padre = $("[Tema=" + idTema + "]").parent();
+                $("[Tema=" + idTema + "]").remove();
+                padre.replaceWith('<h2 class="comprado">Tema Comprado</h2>');
+
                 AgregarAcceso(idCurso, idTema);
+                MostrarMsgBox("Registrado y comprado el tema con exito", "Espero que te guste el curso", "success");
                 $(location).attr('href','#');
+
             } else {
-                $(location).attr('href','#');
+                MostrarMsgBox("Registrado y comprado con exito", "Espero que te guste el curso", "success");
+                $(location).attr('href','../elcurso/vista.php?curso='+ idCurso);
             }
         },
 

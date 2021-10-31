@@ -113,7 +113,6 @@ require('../../Controladores/db_curso.php');
                                             ?>
                                         </div>
                                     </div>
-
                                 <?php
                                 }
                             ?>
@@ -131,7 +130,7 @@ require('../../Controladores/db_curso.php');
                                             </div>
                                             <a href="#modal" id="mostrar">
                                                 <div class="ayuda">                                        
-                                                    <button class="btn_diseño">Comprar ahora</button>
+                                                    <button class="btn_diseño" Precio="<?php echo $curso->get_precio()?>" Curso="<?php echo $_GET['curso']; ?>">Comprar ahora</button>
                                                 </div>
                                             </a>
                                         </div>

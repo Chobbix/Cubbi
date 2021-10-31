@@ -72,7 +72,7 @@ require("../../Controladores/db_busquedas.php");
                 <div class="contenedor">
                     <a href="../Curso/curso.php?curso=<?php echo $row['ID']; ?>"> <img src="data:image/png;base64,<?php echo base64_encode($row['Imagen']); ?>" alt="" class="video"> </a>
                     <div class="cabecera">
-                        <a href="../Curso/curso.php">
+                        <a href="../Curso/curso.php?curso=<?php echo $row['ID']; ?>">
                             <h1><?php echo $row['Titulo']; ?></h1>
                         </a>
                     </div>
@@ -87,9 +87,7 @@ require("../../Controladores/db_busquedas.php");
                             <h6>126</h6>
                         </div>
                     </div>
-                    <button class="add-carrito"> Agregar al carro</button>
                 </div>
-
                 <?php
                 $contador ++;
                 if($contador == 3) {
