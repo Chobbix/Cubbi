@@ -1,6 +1,6 @@
 <?php
 
-require("../../Controladores/db_dashboard.php");
+require("../../Controladores/db_info_usu.php");
 
 ?>
 <!DOCTYPE html>
@@ -16,6 +16,7 @@ require("../../Controladores/db_dashboard.php");
 <body>
     <div >
         <?php include ("../Navegacion/Nav.php");?>
+        <?php include('cuadro_curso.php');?>
     </div>
     <div class="contenedor">
         <div class="menus">
@@ -55,79 +56,16 @@ require("../../Controladores/db_dashboard.php");
                                 </div>
                                 <div class="bloque-menu"  id="filtrado">   
                                     <div class="contenidoooo">
-                                        <div class="bloque-contenido"> 
-                                            <div class="contenedor-Todos container-dis">
-                                                <div class="bloque-containeer">  
-                                                    <div class="container">
-                                                        <div class="miniatura "> 
-                                                            <img src="../Multimedia/c.gif" alt="" class="miniatura_ds"> 
-                                                        </div>
-                                                        <div class="titulo ">
-                                                            <div class="tittle-text" >
-                                                                <h4>  Bordado basico </h4>
-                                                            </div>
-                                                        </div>
-                                                        <div class="porcentaje "> 
-                                                        </div>
-                                                        <div class="btn-curso ">
-                                                            <a href="../elcurso/vista.php"> <button class="btn-curso-ds">Empieza ahora</button></a>
-                                                            
-                                                        </div>
-                                                    </div>  
-                                                </div>                                                                                                                              
-                                            </div>                                                                                                
-                                            <div class="contenedor-Todos container-dis">
-                                                <div class="bloque-containeer">  
-                                                    <div class="container">
-                                                        <div class="miniatura ">
-                                                            <img src="../Multimedia/c.gif" alt="" class="miniatura_ds">
-                                                        </div>
-                                                        <div class="titulo ">
-                                                            <div class="tittle-text" >
-                                                                <h4>  Introduccion a la programacion web </h4>                                                                               
-                                                            </div>
-                                                        </div>
-                                                        <div class="porcentaje ">
-                                                            <h5 class="texto"> 10%</h5>
-                                                        </div>
-                                                        <div class="btn-curso ">
-                                                            <a href="../elcurso/vista.php"> <button class="btn-curso-ds">Continua ahora</button> </a>
-                                                            
-                                                        </div>
-                                                    </div>  
-                                                </div>                                                                                                                              
-                                            </div>  
-                                            <div class="contenedor-Todos container-dis">
-                                                <div class="bloque-containeer">  
-                                                    <div class="container">
-                                                        <div class="miniatura ">
-                                                            <img src="../Multimedia/c.gif" alt="" class="miniatura_ds"> 
-                                                        </div>
-                                                        <div class="titulo ">
-                                                            <div class="tittle-text" >
-                                                                <h4>  Introduccion a la programacion web</h4>                                                                              
-                                                            </div>
-                                                        </div>
-                                                        <div class="porcentaje ">                                                                        
-                                                        </div>
-                                                        <div class="btn-curso ">
-                                                            <a href="../elcurso/vista.php">  <button class="btn-curso-ds">Terminado</button> </a>
-                                                        </div>
-                                                    </div>  
-                                                </div>                                                                                                                              
-                                            </div>                                                        
+                                        <div class="bloque-contenido">
+                                            <?php
+                                                ObtenerAllCursosRegistrados();
+                                            ?>
                                             <div class="contenedor-sinver container-dis"  id="filtrado" >
-                                                
-                                            </div>  
-                                            <div class="contenedor-progreso container-dis"  id="filtrado" >
-                                                continuar
-                                            </div>  
+                                            </div>
                                             <div class="contenedor-Completos container-dis"  id="filtrado" >
-                                                completados
-                                            </div>  
+                                            </div>
                                             <div class="contenedor-inexistentes container-dis"  id="filtrado" >
-                                                solo tu puedes ver
-                                            </div>                                                                                                                       
+                                            </div>
                                         </div> 
                                     </div>                                                                                            
                                 </div>
@@ -151,16 +89,14 @@ require("../../Controladores/db_dashboard.php");
                                     </div>
                                     <div class="btn-curso ">
                                         <a href="../Curso/curso.php"><button class="btn-curso-ds">Comprar</button></a>
-                                        
                                     </div>
-                                </div>                               
-                            </div> 
-                        </div>                                                                                                                             
-
+                                </div>
+                            </div>
+                        </div>
                     </div> 
                 </div>
             </div>                              
         </div>                               
-    </div>                                
+    </div>
 </body>
 </html>               

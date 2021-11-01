@@ -16,6 +16,11 @@
         private $isEdited;
         private $date_registro;
         private $date_cambio;
+        private $int_likes;
+        private $int_inscritos;
+        private $int_tema_actual;
+        private $int_capitulo_actual;
+        private $txt_titulo_capitulo;
 
         public function __construct() {
         }
@@ -70,6 +75,21 @@
 
         function set_cambio($date_cambio) { $this->date_cambio = $date_cambio; }
         function get_cambio() { return $this->date_cambio; }
+
+        function set_likes($int_likes) { $this->int_likes = $int_likes; }
+        function get_likes() { return $this->int_likes; }
+
+        function set_Inscritos($int_inscritos) { $this->int_inscritos = $int_inscritos; }
+        function get_Inscritos() { return $this->int_inscritos; }
+
+        function set_tema($int_tema_actual) { $this->int_tema_actual = $int_tema_actual; }
+        function get_tema() { return $this->int_tema_actual; }
+
+        function set_capitulo($int_capitulo_actual) { $this->int_capitulo_actual = $int_capitulo_actual; }
+        function get_capitulo() { return $this->int_capitulo_actual; }
+
+        function set_titulo_capitulo($txt_titulo_capitulo) { $this->txt_titulo_capitulo = $txt_titulo_capitulo; }
+        function get_titulo_capitulo() { return $this->txt_titulo_capitulo; }
 
         public function query_insert_curso() {
             try{

@@ -80,11 +80,11 @@ require("../../Controladores/db_busquedas.php");
                     <div class="informacion_megusta">
                         <div class="me_gusta informacion_megusta">
                             <i class="far fa-heart"></i>
-                            <h6>126</h6>
+                            <h6><?php echo $row['Likes']; ?></h6>
                         </div>
                         <div class="personas informacion_megusta">
                             <i class="far fa-user"></i>
-                            <h6>126</h6>
+                            <h6><?php echo $row['Registros_Cantidad']; ?></h6>
                         </div>
                     </div>
                 </div>

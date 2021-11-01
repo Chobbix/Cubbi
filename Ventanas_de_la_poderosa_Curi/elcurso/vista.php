@@ -1,5 +1,6 @@
 <?php
 require('../../Controladores/db_curso.php');
+require('../../Controladores/db_vista_curso.php');
 ?>
 
 <!DOCTYPE html>
@@ -30,13 +31,10 @@ require('../../Controladores/db_curso.php');
                             <div class=""> Impartida por: <?php echo $curso->get_profesor(); ?> </div>
                         </div>
                         <div class="">
-                            <h1>Clase 1.- *Titulo del capitulo*</h1>
-                            <a href="../videos/videos.php"> <button class="btn_dis"> Continuar curso</button> </a>
-                            
+                            <h1>Tema <?php echo $curso->get_tema(); ?>.- <?php echo $curso->get_titulo_capitulo(); ?></h1>
+                            <a href="../videos/videos.php?curso=<?php echo $_GET['curso']; ?>&tem=<?php echo $curso->get_tema(); ?>&cap=<?php echo $curso->get_capitulo(); ?>#question<?php echo $curso->get_tema(); ?>"> <button class="btn_dis"> Continuar curso</button> </a>
+                        </div>
                     </div>
-                        
-                    </div>
-                    
                 </div>
                 <div class="sub_bloque_contenido">
                     <h1 class="dis_bloque">
@@ -69,7 +67,7 @@ require('../../Controladores/db_curso.php');
                                         </div>                                        
                                         <div class="sep">
                                             <h1>Estudiantes inscritos:</h1>   
-                                            <h2 class=des>450</h2>     
+                                            <h2 class=des><?php echo $curso->get_Inscritos(); ?></h2>     
                                         </div>
                                         <div class="sep">
                                             <h1>Descripcion:</h1> 
@@ -84,7 +82,7 @@ require('../../Controladores/db_curso.php');
                                     <div class="bloque_calificacion">
                                         <div class="cuadro_informativo">
                                         <i class="far fa-heart"></i> 
-                                        <h2>524</h2>
+                                        <h2><?php echo $curso->get_likes(); ?></h2>
                                         <h2> personas les gusto este curso</h2>
                                         </div>
                                     </div>

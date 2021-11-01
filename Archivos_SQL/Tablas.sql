@@ -85,26 +85,27 @@ CREATE TABLE Categorias_cursos (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE Promedios (
-	ID_Promedio			INT AUTO_INCREMENT      NOT NULL COMMENT 'Clave primaria del promedio del curso',
     ID_Curso			INT                     NOT NULL COMMENT 'Clave foranea del curso',
     ID_Usuario			INT                     NOT NULL COMMENT 'Clave foranea del usuario que hizo la calificacion',
-    int_Calificacion    INT                     NOT NULL COMMENT 'Calificacion que le dio el usuario al curso',
+    bool_like		    BOOL	default false	NOT NULL COMMENT 'Calificacion que le dio el usuario al curso',
+    bool_dislike	    BOOL	default false	NOT NULL COMMENT 'Calificacion que le dio el usuario al curso',
     
-    CONSTRAINT pk_pro PRIMARY KEY (ID_Promedio),
+    CONSTRAINT pk_pro PRIMARY KEY (ID_Curso, ID_Usuario),
     CONSTRAINT fk_pro_cur FOREIGN KEY (ID_Curso) REFERENCES Cursos (ID_Curso),
     CONSTRAINT fk_pro_usu FOREIGN KEY (ID_Usuario) REFERENCES Usuarios (ID_Usuario)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE Cursos_Registrados (
-	ID_Usuario			INT     NOT NULL COMMENT 'Clave primaria del usuario registardo en el curso',
-    ID_Curso			INT     NOT NULL COMMENT 'Clave primaria refiriendose al curso registrado',
-    int_SeccionActual	INT     NULL     COMMENT 'La seccion en la que se encuentra actualmente el usuario',
-    isTerminado			BOOL    NOT NULL COMMENT 'Para afirmar que si usuario ha terminado o no el curso',
-    isBaja				BOOL    NOT NULL COMMENT 'Para afirmar que si el usuario se ha dado de baja enel curso',
-    f_MontoPagado		FLOAT   NOT NULL COMMENT 'Monto que se ha pagado del curso hasta el momento',
-    int_TipoPago		INT	    NOT NULL COMMENT 'Tipo de pago utilizado',
-    date_FchaRegistro	DATE    NULL     COMMENT 'Fecha de registro del usuario en el curso',
-    date_FchaTerm		DATE    NULL     COMMENT 'para mostrar la fecha del dia en que el alumno terminó el curso',
+	ID_Usuario			INT     NOT NULL 	COMMENT 'Clave primaria del usuario registardo en el curso',
+    ID_Curso			INT     NOT NULL 	COMMENT 'Clave primaria refiriendose al curso registrado',
+    int_SeccionActual	INT     NULL		COMMENT 'La seccion en la que se encuentra actualmente el usuario',
+    int_CapituloActual	INT     DEFAULT 1	COMMENT 'Capitulo en el que se encuentra el usuario actualmente',
+    isTerminado			BOOL    NOT NULL 	COMMENT 'Para afirmar que si usuario ha terminado o no el curso',
+    isBaja				BOOL    NOT NULL 	COMMENT 'Para afirmar que si el usuario se ha dado de baja enel curso',
+    f_MontoPagado		FLOAT   NOT NULL 	COMMENT 'Monto que se ha pagado del curso hasta el momento',
+    int_TipoPago		INT	    NOT NULL 	COMMENT 'Tipo de pago utilizado',
+    date_FchaRegistro	DATE    NULL     	COMMENT 'Fecha de registro del usuario en el curso',
+    date_FchaTerm		DATE    NULL     	COMMENT 'para mostrar la fecha del dia en que el alumno terminó el curso',
     
 	CONSTRAINT pk_curreg PRIMARY KEY (ID_Usuario, ID_Curso),
     CONSTRAINT fk_curreg_usu FOREIGN KEY (ID_Usuario) REFERENCES Usuarios (ID_Usuario),

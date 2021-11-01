@@ -3,7 +3,7 @@ DROP PROCEDURE sp_Consultas;
 
 DELIMITER $$
 CREATE PROCEDURE sp_Consultas (
-	in opc					VARCHAR(20),
+	in opc					VARCHAR(30),
     in id1                  INT,
     in id2                  INT,
     in txt1     			VARCHAR(40),
@@ -21,7 +21,7 @@ BEGIN
     END IF;
 
     IF opc = 'Curso' THEN
-        SELECT ID, Titulo, Descripcion, Duracion, Imagen, Profesor, Activo, Tipo, Precio, Registro, Cambio FROM View_Curso
+        SELECT ID, Titulo, Descripcion, Duracion, Imagen, Profesor, Activo, Tipo, Precio, Registro, Cambio, Registros_Cantidad, Likes FROM View_Curso
             WHERE ID = id1;
     END IF;
 
@@ -47,6 +47,16 @@ BEGIN
     IF opc = 'Accesos_User' THEN
         SELECT ID_Curso, ID_Usuario, ID_Seccion FROM Accesos
             WHERE ID_Curso = id1 and ID_Usuario = id2;
+    END IF;
+
+    IF opc = 'All_Registrados' THEN
+        SELECT ID_Usuario, ID_Curso, Seccion_Actual, Capitulo_Actual, img, Titulo, Capitulos, Porcentaje, Titulo_Capitulo FROM View_Registros
+            WHERE ID_Usuario = id1;
+    END IF;
+
+    IF opc = 'Registrados_User' THEN
+        SELECT ID_Usuario, ID_Curso, Seccion_Actual, Capitulo_Actual, img, Titulo, Capitulos, Porcentaje, Titulo_Capitulo FROM View_Registros
+            WHERE ID_Usuario = id1 AND ID_Curso = id2;
     END IF;
 END
 $$

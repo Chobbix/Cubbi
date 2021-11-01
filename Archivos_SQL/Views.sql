@@ -34,9 +34,14 @@ SELECT Cursos.ID_Curso as ID,
             Cursos.isPrecioGeneral as Tipo,
             Cursos.f_Precio as Precio,
             Cursos.date_FchaRegistro as Registro,
-            Cursos.date_FchaUltiCambio as Cambio
+            Cursos.date_FchaUltiCambio as Cambio,
+            COUNT(Cursos_Registrados.ID_Usuario) as Registros_Cantidad,
+            COUNT(Promedios.bool_like) as Likes
             from Cursos
-            inner join Usuarios on Usuarios.ID_Usuario = Cursos.ID_Usuario;
+            inner join Usuarios on Usuarios.ID_Usuario = Cursos.ID_Usuario
+            left join Cursos_Registrados on Cursos_Registrados.ID_Curso = Cursos.ID_Curso
+            left join Promedios on Promedios.ID_Curso = Cursos.ID_Curso
+            group by Cursos.ID_Curso;
 
 CREATE VIEW View_Curso_Categoria AS
 SELECT Cursos.ID_Curso as ID,
@@ -69,8 +74,27 @@ SELECT Comentarios_Cursos.txt_Comentario as Comentario,
         inner join Cursos on Cursos.ID_Curso = Comentarios_Cursos.ID_Curso
         ORDER BY Fecha DESC;
 
+CREATE VIEW View_Registros AS
+SELECT Cursos_Registrados.ID_Usuario as ID_Usuario,
+            Cursos_Registrados.ID_Curso as ID_Curso,
+            Cursos_Registrados.int_SeccionActual as Seccion_Actual,
+            Cursos_Registrados.int_CapituloActual as Capitulo_Actual,
+            Cursos.blob_img as img,
+            Cursos.txt_Titulo as Titulo,
+            COUNT(Capitulos.ID_Capitulo) as Capitulos,
+            Crear_Porcentaje(int_CapituloActual, COUNT(Capitulos.ID_Capitulo)) as Porcentaje,
+            Capitulos.txt_Titulo as Titulo_Capitulo
+            from Cursos_Registrados
+        inner join Cursos on Cursos.ID_Curso = Cursos_Registrados.ID_Curso
+        inner join Capitulos on Capitulos.ID_Curso = Cursos_Registrados.ID_Curso 
+			and Capitulos.ID_Capitulo = Cursos_Registrados.int_CapituloActual 
+            and Capitulos.ID_Seccion = Cursos_Registrados.int_SeccionActual 
+        Group by Cursos_Registrados.ID_Curso
+        ORDER BY Cursos_Registrados.date_FchaRegistro DESC;
+
 drop view View_Usuarios;
 drop VIEW View_VideosCursos;
 drop VIEW View_Curso;
 drop VIEW View_Curso_Categoria;
 drop VIEW View_Comentarios;
+drop VIEW View_Registros;

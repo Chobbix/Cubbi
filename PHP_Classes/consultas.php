@@ -139,4 +139,26 @@
             
             return $rows;
         }
+
+        function query_select_cursosReg_By_Usuario($usuario) {
+            $database = new DB;
+            $conexion = $database->ConectarDB();
+            $sql = "call sp_Consultas ('All_Registrados', ?, 0, '', '')";
+            $statementSelect = $conexion->prepare($sql);
+            $statementSelect->execute(array($usuario));
+            $rows = $statementSelect->fetchAll();
+            
+            return $rows;
+        }
+
+        function query_select_cursoReg_By_Usuario($usuario, $curso) {
+            $database = new DB;
+            $conexion = $database->ConectarDB();
+            $sql = "call sp_Consultas ('Registrados_User', ?, ?, '', '')";
+            $statementSelect = $conexion->prepare($sql);
+            $statementSelect->execute(array($usuario, $curso));
+            $rows = $statementSelect->fetchAll();
+            
+            return $rows;
+        }
     }

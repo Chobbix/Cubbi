@@ -44,6 +44,8 @@ if(isset($_GET["curso"])) {
         $curso->set_cambio($row['Cambio']);
         $curso->set_isPrecioGeneral($row['Tipo']);
         $curso->set_precio($row['Precio']);
+        $curso->set_likes($row['Likes']);
+        $curso->set_Inscritos($row['Registros_Cantidad']);
     }
 }
 

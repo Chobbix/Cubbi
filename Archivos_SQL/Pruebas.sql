@@ -91,6 +91,9 @@ ALTER TABLE Cursos_Registrados ADD date_FchaRegistro DATE;
 
 call sp_Accesos('A', 1, 28, 1);
 
+ALTER TABLE Cursos_Registrados add int_CapituloActual INT DEFAULT 1;
+ALTER TABLE Cursos ADD date_FchaRegistro DATE;
+
 drop table accesos
 
 SELECT Cursos.ID_Curso as ID,
