@@ -50,4 +50,14 @@ else if (isset($_GET['dateFin'])) {
 
 $url = "../Pagduplicada/busqueda.php?categoria=".$categoriaGet."&opc=6&user=Todos&busqueda=".$txtBusquedaGet;
 
+$usuarioID = "Ninguna";
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+if (isset($_SESSION['ses_usuario'])) {
+    $usuarioID = $_SESSION['ses_usuario'];
+}
+
 ?>

@@ -58,6 +58,24 @@ BEGIN
         SELECT ID_Usuario, ID_Curso, Seccion_Actual, Capitulo_Actual, img, Titulo, Capitulos, Porcentaje, Titulo_Capitulo FROM View_Registros
             WHERE ID_Usuario = id1 AND ID_Curso = id2;
     END IF;
+
+    IF opc = 'Mas_Nuevo' THEN
+        SELECT ID, Titulo, Descripcion, Duracion, Imagen, Profesor, Activo, Tipo, Precio, Registro, Cambio, Registros_Cantidad, Likes FROM View_Curso
+            ORDER BY Registro DESC, ID DESC
+            LIMIT 0,3;
+    END IF;
+
+    IF opc = 'Mas_Vendidos' THEN
+        SELECT ID, Titulo, Descripcion, Duracion, Imagen, Profesor, Activo, Tipo, Precio, Registro, Cambio, Registros_Cantidad, Likes FROM View_Curso
+            ORDER BY Registros_Cantidad DESC, ID DESC
+            LIMIT 0,3;
+    END IF;
+
+    IF opc = 'Mejor_Calificados' THEN
+        SELECT ID, Titulo, Descripcion, Duracion, Imagen, Profesor, Activo, Tipo, Precio, Registro, Cambio, Registros_Cantidad, Likes FROM View_Curso
+            ORDER BY Likes DESC, ID DESC
+            LIMIT 0,3;
+    END IF;
 END
 $$
 DELIMITER ;
