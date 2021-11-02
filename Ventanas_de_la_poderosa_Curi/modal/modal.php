@@ -26,7 +26,18 @@
                                     <div class="bloque-editar">
                                         <div class="bloque_ftperfil">
                                             <div class="ft_perfil">
-                                                <img src="data:image/png;base64,<?php echo base64_encode($user->get_img()); ?>" alt="" class="perfilus">
+                                                <?php 
+                                                    if(is_null($row['Foto_Perfil'])){
+                                                        ?>
+                                                            <img src="../Multimedia/predeterminado.png" alt="" class="perfilus">
+                                                        <?php
+                                                    }
+                                                    else {
+                                                        ?>
+                                                            <img src="data:image/png;base64,<?php echo base64_encode($user->get_img()); ?>" alt="" class="perfilus">
+                                                        <?php
+                                                    }
+                                                ?>
                                                 <button class="btn_enviar"> <input type="file" name="imagensubida" accept="image/png, .jpeg, .jpg"></button>
                                             </div>
                                         </div>

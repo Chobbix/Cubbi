@@ -25,7 +25,19 @@ require('../../Controladores/db_perfil.php');
     </div>
     <div class="contenedor">
         <div class="cabecera">
-            <img src="data:image/png;base64,<?php echo base64_encode($user->get_img()); ?>" alt="" class="usperfil ">
+            <?php 
+                if(is_null($row['Foto_Perfil'])){
+                    ?>
+                        <img src="../Multimedia/predeterminado.png" alt="" class="usperfil ">
+                    <?php
+                }
+                else {
+                    ?>
+                        <img src="data:image/png;base64,<?php echo base64_encode($user->get_img()); ?>" alt="" class="usperfil ">
+                    <?php
+                }
+            ?>
+            
             <h1 class="usname"><?php echo $user->get_NomUser(); ?></h1>
         </div>
         <div class="grupo">

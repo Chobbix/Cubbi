@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require("../PHP_Classes/conexion.php");
 require("../PHP_Classes/usuarios.php");
 
@@ -13,8 +15,9 @@ $password = $_POST["password"];
 
 $user = new Usuario($rol, $nickname, $password, $nombre, $apes, $correo, $genero, $fNac);
 $_SESSION['ses_usuario'] = $user->query_insert_Usuario();
-session_start();
+$_SESSION['rol'] = $user->get_idRol();
 echo $_SESSION['ses_usuario'];
+echo $_SESSION['rol'];
 
-header('location: ../Ventanas_de_la_poderosa_Curi/principal/h.php');
+header('location: ../Ventanas_de_la_poderosa_Curi/Cursos/cursos.php');
 ?>

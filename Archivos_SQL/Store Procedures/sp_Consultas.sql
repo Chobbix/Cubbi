@@ -11,7 +11,7 @@ CREATE PROCEDURE sp_Consultas (
 )
 BEGIN
 	IF opc = 'Login' THEN
-        SELECT usuarios.ID_Usuario, usuarios.txt_NomUser FROM usuarios 
+        SELECT usuarios.ID_Usuario, usuarios.ID_Rol, usuarios.txt_NomUser FROM usuarios 
             WHERE usuarios.txt_Email = txt1 AND usuarios.txt_Contra = txt2;
     END IF;
 
