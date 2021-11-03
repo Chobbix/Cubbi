@@ -105,3 +105,6 @@ SELECT Cursos.ID_Curso as ID,
             from Accesos
             inner join Usuarios on Usuarios.ID_Usuario = Accesos.ID_Usuario
             inner join Cursos on Cursos.ID_Curso = Accesos.ID_Curso;
+            
+select Crear_Porcentaje(2, 2, 28, 3);
+

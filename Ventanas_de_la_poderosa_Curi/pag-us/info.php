@@ -58,14 +58,24 @@ require("../../Controladores/db_info_usu.php");
                                     <div class="contenidoooo">
                                         <div class="bloque-contenido">
                                             <?php
-                                                ObtenerAllCursosRegistrados();
+                                                ObtenerAllCursosRegistrados($resCursosregistrados);
                                             ?>
-                                            <div class="contenedor-sinver container-dis"  id="filtrado" >
-                                            </div>
-                                            <div class="contenedor-Completos container-dis"  id="filtrado" >
-                                            </div>
-                                            <div class="contenedor-inexistentes container-dis"  id="filtrado" >
-                                            </div>
+
+                                            <?php
+                                                ObtenerCursosNoTerminados($resCursosregistrados);
+                                            ?>
+
+                                            <?php
+                                                ObtenerCursosNoEmpezados($resCursosregistrados);
+                                            ?>
+
+                                            <?php
+                                                ObtenerCursosTerminados($resCursosregistrados);
+                                            ?>
+
+                                            <?php
+                                                ObtenerCursosSoloTuyos($resCursosregistrados);
+                                            ?>
                                         </div> 
                                     </div>                                                                                            
                                 </div>

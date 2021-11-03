@@ -82,13 +82,11 @@ SELECT Cursos_Registrados.ID_Usuario as ID_Usuario,
             Cursos.blob_img as img,
             Cursos.txt_Titulo as Titulo,
             COUNT(Capitulos.ID_Capitulo) as Capitulos,
-            Crear_Porcentaje(int_CapituloActual, COUNT(Capitulos.ID_Capitulo)) as Porcentaje,
+            Crear_Porcentaje(Cursos_Registrados.int_CapituloActual, Cursos_Registrados.int_SeccionActual, Cursos_Registrados.ID_Curso, COUNT(Capitulos.ID_Capitulo)) as Porcentaje,
             Capitulos.txt_Titulo as Titulo_Capitulo
             from Cursos_Registrados
         inner join Cursos on Cursos.ID_Curso = Cursos_Registrados.ID_Curso
         inner join Capitulos on Capitulos.ID_Curso = Cursos_Registrados.ID_Curso 
-			and Capitulos.ID_Capitulo = Cursos_Registrados.int_CapituloActual 
-            and Capitulos.ID_Seccion = Cursos_Registrados.int_SeccionActual 
         Group by Cursos_Registrados.ID_Curso
         ORDER BY Cursos_Registrados.date_FchaRegistro DESC;
 
