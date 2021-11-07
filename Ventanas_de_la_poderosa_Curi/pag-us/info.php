@@ -27,7 +27,6 @@ require("../../Controladores/db_info_usu.php");
             <div class="contenedor-categoria">
                 <label for="cursos"> <h2 class="design-tittle">Tus cursos</h2></label>
                 <label for="diplomas"><h2 class="design-tittle">Tus diplomas</h2>  </label>
-                <label for="guardados"><h2 class="design-tittle">Cursos guardados</h2>  </label>
             </div>        
             <div class="contenedor-categoria1"  id="Registro">
                 <div class="bloque-contenido">
@@ -85,25 +84,6 @@ require("../../Controladores/db_info_usu.php");
                     <div class="contenedor-diplomas bloque_contenedor_cursos" id="Registro">   
                     <?php include ("./cuadro.php");?>                       
                     </div>
-                    <div class="contenedor-guardado bloque_contenedor_cursos" id="Registro" >   
-                        <div class="contenedor-Todos container-dis">
-                            <div class="bloque_general">  
-                                <div class="container">
-                                    <div class="miniatura ">
-                                        <img src="../Multimedia/c.gif" alt="" class="miniatura_ds"> 
-                                    </div>
-                                    <div class="titulo ">
-                                        <div class="tittle-text" >
-                                            <h4>  Introduccion a la programacion web</h4>                                                                              
-                                        </div>
-                                    </div>
-                                    <div class="btn-curso ">
-                                        <a href="../Curso/curso.php"><button class="btn-curso-ds">Comprar</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> 
                 </div>
             </div>                              
         </div>                               

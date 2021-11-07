@@ -8,53 +8,71 @@
     <input type="radio" id="a" name="categoria" value="preguntas" checked>
     <div class="menus">
 
-        <input type="radio" id="chat1" name="categoria" value="chat1" checked>
-        <input type="radio" id="chat2" name="categoria" value="chat2">
-        <input type="radio" id="chat3" name="categoria" value="chat3">
-        <input type="radio" id="chat4" name="categoria" value="chat4">
+    <?php
+        if(!isset($_GET['Maestro'])) {
+            ?>
+            <input type="radio" id="chat1" name="categoria" value="chat1" checked>
+            <?php
+        } else {
+            ?>
+            <input type="radio" id="chat1" name="categoria" value="chat1" checked>
+            <?php
+            $cantidad = count($resChatsActivos);
+
+            for($i=0; $i < $cantidad; $i++) {
+                ?>
+                <input type="radio" id="chat<?php echo $i + 2 ?>" name="categoria" value="chat<?php echo $i + 2 ?>">
+                <?php
+            }
+            ?>
+            <?php
+        }
+    ?>
+
         <div class="contenedor-categoria">
-            <label for="chat1">
-                <div class="chats">
-                    <h6 class="design-tittle">Chat1</h6>
-                </div>
-            </label>
-            <label for="chat2">
-                <div class="chats">
-                    <h6 class="design-tittle">Chat2</h6>
-                </div>
+        <?php
+            if(!isset($_GET['Maestro'])) {
+                ?>
+                    <label for="chat1">
+                        <div class="chats">
+                            <h6 class="design-tittle">AAAAA</h6>
+                        </div>
+                    </label>
+                <?php
+            } else {
+                ?>
+                <?php
+                $cantidad = 1;
 
-            </label>
-            <label for="chat3">
-                <div class="chats">
-                    <h6 class="design-tittle">Chat3</h6>
-                </div>
-
-            </label>
-            <label for="chat4">
-                <div class="chats">
-                    <h6 class="design-tittle"> Chat4</h6>
-                </div>
-
-            </label>
+                foreach($resChatsActivos as $row) {
+                    ?>
+                        <label for="chat<?php echo $cantidad ?>">
+                            <div class="chats">
+                                <h6 class="design-tittle"><?php echo $row['Usuario'];?></h6>
+                            </div>
+                        </label>
+                    <?php
+                    $cantidad ++;
+                }
+                ?>
+                <?php
+            }
+        ?>
         </div>
         <div class="bloque-menu" id="id">
             <div class="bloque-contenido">
-                <div class="contenedor-chat1 block">
-                    1
-                    <?php include("./mensajes.php"); ?>
-                </div>
-                <div class="contenedor-chat2 block" id="id">
-                    2
-                    <?php include("./mensajes.php"); ?>
-                </div>
-                <div class="contenedor-chat3 block" id="id">
-                    3
-                    <?php include("./mensajes.php"); ?>
-                </div>
-                <div class="contenedor-chat4 block" id="id">
-                    4
-                    <?php include("./mensajes.php"); ?>
-                </div>
+                <?php
+                $cantidad = 1;
+
+                foreach($resChatsActivos as $row) {
+                    ?>
+                        <div class="contenedor-chat<?php echo $cantidad ?> block">
+                            <?php include("./mensajes.php"); ?>
+                        </div>
+                    <?php
+                    $cantidad ++;
+                }
+                ?>
             </div>
         </div>
     </div>

@@ -161,4 +161,26 @@
             
             return $rows;
         }
+
+        function query_select_mensajes_By_Usuario($usuario, $curso) {
+            $database = new DB;
+            $conexion = $database->ConectarDB();
+            $sql = "call sp_Consultas ('Mensajes', ?, ?, '', '')";
+            $statementSelect = $conexion->prepare($sql);
+            $statementSelect->execute(array($curso, $usuario));
+            $rows = $statementSelect->fetchAll();
+            
+            return $rows;
+        }
+
+        function query_select_ChatsActivos_By_Maestro($usuario) {
+            $database = new DB;
+            $conexion = $database->ConectarDB();
+            $sql = "call sp_Consultas ('Mensajes_Maestro', ?, 0, '', '')";
+            $statementSelect = $conexion->prepare($sql);
+            $statementSelect->execute(array($usuario));
+            $rows = $statementSelect->fetchAll();
+            
+            return $rows;
+        }
     }

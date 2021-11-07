@@ -21,9 +21,9 @@ CREATE PROCEDURE sp_Cursos (
 BEGIN
 	IF opc = 'A' THEN
 		INSERT INTO Cursos
-					(Cursos.ID_Usuario, Cursos.ID_Categoria, Cursos.int_Niveles, Cursos.txt_Titulo, Cursos.txt_Descripcion, Cursos.txt_Duracion, Cursos.isPrecioGeneral, Cursos.f_Precio, Cursos.blob_img, Cursos.ruta_vid, Cursos.isAcitvo, Cursos.isEdited)
+					(Cursos.ID_Usuario, Cursos.ID_Categoria, Cursos.int_Niveles, Cursos.txt_Titulo, Cursos.txt_Descripcion, Cursos.txt_Duracion, Cursos.isPrecioGeneral, Cursos.f_Precio, Cursos.blob_img, Cursos.ruta_vid, Cursos.isAcitvo, Cursos.isEdited, Cursos.date_FchaRegistro, Cursos.date_FchaUltiCambio)
 				VALUES 
-					(ID_Usuario, ID_Categoria, int_Niveles, txt_Titulo, txt_Descripcion, txt_Duracion, isPrecioGeneral, f_Precio, blob_img, ruta_vid, isAcitvo, isEdited);
+					(ID_Usuario, ID_Categoria, int_Niveles, txt_Titulo, txt_Descripcion, txt_Duracion, isPrecioGeneral, f_Precio, blob_img, ruta_vid, isAcitvo, isEdited, curdate(), curdate());
     END IF;
     
 END

@@ -62,7 +62,7 @@ require('../../Controladores/db_vista_curso.php');
                             <label for="Comentarios" class="design">
                                 <h3 class=ds_btm>Comentarios</h3>
                             </label>
-                            <label for="Comentarios" class="design"> <a href="../chat/chat.php">
+                            <label for="Comentarios" class="design"> <a href="../chat/chat.php?curso=<?php echo $_GET['curso']; ?>">
                                     <h3 class=ds_btm>Mensaje privado </h3>
                                 </a> </label>
                         </div>

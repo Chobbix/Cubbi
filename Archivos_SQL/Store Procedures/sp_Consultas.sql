@@ -76,6 +76,19 @@ BEGIN
             ORDER BY Likes DESC, ID DESC
             LIMIT 0,3;
     END IF;
+
+    IF opc = 'Mensajes' THEN
+        SELECT ID, ID_Curso, ID_Usuario, Nombre_Usuario, Mensaje, isFromEscuela, Fecha, Curso, Usuario, ID_Maestro FROM view_mensajes
+            WHERE ID_Curso = id1 AND ID_Usuario = id2
+            ORDER BY Fecha ASC, ID ASC;
+    END IF;
+
+    IF opc = 'Mensajes_Maestro' THEN
+        SELECT ID, ID_Curso, ID_Usuario, Nombre_Usuario, Mensaje, isFromEscuela, Fecha, Curso, Usuario, ID_Maestro FROM view_mensajes
+            WHERE ID_Maestro = id1
+			GROUP BY ID_Usuario, ID_Curso
+            ORDER BY Fecha ASC, ID ASC;
+    END IF;
 END
 $$
 DELIMITER ;

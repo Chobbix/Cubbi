@@ -124,13 +124,14 @@ CREATE TABLE Accesos (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE Mensajes_Cursos (
-    ID_Curso            INT             NOT NULL COMMENT 'Clave primaria del curso',
-    ID_Usuario          INT             NOT NULL COMMENT 'Clave primaria del usuario',
-    txt_Mensaje         VARCHAR(500)    NOT NULL COMMENT 'Texto del mensaje escrito por el usuario',
-    isFromEscuela       BOOL            NOT NULL COMMENT 'Para revisar si el mensaje fue enviado por el profesor',
-    date_FchaEnvio      DATE            NOT NULL COMMENT 'Fecha de cuando se envió el mensaje',
+	ID_Mensaje			INT AUTO_INCREMENT  NOT NULL COMMENT 'Clave primaria del mensaje',		
+    ID_Curso            INT             	NOT NULL COMMENT 'Clave foranea del curso',
+    ID_Usuario          INT             	NOT NULL COMMENT 'Clave foranea del usuario',
+    txt_Mensaje         VARCHAR(500)    	NOT NULL COMMENT 'Texto del mensaje escrito por el usuario',
+    isFromEscuela       BOOL            	NOT NULL COMMENT 'Para revisar si el mensaje fue enviado por el profesor',
+    date_FchaEnvio      DATE            	NOT NULL COMMENT 'Fecha de cuando se envió el mensaje',
 
-    CONSTRAINT pk_mencur PRIMARY KEY (ID_Usuario, ID_Curso),
+    CONSTRAINT pk_mencur PRIMARY KEY (ID_Mensaje),
     CONSTRAINT fk_mencur_cur FOREIGN KEY (ID_Curso) REFERENCES Cursos (ID_Curso),
     CONSTRAINT fk_mencur_usu FOREIGN KEY (ID_Usuario) REFERENCES Usuarios (ID_Usuario)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

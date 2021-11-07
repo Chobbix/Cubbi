@@ -56,11 +56,16 @@ SELECT Cursos.ID_Curso as ID,
             Categorias_cursos.ID_Categoria as ID_Categoria,
             Categorias.txt_Nombre as Categoria,
             Cursos.date_FchaRegistro as Registro,
-            Cursos.date_FchaUltiCambio as Cambio
+            Cursos.date_FchaUltiCambio as Cambio,
+            COUNT(Cursos_Registrados.ID_Usuario) as Registros_Cantidad,
+            COUNT(Promedios.bool_like) as Likes
             from Categorias_cursos
             inner join Cursos on Cursos.ID_Curso = Categorias_cursos.ID_Curso
+            inner join Usuarios on Usuarios.ID_Usuario = Cursos.ID_Usuario
             inner join Categorias on Categorias.ID_Categoria = Categorias_cursos.ID_Categoria
-            inner join Usuarios on Usuarios.ID_Usuario = Cursos.ID_Usuario;
+            left join Cursos_Registrados on Cursos_Registrados.ID_Curso = Categorias_cursos.ID_Curso
+            left join Promedios on Promedios.ID_Curso = Cursos.ID_Curso
+            group by Cursos.ID_Curso, Categoria;
 
 CREATE VIEW View_Comentarios AS
 SELECT Comentarios_Cursos.txt_Comentario as Comentario,
@@ -87,8 +92,23 @@ SELECT Cursos_Registrados.ID_Usuario as ID_Usuario,
             from Cursos_Registrados
         inner join Cursos on Cursos.ID_Curso = Cursos_Registrados.ID_Curso
         inner join Capitulos on Capitulos.ID_Curso = Cursos_Registrados.ID_Curso 
-        Group by Cursos_Registrados.ID_Curso
+        Group by Cursos_Registrados.ID_Curso, Cursos_Registrados.ID_Usuario
         ORDER BY Cursos_Registrados.date_FchaRegistro DESC;
+
+CREATE VIEW View_Mensajes AS
+SELECT Mensajes_Cursos.ID_Mensaje as ID,
+            Mensajes_Cursos.ID_Curso as ID_Curso,
+            Mensajes_Cursos.ID_Usuario as ID_Usuario,
+            usuarios.txt_NomUser as Nombre_Usuario,
+            Mensajes_Cursos.txt_Mensaje as Mensaje,
+            Mensajes_Cursos.isFromEscuela as isFromEscuela,
+            Mensajes_Cursos.date_FchaEnvio as Fecha,
+            Cursos.txt_Titulo as Curso,
+            Cursos.ID_Usuario as ID_Maestro,
+            Obtener_Usuario_Mensajes(Mensajes_Cursos.ID_Curso, Mensajes_Cursos.ID_Usuario, Mensajes_Cursos.isFromEscuela) as Usuario
+            from Mensajes_Cursos
+        inner join Cursos on Cursos.ID_Curso = Mensajes_Cursos.ID_Curso
+        inner join usuarios on usuarios.ID_Usuario = Mensajes_Cursos.ID_Usuario;
 
 drop view View_Usuarios;
 drop VIEW View_VideosCursos;
@@ -96,3 +116,4 @@ drop VIEW View_Curso;
 drop VIEW View_Curso_Categoria;
 drop VIEW View_Comentarios;
 drop VIEW View_Registros;
+drop View View_Mensajes;
