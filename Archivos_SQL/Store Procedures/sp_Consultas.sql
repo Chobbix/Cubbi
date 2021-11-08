@@ -89,6 +89,11 @@ BEGIN
 			GROUP BY ID_Usuario, ID_Curso
             ORDER BY Fecha ASC, ID ASC;
     END IF;
+
+    IF opc = 'Cursos_Maestro' THEN
+        SELECT ID, Titulo, Descripcion, Duracion, Imagen, ID_Profesor, Profesor, Activo, Tipo, Precio, Registro, Cambio, Registros_Cantidad, Likes FROM view_curso
+            WHERE ID_Profesor = id1;
+    END IF;
 END
 $$
 DELIMITER ;

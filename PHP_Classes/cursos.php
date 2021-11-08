@@ -118,5 +118,33 @@
                 return $e;
             }
         }
+
+        public function query_eliminar_curso() {
+            try{
+                $database = new DB;
+                $conexion = $database->ConectarDB();
+                $sql = "call sp_Cursos('B', ?, 0, 0, 0, '', '', '', false, 0, null, '', false, false)";
+                $statement = $conexion->prepare($sql);
+                $statement->execute(array($this->ID_Curso));
+                $statement->closeCursor();
+
+            }catch(Exception $e) {
+                return $e;
+            }
+        }
+
+        public function query_reactivar_curso() {
+            try{
+                $database = new DB;
+                $conexion = $database->ConectarDB();
+                $sql = "call sp_Cursos('D', ?, 0, 0, 0, '', '', '', false, 0, null, '', false, false)";
+                $statement = $conexion->prepare($sql);
+                $statement->execute(array($this->ID_Curso));
+                $statement->closeCursor();
+
+            }catch(Exception $e) {
+                return $e;
+            }
+        }
     }
 ?>

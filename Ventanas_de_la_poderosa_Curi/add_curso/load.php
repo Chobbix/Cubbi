@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="./load.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="../../JavaScript/Load2.js"></script>
+<script src="../../JavaScript/Load_Edit.js"></script>
 <?php include("../../Controladores/db_load.php"); ?>
 <?php include("../Navegacion/Nav.php"); ?>
 
@@ -149,8 +150,14 @@
                         </div>
                     </div>
                 </div>
-                <?php require("cursos_creados.php"); ?>
-                <?php require("ingresos_generados.php"); ?>
+
+                <?php 
+                require("cursos_creados.php");
+                ?>
+
+                <?php 
+                require("ingresos_generados.php"); 
+                ?>
             </div>
         </div>
     </div>

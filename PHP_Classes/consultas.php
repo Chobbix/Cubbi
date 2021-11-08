@@ -183,4 +183,15 @@
             
             return $rows;
         }
+
+        function query_select_Cursos_By_Maestro($usuario) {
+            $database = new DB;
+            $conexion = $database->ConectarDB();
+            $sql = "call sp_Consultas ('Cursos_Maestro', ?, 0, '', '')";
+            $statementSelect = $conexion->prepare($sql);
+            $statementSelect->execute(array($usuario));
+            $rows = $statementSelect->fetchAll();
+            
+            return $rows;
+        }
     }

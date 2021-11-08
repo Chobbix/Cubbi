@@ -25,6 +25,16 @@ BEGIN
 				VALUES 
 					(ID_Usuario, ID_Categoria, int_Niveles, txt_Titulo, txt_Descripcion, txt_Duracion, isPrecioGeneral, f_Precio, blob_img, ruta_vid, isAcitvo, isEdited, curdate(), curdate());
     END IF;
+
+    IF opc = 'B' THEN
+		UPDATE Cursos SET Cursos.isAcitvo = 0
+            WHERE Cursos.ID_Curso = ID_Curso;
+    END IF;
+
+    IF opc = 'D' THEN
+		UPDATE Cursos SET Cursos.isAcitvo = 1
+            WHERE Cursos.ID_Curso = ID_Curso;
+    END IF;
     
 END
 $$

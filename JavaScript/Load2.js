@@ -1,6 +1,23 @@
 
 $(document).ready(function(){
 
+    $("[btn=Editar]").click(function(){
+        var idCurso = $(this).attr("curso");
+        EditarCurso(idCurso);
+    });
+
+    $("[btn=Eliminar]").click(function(){
+        var idCurso = $(this).attr("curso");
+        EliminarCurso(idCurso);
+    });
+
+    $("[btn=Re-Activar]").click(function(){
+        var idCurso = $(this).attr("curso");
+        ReActivarCurso(idCurso);
+    });
+
+
+
     if($('#tipodepago').val() == 1 || $('#tipodepago').val() == 3){
         $('#Costo').hide();
         $('#Costoh1').hide();
