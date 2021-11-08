@@ -56,7 +56,6 @@ require("../../Controladores/db_nav.php");
                 </ul>
                 <li><a class="nav-item buscador "> <input type="text" name="busqueda" id="inputsearch" placeholder="¿Que vas a aprender?" value="<?php echo $txtBusquedaGet ?>" class="search"></li>
                 <li><button href="../Pagduplicada/busqueda.php" class="nav-item buscador "> <i class="fas fa-search"></i></button></li>
-                <li><a href="../carrito/cesta.php" class="nav-item btn-carrito"><i class="fas fa-shopping-cart"></i></a></li>
                 <li><a href="../pag-us/info.php"> <i class="fas fa-graduation-cap"></i> </a></li>
                 <?php 
                     if($usuarioRol != "Ninguna"){
