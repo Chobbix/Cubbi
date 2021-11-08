@@ -1,6 +1,8 @@
 <link rel="stylesheet" href="../Navegacion/nav.css">
 <link rel="stylesheet" href="./chat.css">
 <link rel="stylesheet" href="./mensajes.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../../JavaScript/Chats.js"></script>
 <?php require("../../Controladores/db_chat.php"); ?>
 <?php include("../Navegacion/Nav.php"); ?>
 
@@ -32,13 +34,15 @@
         <div class="contenedor-categoria">
         <?php
             if(!isset($_GET['Maestro'])) {
-                ?>
-                    <label for="chat1">
-                        <div class="chats">
-                            <h6 class="design-tittle">AAAAA</h6>
-                        </div>
-                    </label>
-                <?php
+                foreach($resChatsActivos as $row){
+                    ?>
+                        <label for="chat1">
+                            <div class="chats">
+                                <h6 class="design-tittle"><?php echo $row['Titulo'] ?></h6>
+                            </div>
+                        </label>
+                    <?php
+                }
             } else {
                 ?>
                 <?php

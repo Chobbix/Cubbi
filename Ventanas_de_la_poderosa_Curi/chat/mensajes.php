@@ -3,13 +3,36 @@
         <div class="contenedor_mensajes">
             <div class="cabecera_ms">
                 <div class="contenido_cabecera">
-                    <h1><?php echo $row['Curso']; ?></h1>
+                    <?php
+                        if(!isset($_GET['Maestro'])) { 
+                            ?>
+                            <h1><?php echo $row['Titulo']; ?></h1>
+                            <?php
+                        } else{
+                            ?>
+                            <h1><?php echo $row['Curso']; ?></h1>
+                            <?php
+                        }
+                    ?>
                 </div>
             </div>
             <strcoll-container>
                 <div class="cont_mss">
                     <?php
-                        $resMensajes = $mensajes->query_select_mensajes_By_Usuario($row['ID_Usuario'], $row['ID_Curso']);
+                        $idUsuario;
+                        $idCurso;
+                        $isFormEscuela;
+                        if(!isset($_GET['Maestro'])) {
+                            $resMensajes = $mensajes->query_select_mensajes_By_Usuario($_SESSION['ses_usuario'], $row['ID']);
+                            $idUsuario = $_SESSION['ses_usuario'];
+                            $idCurso = $row['ID'];
+                            $isFormEscuela = 0;
+                        } else{
+                            $resMensajes = $mensajes->query_select_mensajes_By_Usuario($row['ID_Usuario'], $row['ID_Curso']);
+                            $idUsuario = $row['ID_Usuario'];
+                            $idCurso = $row['ID_Curso'];
+                            $isFormEscuela = 1;
+                        }
                         foreach($resMensajes as $row) {
                             if($row['isFromEscuela'] == '0'){
                                 ?>
@@ -40,7 +63,7 @@
         <div class="send_mss">
             <div class="ds_mss">
                 <textarea name="comment" id="comentario" cols="10" rows="5" class="comment_add"></textarea>
-                <button class="enviar"><i class="fas fa-paper-plane"></i></button>
+                <button class="enviar" usuario="<?php echo $idUsuario ?>" curso="<?php echo $idCurso ?>" isFormEscuela="<?php echo $isFormEscuela ?>"><i class="fas fa-paper-plane"></i></button>
             </div>
         </div>
     </div>

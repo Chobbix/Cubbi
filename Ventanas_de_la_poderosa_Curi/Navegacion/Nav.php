@@ -58,7 +58,15 @@ require("../../Controladores/db_nav.php");
                 <li><button href="../Pagduplicada/busqueda.php" class="nav-item buscador "> <i class="fas fa-search"></i></button></li>
                 <li><a href="../carrito/cesta.php" class="nav-item btn-carrito"><i class="fas fa-shopping-cart"></i></a></li>
                 <li><a href="../pag-us/info.php"> <i class="fas fa-graduation-cap"></i> </a></li>
-                <li><a href="../chat/chat.php"><i class="fas fa-comment"></i></a></li>
+                <?php 
+                    if($usuarioRol != "Ninguna"){
+                        if($usuarioRol == "2"){
+                        ?>
+                            <li><a href="../chat/chat.php?Maestro=1"><i class="fas fa-comment"></i></a></li>
+                        <?php
+                        }
+                    }
+                ?>
                 <?php include("../Navegacion/perfil.php"); ?>
             </ul>
         </nav>

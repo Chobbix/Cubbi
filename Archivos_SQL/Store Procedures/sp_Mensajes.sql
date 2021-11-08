@@ -3,6 +3,7 @@ DROP PROCEDURE sp_Mensajes;
 
 DELIMITER $$
 CREATE PROCEDURE sp_Mensajes (
+    in opc                  VARCHAR(20),
 	in ID_Mensaje		    INT,
     in ID_Curso             INT,
     in ID_Usuario           INT,
