@@ -216,7 +216,6 @@ $(document).ready(function(){
 
         $(".bloque_nivel").each(function(index, element){
             var i = index + 1;
-            alert("Tema: " + i);
 
             var form_datasec = new FormData();
             form_datasec.append('ID_Seccion', i);
@@ -238,7 +237,6 @@ $(document).ready(function(){
 
             $($(element).children(".cabecera_nivel").children()).each(function(index, element){
                 var iDos = index + 1;
-                alert("Capitulo: " + iDos);
 
                 var divContenido = $(element).children(".contenido");
                 var divContenidos = $(divContenido).children(".btn_contenidos");
@@ -281,6 +279,8 @@ $(document).ready(function(){
                 });
             });
         });
+
+        $(location).attr('href',"../perfil/perfil.php");
     });
 });
 

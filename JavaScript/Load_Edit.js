@@ -1,5 +1,7 @@
-function EditarCurso() {
+function EditarCurso(ID_Curso) {
     //alert("Editando curso");
+    var url = "?editando=true&curso=" + ID_Curso;
+    $(location).attr('href',url);
 }
 
 function EliminarCurso(ID_Curso) {
