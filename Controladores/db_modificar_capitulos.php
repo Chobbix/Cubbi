@@ -5,6 +5,7 @@ session_start();
 require("../PHP_Classes/conexion.php");
 require("../PHP_Classes/capitulos.php");
 
+echo $ID_Curso = $_POST['ID_Curso'];
 echo $ID_Seccion = $_POST['ID_Seccion'];
 echo $ID_Capitulo = $_POST['ID_Capitulo'];
 echo $titulo = $_POST['Titulo'];
@@ -12,6 +13,7 @@ echo $costo = $_POST['Costo'];
 
 
 $capitulo = new Capitulos();
+$capitulo->set_idCurso($ID_Curso);
 $capitulo->set_idSeccion($ID_Seccion);
 $capitulo->set_idCapitulo($ID_Capitulo);
 $capitulo->set_titulo($titulo);
@@ -35,6 +37,6 @@ if(isset($_FILES['Doc']['tmp_name'])){
     $capitulo->set_rutaDoc("");
 }
 
-$capitulo->query_update_capitulo_by_curso();
+echo $capitulo->query_update_capitulo_by_curso();
 
 ?>

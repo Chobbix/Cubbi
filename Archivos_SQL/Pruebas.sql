@@ -111,3 +111,4 @@ select Crear_Porcentaje(2, 2, 28, 3);
 call sp_Consultas ('Mensajes_Maestro', 1, 0, '', '');
 call sp_Mensajes('A', 0, 34, 2, 'No pues lo que pasa es que', 0, curdate())
 
+CALL sp_Capitulos('C', ?, ?, ?, ?, ?, ?, ?);

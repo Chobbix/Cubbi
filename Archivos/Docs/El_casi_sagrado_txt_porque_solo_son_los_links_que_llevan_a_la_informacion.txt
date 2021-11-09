@@ -1,0 +1,11 @@
+https://es.wikipedia.org/wiki/Conversi%C3%B3n_anal%C3%B3gica-digital#:~:text=La%20conversi%C3%B3n%20anal%C3%B3gica%2Ddigital%20consiste,m%C3%A1s%20sensibles%20las%20se%C3%B1ales%20anal%C3%B3gicas.
+https://diablecos.com/es/analogicos/
+https://openwebinars.net/blog/tutorial-arduino-entradas-analogicas-y-digitales/
+https://www.luisllamas.es/entradas-analogicas-en-arduino/
+https://www.luisllamas.es/entradas-analogicas-en-arduino/
+https://es.wikipedia.org/wiki/Conversor_de_se%C3%B1al_anal%C3%B3gica_a_digital
+https://aprendiendoarduino.wordpress.com/2017/09/05/puertos-analogicos-arduino-avanzado/
+https://aprendiendoarduino.wordpress.com/2017/09/03/puertos-digitales-arduino-avanzado/
+http://dfists.ua.es/~jpomares/arduino/page_10.htm
+https://es.wikipedia.org/wiki/Modulaci%C3%B3n_por_ancho_de_pulsos
+https://cursos.mcielectronics.cl/2019/06/18/modulacion-por-ancho-de-pulsos/

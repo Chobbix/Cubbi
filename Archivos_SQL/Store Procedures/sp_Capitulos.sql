@@ -23,7 +23,9 @@ BEGIN
         Capitulos.f_Precio = f_Precio, 
         Capitulos.ruta_vid = ruta_vid, 
         Capitulos.ruta_docs = ruta_docs
-            WHERE Capitulos.ID_Curso = ID_Curso;
+            WHERE   Capitulos.ID_Curso = ID_Curso 
+            AND     Capitulos.ID_Seccion = ID_Seccion
+            AND     Capitulos.ID_Capitulo = ID_Capitulo;
     END IF;
 
 	IF opc = 'D' THEN
