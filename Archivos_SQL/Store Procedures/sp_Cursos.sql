@@ -31,6 +31,18 @@ BEGIN
             WHERE Cursos.ID_Curso = ID_Curso;
     END IF;
 
+    IF opc = 'C' THEN
+		UPDATE Cursos SET Cursos.txt_Titulo = txt_Titulo, 
+        Cursos.txt_Descripcion = txt_Descripcion, 
+        Cursos.txt_Duracion = txt_Duracion, 
+        Cursos.f_Precio = f_Precio, 
+        Cursos.blob_img = blob_img, 
+        Cursos.ruta_vid = ruta_vid, 
+        Cursos.isEdited = 1,
+        Cursos.date_FchaUltiCambio = curdate()
+            WHERE Cursos.ID_Curso = ID_Curso;
+    END IF;
+
     IF opc = 'D' THEN
 		UPDATE Cursos SET Cursos.isAcitvo = 1
             WHERE Cursos.ID_Curso = ID_Curso;

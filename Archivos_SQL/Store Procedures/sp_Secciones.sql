@@ -12,6 +12,11 @@ BEGIN
 		INSERT INTO Secciones (Secciones.ID_Seccion, Secciones.ID_Curso) 
             VALUES (ID_Seccion, Max_Cursos());
     END IF;
+
+    IF opc = 'D' THEN
+		INSERT INTO Secciones (Secciones.ID_Seccion, Secciones.ID_Curso) 
+            VALUES (ID_Seccion, ID_Curso);
+    END IF;
 END
 $$
 DELIMITER ;

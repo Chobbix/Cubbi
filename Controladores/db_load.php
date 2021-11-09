@@ -10,6 +10,8 @@ $resCursosMaestro = $consulta->query_select_Cursos_By_Maestro($_SESSION['ses_usu
 
 if(isset($_GET['editando'])) {
     $resCursoModificar = $consulta->query_select_curso_by_id($_GET['curso']);
+    $resSecciones = $consulta->query_select_secciones_by_curso($_GET['curso']);
+    $resCapitulos = $consulta->query_select_capitulos_by_curso($_GET["curso"]);
 }
 
 ?>

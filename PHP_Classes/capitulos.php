@@ -45,6 +45,34 @@
                 return $e;
             }
         }
+
+        public function query_update_capitulo_by_curso() {
+            try{
+                $database = new DB;
+                $conexion = $database->ConectarDB();
+                $sql = "CALL sp_Capitulos('C', ?, ?, ?, ?, ?, ?, ?);";
+                $statement = $conexion->prepare($sql);
+                $statement->execute(array($this->ID_Capitulo, $this->ID_Seccion, $this->ID_Curso, $this->txt_Titulo, $this->f_Precio, $this->txt_rutaVid, $this->txt_rutaDoc));
+                $statement->closeCursor();
+
+            }catch(Exception $e) {
+                return $e;
+            }
+        }
+
+        public function query_insert_capitulo_by_curso() {
+            try{
+                $database = new DB;
+                $conexion = $database->ConectarDB();
+                $sql = "CALL sp_Capitulos('D', ?, ?, ?, ?, ?, ?, ?);";
+                $statement = $conexion->prepare($sql);
+                $statement->execute(array($this->ID_Capitulo, $this->ID_Seccion, $this->ID_Curso, $this->txt_Titulo, $this->f_Precio, $this->txt_rutaVid, $this->txt_rutaDoc));
+                $statement->closeCursor();
+
+            }catch(Exception $e) {
+                return $e;
+            }
+        }
     }
 
 ?>

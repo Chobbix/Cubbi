@@ -25,6 +25,20 @@
                 return $e;
             }
         }
+
+        public function query_insert_seccion_By_Curso() {
+            try{
+                $database = new DB;
+                $conexion = $database->ConectarDB();
+                $sql = "call sp_Secciones('D', ?, ?)";
+                $statement = $conexion->prepare($sql);
+                $statement->execute(array($this->ID_Curso, $this->ID_Seccion));
+                $statement->closeCursor();
+
+            }catch(Exception $e) {
+                return $e;
+            }
+        }
     }
 
 ?>

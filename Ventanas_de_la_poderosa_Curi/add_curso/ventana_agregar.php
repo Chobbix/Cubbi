@@ -13,7 +13,7 @@
                     <h1 class="text_decoration">Contenido curso</h1>
                 </label>
             </div>
-            <button class="save_btn">
+            <button class="save_btn" btnGuardar="Agregar">
                 <h3> Guardar cambios </h3>
             </button>
         </div>
