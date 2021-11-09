@@ -89,7 +89,8 @@ SELECT Cursos_Registrados.ID_Usuario as ID_Usuario,
             Cursos.txt_Titulo as Titulo,
             COUNT(Capitulos.ID_Capitulo) as Capitulos,
             Crear_Porcentaje(Cursos_Registrados.int_CapituloActual, Cursos_Registrados.int_SeccionActual, Cursos_Registrados.ID_Curso, COUNT(Capitulos.ID_Capitulo)) as Porcentaje,
-            Capitulos.txt_Titulo as Titulo_Capitulo
+            Capitulos.txt_Titulo as Titulo_Capitulo,
+            Cursos.date_FchaUltiCambio as Fecha_Cambio
             from Cursos_Registrados
         inner join Cursos on Cursos.ID_Curso = Cursos_Registrados.ID_Curso
         inner join Capitulos on Capitulos.ID_Curso = Cursos_Registrados.ID_Curso 

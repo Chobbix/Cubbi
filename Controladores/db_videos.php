@@ -5,6 +5,7 @@ require("../../PHP_Classes/conexion.php");
 require("../../PHP_Classes/consultas.php");
 require("../../PHP_Classes/usuarios.php");
 require("../../PHP_Classes/cursos.php");
+require("../../PHP_Classes/curso_reg.php");
 
 $user;
 
@@ -39,11 +40,38 @@ if(isset($_GET["curso"])) {
         $curso->set_descripcion($row['Descripcion']);
         $curso->set_duracion($row['Duracion']);
         $curso->set_img($row['Imagen']);
+        $curso->set_isPrecioGeneral($row['Tipo']);
     }
 }
 
 $consulta = new Consulta();
 $capitulosRes = $consulta->query_select_capitulos_by_curso($_GET["curso"]);
 $seccionesRes = $consulta->query_select_secciones_by_curso($_GET["curso"]);
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+if (isset($_SESSION['ses_usuario'])) {
+    $usuarioID = $_SESSION['ses_usuario'];
+    $usuarioRol = $_SESSION['rol'];
+}
+
+$mostrarVideo = false;
+if($curso->get_isPrecioGeneral() == "3") {
+    $resAccesos = $consulta->query_select_accesos($_GET['curso'], $_SESSION['ses_usuario']);
+    foreach($resAccesos as $row) {
+        if($row['ID_Seccion'] == $_GET['tem']) {
+            $mostrarVideo = true;
+        }
+    }
+}
+
+$reg_Curso = new Curso_reg();
+$reg_Curso->set_idUsuario($_SESSION['ses_usuario']);
+$reg_Curso->set_idCurso($_GET['curso']);
+$reg_Curso->set_SeccionActual($_GET['tem']);
+$reg_Curso->set_CapituloActual($_GET['cap']);
+$reg_Curso->query_update_seccion_capitulo();
 
 ?>

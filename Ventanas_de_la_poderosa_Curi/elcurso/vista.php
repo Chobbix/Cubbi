@@ -86,7 +86,7 @@ require('../../Controladores/db_vista_curso.php');
                                         </div>
                                         <div class="actualizacion">
                                             <h3 class="date_update">Actualizado el:</h3>
-                                            <h3 class="date_update">3 de octubre 2019</h3>
+                                            <h3 class="date_update"><?php echo $curso->get_cambio(); ?></h3>
                                         </div>
                                     </div>
                                 </div>

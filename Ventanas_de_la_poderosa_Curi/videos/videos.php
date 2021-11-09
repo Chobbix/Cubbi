@@ -20,19 +20,25 @@ require('../../Controladores/db_videos.php');
     <div class="bloque_principal">
         <div class="bloque_de_video">
             <div class="video">
-                <video class="video_contenido" controls>
                 <?php
                     
                     foreach($capitulosRes as $row2){
                         if($row2['Tema'] == $_GET["tem"] && $row2['Capitulo'] == $_GET["cap"] && $row2['Curso'] == $_GET["curso"]){
-                        ?>
-                            <source src="../../Archivos/Videos/<?php echo $row2['Video'] ?>" type="video/mp4" id="id">
-                        <?php
+                            if($mostrarVideo == true || $curso->get_isPrecioGeneral() != 3){
+                            ?>
+                                <video class="video_contenido" controls>
+                                    <source src="../../Archivos/Videos/<?php echo $row2['Video'] ?>" type="video/mp4" id="id">
+                                </video>
+                            <?php
+                            } else {
+                            ?>
+                                <img src="../Multimedia/cubbi.png" alt="" class="logo_base">
+                            <?php
+                            }
                         }
                     }
                     
                 ?>
-                </video>
             </div>
         </div>
         <div class="bloque_de_informacion">

@@ -7,7 +7,9 @@ CREATE PROCEDURE sp_Cursos_Registros (
 	in ID_Usuario		    INT,
 	in ID_Curso			    INT,
     in f_MontoPagado	    FLOAT,
-	in int_TipoPago		    INT
+	in int_TipoPago		    INT,
+	in ID_Seccion		    INT,
+	in ID_Capitulo		    INT
 )
 BEGIN
 	IF opc = 'A' THEN
@@ -16,7 +18,12 @@ BEGIN
 				VALUES 
 					(ID_Usuario, ID_Curso, 1, 0, 0, f_MontoPagado, int_TipoPago, curdate());
     END IF;
-    
+
+	IF opc = 'C_SecCap' THEN
+		UPDATE Cursos_Registrados SET Cursos_Registrados.int_SeccionActual = ID_Seccion,
+				Cursos_Registrados.int_CapituloActual = ID_Capitulo
+			WHERE Cursos_Registrados.ID_Usuario = ID_Usuario AND Cursos_Registrados.ID_Curso = ID_Curso;
+    END IF;
 END
 $$
 DELIMITER ;
