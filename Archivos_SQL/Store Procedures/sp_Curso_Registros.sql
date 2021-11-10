@@ -21,7 +21,8 @@ BEGIN
 
 	IF opc = 'C_SecCap' THEN
 		UPDATE Cursos_Registrados SET Cursos_Registrados.int_SeccionActual = ID_Seccion,
-				Cursos_Registrados.int_CapituloActual = ID_Capitulo
+				Cursos_Registrados.int_CapituloActual = ID_Capitulo,
+				Cursos_Registrados.date_FchaUltimaEntrada = curdate()
 			WHERE Cursos_Registrados.ID_Usuario = ID_Usuario AND Cursos_Registrados.ID_Curso = ID_Curso;
     END IF;
 END

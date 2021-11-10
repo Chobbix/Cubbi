@@ -50,7 +50,7 @@ BEGIN
     END IF;
 
     IF opc = 'All_Registrados' THEN
-        SELECT ID_Usuario, ID_Curso, Seccion_Actual, Capitulo_Actual, img, Titulo, Capitulos, Porcentaje, Titulo_Capitulo FROM View_Registros
+        SELECT ID_Usuario, ID_Curso, Seccion_Actual, Capitulo_Actual, img, Titulo, Capitulos, Porcentaje, Titulo_Capitulo, Activo, Terminado, Fecha_Terminacion, Fecha_Inscripcion, Fecha_Ultima_Entrada FROM View_Registros
             WHERE ID_Usuario = id1;
     END IF;
 

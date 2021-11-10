@@ -106,6 +106,7 @@ CREATE TABLE Cursos_Registrados (
     int_TipoPago		INT	    NOT NULL 	COMMENT 'Tipo de pago utilizado',
     date_FchaRegistro	DATE    NULL     	COMMENT 'Fecha de registro del usuario en el curso',
     date_FchaTerm		DATE    NULL     	COMMENT 'para mostrar la fecha del dia en que el alumno terminó el curso',
+    date_FchaUltimaEntrada DATE NULL        COMMENT 'Fecha de la ultima vez que entro al curso',
     
 	CONSTRAINT pk_curreg PRIMARY KEY (ID_Usuario, ID_Curso),
     CONSTRAINT fk_curreg_usu FOREIGN KEY (ID_Usuario) REFERENCES Usuarios (ID_Usuario),

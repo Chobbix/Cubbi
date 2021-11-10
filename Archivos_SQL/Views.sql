@@ -90,7 +90,10 @@ SELECT Cursos_Registrados.ID_Usuario as ID_Usuario,
             Capitulos.txt_Titulo as Titulo_Capitulo,
             Cursos.date_FchaUltiCambio as Fecha_Cambio,
             Cursos_Registrados.date_FchaTerm as Fecha_Terminacion,
-            Cursos.isAcitvo as Activo
+            Cursos_Registrados.date_FchaRegistro as Fecha_Inscripcion,
+            Cursos_Registrados.date_FchaUltimaEntrada as Fecha_Ultima_Entrada,
+            Cursos.isAcitvo as Activo,
+            Cursos_Registrados.isTerminado as Terminado
             from Cursos_Registrados
         inner join Cursos on Cursos.ID_Curso = Cursos_Registrados.ID_Curso
         inner join Capitulos on Capitulos.ID_Curso = Cursos_Registrados.ID_Curso 

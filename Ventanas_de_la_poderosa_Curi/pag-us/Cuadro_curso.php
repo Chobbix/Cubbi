@@ -3,14 +3,22 @@
 function ObtenerAllCursosRegistrados($resultados) {
 
     $txt_button = "";
+    $txt_porcentaje = "";
+    $txt_estado = "";
 
     foreach($resultados as $row){
-        if($row['Porcentaje'] == 0) {
+        if($row['Porcentaje'] == 0 && $row['Activo'] == 1 && $row['Terminado'] == 0) {
             $txt_button = "Empieza ahora";
-        } else if ($row['Porcentaje'] > 0 && $row['Porcentaje'] < 100) {
+            $txt_porcentaje = $row['Porcentaje']." %";
+            $txt_estado = "Inscrito el: ".$row['Fecha_Inscripcion'];
+        } else if ($row['Porcentaje'] > 0 && $row['Porcentaje'] < 100 && $row['Activo'] == 1 && $row['Terminado'] == 0) {
             $txt_button = "Continua ahora";
-        } else {
+            $txt_porcentaje = number_format($row['Porcentaje'])." %";
+            $txt_estado = "Entrado por ultima vez: ".$row['Fecha_Ultima_Entrada'];
+        } else if ($row['Activo'] == 1 && $row['Terminado'] == 1) {
             $txt_button = "Terminado";
+            $txt_porcentaje = "100 %";
+            $txt_estado = "Terminado el: ".$row['Fecha_Terminacion'];
         }
     ?>
 
@@ -26,7 +34,8 @@ function ObtenerAllCursosRegistrados($resultados) {
                     </div>
                 </div>
                 <div class="porcentaje ">
-                    <h5 class="texto"> <?php echo number_format($row['Porcentaje']); ?> %</h5>
+                    <h5 class="texto"><?php echo $txt_porcentaje ?></h5>
+                    <h5 class="texto"><?php echo $txt_estado ?></h5>
                 </div>
                 <div class="btn-curso ">
                     <a href="../elcurso/vista.php?curso=<?php echo $row['ID_Curso']; ?>"> <button class="btn-curso-ds"><?php echo $txt_button ?></button></a>
@@ -46,7 +55,7 @@ function ObtenerCursosNoEmpezados($resultados) {
     $txt_button = "";
 
     foreach($resultados as $row){
-        if($row['Porcentaje'] == 0) {
+        if($row['Porcentaje'] == 0 && $row['Activo'] == 1 && $row['Terminado'] == 0) {
             $txt_button = "Empieza ahora";
     ?>
 
@@ -63,6 +72,7 @@ function ObtenerCursosNoEmpezados($resultados) {
                 </div>
                 <div class="porcentaje ">
                     <h5 class="texto"> <?php echo $row['Porcentaje']; ?> %</h5>
+                    <h5 class="texto"> Inscrito el: <?php echo $row['Fecha_Inscripcion']; ?></h5>
                 </div>
                 <div class="btn-curso ">
                     <a href="../elcurso/vista.php?curso=<?php echo $row['ID_Curso']; ?>"> <button class="btn-curso-ds"><?php echo $txt_button ?></button></a>
@@ -83,7 +93,7 @@ function ObtenerCursosNoTerminados($resultados) {
     $txt_button = "";
 
     foreach($resultados as $row){
-        if ($row['Porcentaje'] > 0 && $row['Porcentaje'] < 100) {
+        if ($row['Porcentaje'] > 0 && $row['Porcentaje'] < 100 && $row['Activo'] == 1 && $row['Terminado'] == 0) {
             $txt_button = "Continua ahora";
     ?>
 
@@ -100,6 +110,7 @@ function ObtenerCursosNoTerminados($resultados) {
                 </div>
                 <div class="porcentaje ">
                     <h5 class="texto"> <?php echo number_format($row['Porcentaje']); ?> %</h5>
+                    <h5 class="texto"> Entrado por ultima vez: <?php echo $row['Fecha_Ultima_Entrada']; ?> </h5>
                 </div>
                 <div class="btn-curso ">
                     <a href="../elcurso/vista.php?curso=<?php echo $row['ID_Curso']; ?>"> <button class="btn-curso-ds"><?php echo $txt_button ?></button></a>
@@ -120,7 +131,7 @@ function ObtenerCursosTerminados($resultados) {
     $txt_button = "";
 
     foreach($resultados as $row){
-        if ($row['Porcentaje'] == 100){
+        if ($row['Activo'] == 1 && $row['Terminado'] == 1){
             $txt_button = "Terminado";
     ?>
 
@@ -136,7 +147,8 @@ function ObtenerCursosTerminados($resultados) {
                     </div>
                 </div>
                 <div class="porcentaje ">
-                    <h5 class="texto"> <?php echo number_format($row['Porcentaje']); ?> %</h5>
+                    <h5 class="texto"> 100 %</h5>
+                    <h5 class="texto">Terminado el: <?php echo $row['Fecha_Terminacion']; ?></h5>
                 </div>
                 <div class="btn-curso ">
                     <a href="../elcurso/vista.php?curso=<?php echo $row['ID_Curso']; ?>"> <button class="btn-curso-ds"><?php echo $txt_button ?></button></a>
@@ -157,13 +169,8 @@ function ObtenerCursosSoloTuyos($resultados) {
     $txt_button = "";
 
     foreach($resultados as $row){
-        if($row['Porcentaje'] == 0) {
-            $txt_button = "Empieza ahora";
-        } else if ($row['Porcentaje'] > 0 && $row['Porcentaje'] < 100) {
-            $txt_button = "Continua ahora";
-        } else {
-            $txt_button = "Terminado";
-        }
+        if($row['Activo'] == 0) {
+            $txt_button = "Continuar";
     ?>
 
     <div class="contenedor-inexistentes container-dis"  id="filtrado" >
@@ -188,7 +195,7 @@ function ObtenerCursosSoloTuyos($resultados) {
     </div>
 
     <?php
-
+        }
     }
 }
 
