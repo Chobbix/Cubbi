@@ -36,12 +36,11 @@ SELECT Cursos.ID_Curso as ID,
             Cursos.f_Precio as Precio,
             Cursos.date_FchaRegistro as Registro,
             Cursos.date_FchaUltiCambio as Cambio,
-            COUNT(Cursos_Registrados.ID_Usuario) as Registros_Cantidad,
-            COUNT(Promedios.bool_like) as Likes
+            COUNT(distinct Cursos_Registrados.ID_Usuario) as Registros_Cantidad,
+            ObtenerCantidadLikes(Cursos.ID_Curso) as Likes
             from Cursos
             inner join Usuarios on Usuarios.ID_Usuario = Cursos.ID_Usuario
             left join Cursos_Registrados on Cursos_Registrados.ID_Curso = Cursos.ID_Curso
-            left join Promedios on Promedios.ID_Curso = Cursos.ID_Curso
             group by Cursos.ID_Curso;
 
 CREATE VIEW View_Curso_Categoria AS
@@ -59,13 +58,12 @@ SELECT Cursos.ID_Curso as ID,
             Cursos.date_FchaRegistro as Registro,
             Cursos.date_FchaUltiCambio as Cambio,
             COUNT(Cursos_Registrados.ID_Usuario) as Registros_Cantidad,
-            COUNT(Promedios.bool_like) as Likes
+            ObtenerCantidadLikes(Cursos.ID_Curso) as Likes
             from Categorias_cursos
             inner join Cursos on Cursos.ID_Curso = Categorias_cursos.ID_Curso
             inner join Usuarios on Usuarios.ID_Usuario = Cursos.ID_Usuario
             inner join Categorias on Categorias.ID_Categoria = Categorias_cursos.ID_Categoria
             left join Cursos_Registrados on Cursos_Registrados.ID_Curso = Categorias_cursos.ID_Curso
-            left join Promedios on Promedios.ID_Curso = Cursos.ID_Curso
             group by Cursos.ID_Curso, Categoria;
 
 CREATE VIEW View_Comentarios AS
@@ -90,7 +88,9 @@ SELECT Cursos_Registrados.ID_Usuario as ID_Usuario,
             COUNT(Capitulos.ID_Capitulo) as Capitulos,
             Crear_Porcentaje(Cursos_Registrados.int_CapituloActual, Cursos_Registrados.int_SeccionActual, Cursos_Registrados.ID_Curso, COUNT(Capitulos.ID_Capitulo)) as Porcentaje,
             Capitulos.txt_Titulo as Titulo_Capitulo,
-            Cursos.date_FchaUltiCambio as Fecha_Cambio
+            Cursos.date_FchaUltiCambio as Fecha_Cambio,
+            Cursos_Registrados.date_FchaTerm as Fecha_Terminacion,
+            Cursos.isAcitvo as Activo
             from Cursos_Registrados
         inner join Cursos on Cursos.ID_Curso = Cursos_Registrados.ID_Curso
         inner join Capitulos on Capitulos.ID_Curso = Cursos_Registrados.ID_Curso 

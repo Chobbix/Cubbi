@@ -35,7 +35,7 @@ require('../../Controladores/db_vista_curso.php');
                             <div class=""> Impartida por: <?php echo $curso->get_profesor(); ?> </div>
                         </div>
                         <div class="">
-                            <h1>Tema <?php echo $curso->get_tema(); ?>.- <?php echo $curso->get_titulo_capitulo(); ?></h1>
+                            <h1>Tema <?php echo $curso->get_tema(); ?>.</h1>
                             <a href="../videos/videos.php?curso=<?php echo $_GET['curso']; ?>&tem=<?php echo $curso->get_tema(); ?>&cap=<?php echo $curso->get_capitulo(); ?>#question<?php echo $curso->get_tema(); ?>"> <button class="btn_dis"> Continuar curso</button> </a>
                         </div>
                     </div>

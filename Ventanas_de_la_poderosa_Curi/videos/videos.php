@@ -12,6 +12,8 @@ require('../../Controladores/db_videos.php');
     <link rel="stylesheet" href="./videos.css">
     <link rel="stylesheet" href="../accordion/accordion.css">
     <script src="https://kit.fontawesome.com/5554cc4983.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../../JavaScript/like_dislike_finCurso.js"></script>
     <title>Document</title>
     <link rel="stylesheet" href="../modal/contmodallike.css">
 </head>

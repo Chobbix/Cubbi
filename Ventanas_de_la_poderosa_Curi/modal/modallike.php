@@ -13,12 +13,8 @@
                 </div>
                 <div class="btones">
                     <div class="bloque-editar">
-                        <a href="../elcurso/vista.php">
-                            <i class="fas fa-heart"></i>
-                        </a>
-                        <a href="../elcurso/vista.php">
-                            <i class="fas fa-heart-broken"></i>
-                        </a>
+                        <i class="fas fa-heart" curso="<?php echo $_GET['curso']; ?>" usuario="<?php echo $_SESSION['ses_usuario']; ?>"></i>
+                        <i class="fas fa-heart-broken" curso="<?php echo $_GET['curso']; ?>" usuario="<?php echo $_SESSION['ses_usuario']; ?>"></i>
                     </div>
                 </div>
             </div>

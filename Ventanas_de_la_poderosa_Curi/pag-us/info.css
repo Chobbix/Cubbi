@@ -121,6 +121,12 @@ input[type="radio"]{
     cursor: pointer;
 }
 
+.columla{
+    display: flex;
+    justify-content: center;
+    
+}
+
 #cursos:checked ~ #Registro .contenedor-diplomas,
 #cursos:checked ~ #Registro .contenedor-guardado,
 #cursos:checked ~ #Registro .contenedor-proyectos{

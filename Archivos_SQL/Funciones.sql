@@ -52,11 +52,23 @@ END;
 //
 
 
+DELIMITER //
+CREATE FUNCTION ObtenerCantidadLikes(idCurso INT) 
+RETURNS INT
+BEGIN
+	DECLARE cantidad INT;
+	SET cantidad = (select COUNT(CASE WHEN Promedios.bool_like LIKE 1 THEN 1 END) from promedios where promedios.ID_Curso = idCurso);
+	RETURN cantidad;
+END;
+//
+
+
 select Max_Cursos();
 
 drop function Max_Cursos;
 drop function Crear_Porcentaje;
 drop function Obtener_Usuario_Mensajes;
+drop function ObtenerCantidadLikes;
 
 SET GLOBAL log_bin_trust_function_creators = 1;
 

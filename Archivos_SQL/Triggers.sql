@@ -9,6 +9,7 @@ ON capitulos FOR EACH ROW
 //
 DELIMITER ;
 
+
 DELIMITER //
 
 CREATE TRIGGER validar_rutas_capitulos
@@ -24,6 +25,7 @@ BEGIN
 END
 //
 DELIMITER ;
+
 
 DELIMITER //
 
@@ -41,6 +43,20 @@ END
 //
 DELIMITER ;
 
+
+DELIMITER //
+
+CREATE TRIGGER finalizar_curso
+AFTER INSERT
+ON promedios FOR EACH ROW
+BEGIN
+    UPDATE cursos_registrados SET cursos_registrados.isTerminado = 1, cursos_registrados.date_FchaTerm = curdate()
+		WHERE cursos_registrados.ID_Curso = NEW.ID_Curso AND cursos_registrados.ID_Usuario = NEW.ID_Usuario;
+END
+//
+DELIMITER ;
+
 drop trigger validar_precio;
 drop trigger validar_rutas_capitulos;
 drop trigger validar_rutas_cursos;
+drop trigger finalizar_curso;

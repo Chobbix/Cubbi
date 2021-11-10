@@ -112,3 +112,22 @@ call sp_Consultas ('Mensajes_Maestro', 1, 0, '', '');
 call sp_Mensajes('A', 0, 34, 2, 'No pues lo que pasa es que', 0, curdate())
 
 CALL sp_Capitulos('C', ?, ?, ?, ?, ?, ?, ?);
+
+SELECT Cursos.ID_Curso as ID,
+            Cursos.txt_Titulo as Titulo,
+            Cursos.txt_Descripcion as Descripcion,
+            Cursos.txt_Duracion as Duracion,
+            Cursos.blob_img as Imagen,
+            Cursos.ID_Usuario as ID_Profesor,
+            Usuarios.txt_NomUser as Profesor,
+            Cursos.isAcitvo as Activo,
+            Cursos.isPrecioGeneral as Tipo,
+            Cursos.f_Precio as Precio,
+            Cursos.date_FchaRegistro as Registro,
+            Cursos.date_FchaUltiCambio as Cambio,
+            COUNT(distinct Cursos_Registrados.ID_Usuario) as Registros_Cantidad,
+            ObtenerCantidadLikes(Cursos.ID_Curso) as Likes
+            from Cursos
+            inner join Usuarios on Usuarios.ID_Usuario = Cursos.ID_Usuario
+            left join Cursos_Registrados on Cursos_Registrados.ID_Curso = Cursos.ID_Curso
+            group by Cursos.ID_Curso;
