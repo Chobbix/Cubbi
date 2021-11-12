@@ -86,14 +86,19 @@ SELECT Cursos_Registrados.ID_Usuario as ID_Usuario,
             Cursos.blob_img as img,
             Cursos.txt_Titulo as Titulo,
             COUNT(Capitulos.ID_Capitulo) as Capitulos,
-            Crear_Porcentaje(Cursos_Registrados.int_CapituloActual, Cursos_Registrados.int_SeccionActual, Cursos_Registrados.ID_Curso, COUNT(Capitulos.ID_Capitulo)) as Porcentaje,
+            Crear_Porcentaje(Cursos_Registrados.int_CapituloActual, Cursos_Registrados.int_SeccionActual, Cursos_Registrados.ID_Curso, COUNT(Capitulos.ID_Capitulo), Cursos_Registrados.isTerminado) as Porcentaje,
             Capitulos.txt_Titulo as Titulo_Capitulo,
             Cursos.date_FchaUltiCambio as Fecha_Cambio,
             Cursos_Registrados.date_FchaTerm as Fecha_Terminacion,
             Cursos_Registrados.date_FchaRegistro as Fecha_Inscripcion,
             Cursos_Registrados.date_FchaUltimaEntrada as Fecha_Ultima_Entrada,
             Cursos.isAcitvo as Activo,
-            Cursos_Registrados.isTerminado as Terminado
+            Cursos_Registrados.isTerminado as Terminado,
+            PagoTotal(Cursos_Registrados.ID_Curso, Cursos_Registrados.ID_Usuario, isPrecioGeneral, Cursos_Registrados.f_MontoPagado) as Pago,
+			CASE 
+				WHEN Cursos_Registrados.int_TipoPago = 2 THEN 'PayPal' 
+				WHEN Cursos_Registrados.int_TipoPago = 1 THEN 'Tarjeta de Credito' 
+			END as Tipo_de_Pago
             from Cursos_Registrados
         inner join Cursos on Cursos.ID_Curso = Cursos_Registrados.ID_Curso
         inner join Capitulos on Capitulos.ID_Curso = Cursos_Registrados.ID_Curso 

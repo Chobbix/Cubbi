@@ -10,7 +10,7 @@ END;
 
 
 DELIMITER //
-CREATE FUNCTION Crear_Porcentaje(capActual INT, secActual INT, curso INT, capCantidad INT) 
+CREATE FUNCTION Crear_Porcentaje(capActual INT, secActual INT, curso INT, capCantidad INT, isTerminado BOOL) 
 RETURNS FLOAT
 BEGIN
 	DECLARE porcentaje FLOAT;
@@ -18,19 +18,24 @@ BEGIN
     DECLARE capAnteriores INT;
     DECLARE caps INT;
     
-    SET secActual = secActual - 1;
-    SET capAnteriores = 0;
+    IF isTerminado = true THEN
+		SET porcentaje = 100;
+    ELSE
+        SET secActual = secActual - 1;
+		SET capAnteriores = 0;
+		
+		while secActual > 0 do
+		SET caps = (select COUNT(ID_Capitulo) from Capitulos where ID_seccion = secActual and ID_Curso = curso);
+		SET capAnteriores = capAnteriores + caps;
+		SET secActual = secActual - 1;
+		end while;
+		
+		SET capActual = capActual + capAnteriores;
+		
+		SET division = (capActual - 1) / capCantidad;
+		SET porcentaje = division * 100;
+    END IF;
     
-	while secActual > 0 do
-	SET caps = (select COUNT(ID_Capitulo) from Capitulos where ID_seccion = secActual and ID_Curso = curso);
-    SET capAnteriores = capAnteriores + caps;
-    SET secActual = secActual - 1;
-	end while;
-    
-    SET capActual = capActual + capAnteriores;
-    
-	SET division = (capActual - 1) / capCantidad;
-	SET porcentaje = division * 100;
 	RETURN porcentaje;
 END;
 //
@@ -63,12 +68,29 @@ END;
 //
 
 
+DELIMITER //
+CREATE FUNCTION PagoTotal(idcurso INT, idUsuario INT, tipo INT, monto FLOAT) 
+RETURNS FLOAT
+BEGIN
+    IF tipo = 3 THEN
+		SET monto = (select SUM(f_Precio) from accesos 
+							inner join capitulos on capitulos.ID_Curso = accesos.ID_Curso AND capitulos.ID_Seccion = accesos.ID_Seccion
+                                where accesos.ID_Curso = idcurso AND accesos.ID_usuario = idUsuario
+								group by accesos.ID_Curso, accesos.ID_usuario);
+    END IF;
+    
+	RETURN monto;
+END;
+//
+
+
 select Max_Cursos();
 
 drop function Max_Cursos;
 drop function Crear_Porcentaje;
 drop function Obtener_Usuario_Mensajes;
 drop function ObtenerCantidadLikes;
+drop function PagoTotal;
 
 SET GLOBAL log_bin_trust_function_creators = 1;
 

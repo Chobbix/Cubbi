@@ -132,3 +132,17 @@ SELECT Cursos.ID_Curso as ID,
             inner join Usuarios on Usuarios.ID_Usuario = Cursos.ID_Usuario
             left join Cursos_Registrados on Cursos_Registrados.ID_Curso = Cursos.ID_Curso
             group by Cursos.ID_Curso;
+
+CONCAT(usuarios.txt_Nom , " ", usuarios.txt_ApePat)
+
+SELECT View_Registros.ID_Curso, COUNT(View_Registros.ID_Usuario), (SUM(View_Registros.Porcentaje) / COUNT(View_Registros.ID_Usuario)), SUM(Pago) FROM View_Registros
+	Group by View_Registros.ID_Curso
+
+select * from View_Registros
+
+select * from accesos
+
+select accesos.ID_Curso, accesos.ID_usuario, accesos.ID_Seccion, SUM(f_Precio) from accesos
+	inner join capitulos on capitulos.ID_Curso = accesos.ID_Curso AND capitulos.ID_Seccion = accesos.ID_Seccion
+		group by accesos.ID_Curso, accesos.ID_usuario
+						 
