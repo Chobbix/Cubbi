@@ -27,22 +27,32 @@
                         </div>
                     </div>
                     <div class="bloque-menu" id="filtrado">
-                        <div class="contenedor-Todos container-dis">
 
-                            <div class="bloque-containeer">
-                                <div class="container">
-                                    <div class="puntuacion"> <i class="far fa-heart"></i>
-                                        <h1>520 alumnos les gusta tus curso</h1>
-                                    </div>
-                                    <div class="puntuacion"><i class="fas fa-users"></i>
-                                        <h1>525 alumnos</h1>
-                                    </div>
-                                    <div class="puntuacion"> <i class="fas fa-coins"></i>
-                                        <h1>Generaste $1200 pesos</h1>
+                        <?php
+                        foreach($resReporte1 as $row){
+                            ?>
+
+                            <div class="contenedor-Todos container-dis">
+                                <div class="bloque-containeer">
+                                    <h1> <?php echo $row['Titulo']; ?></h1>
+                                    <div class="container bloquesito">
+                                        <div class="puntuacion"><i class="fas fa-users"></i>
+                                            <h2> Cantidad de alumnos registrados: <?php echo $row['Cantidad_Alumnos']; ?></h2>
+                                        </div>
+                                        <div class="puntuacion"><i class="fas fa-users"></i>
+                                            <h2> Promedio curso: <?php echo $row['Porcentaje']; ?>%</h2>
+                                        </div>
+                                        <div class="puntuacion"><i class="fas fa-coins"></i>
+                                            <h2> Ingresos generados: <?php echo number_format($row['Pago'], 2); ?>$</h2>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+
+                            <?php
+                        }
+                        ?>
+
                         <div class="contenedor-sinver container-dis" id="filtrado">
                             <div class="caja_informativa">
                                 <section>
@@ -73,6 +83,9 @@
                                 </section>
                             </div>
                         </div>
+
+
+
                     </div>
                 </div>
             </div>

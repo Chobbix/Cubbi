@@ -81,6 +81,8 @@ SELECT Comentarios_Cursos.txt_Comentario as Comentario,
 CREATE VIEW View_Registros AS
 SELECT Cursos_Registrados.ID_Usuario as ID_Usuario,
             Cursos_Registrados.ID_Curso as ID_Curso,
+            Cursos.ID_Usuario as ID_Profesor,
+            CONCAT(usuarios.txt_Nom , " ", usuarios.txt_ApePat) as Nombre_Completo,
             Cursos_Registrados.int_SeccionActual as Seccion_Actual,
             Cursos_Registrados.int_CapituloActual as Capitulo_Actual,
             Cursos.blob_img as img,
@@ -102,6 +104,7 @@ SELECT Cursos_Registrados.ID_Usuario as ID_Usuario,
             from Cursos_Registrados
         inner join Cursos on Cursos.ID_Curso = Cursos_Registrados.ID_Curso
         inner join Capitulos on Capitulos.ID_Curso = Cursos_Registrados.ID_Curso 
+        inner join usuarios on usuarios.ID_Usuario = Cursos_Registrados.ID_Usuario 
         Group by Cursos_Registrados.ID_Curso, Cursos_Registrados.ID_Usuario
         ORDER BY Cursos_Registrados.date_FchaRegistro DESC;
 
@@ -120,6 +123,17 @@ SELECT Mensajes_Cursos.ID_Mensaje as ID,
         inner join Cursos on Cursos.ID_Curso = Mensajes_Cursos.ID_Curso
         inner join usuarios on usuarios.ID_Usuario = Mensajes_Cursos.ID_Usuario;
 
+CREATE VIEW View_Ventas_Cursos AS
+SELECT View_Curso.ID as ID_Curso, 
+            View_Curso.Titulo as Titulo, 
+            View_Curso.ID_Profesor as ID_Profesor, 
+            COUNT(View_Registros.ID_Usuario) as Cantidad_Alumnos, 
+            ifnull((SUM(View_Registros.Porcentaje) / COUNT(View_Registros.ID_Usuario)), 0) as Porcentaje, 
+            ifnull((SUM(View_Registros.Pago)), 0) as Pago 
+            FROM View_Curso
+        left join View_Registros on View_Registros.ID_Curso = View_Curso.ID
+        Group by View_Curso.ID;
+
 drop view View_Usuarios;
 drop VIEW View_VideosCursos;
 drop VIEW View_Curso;
@@ -127,3 +141,4 @@ drop VIEW View_Curso_Categoria;
 drop VIEW View_Comentarios;
 drop VIEW View_Registros;
 drop View View_Mensajes;
+drop View View_Ventas_Cursos;

@@ -135,14 +135,41 @@ SELECT Cursos.ID_Curso as ID,
 
 CONCAT(usuarios.txt_Nom , " ", usuarios.txt_ApePat)
 
-SELECT View_Registros.ID_Curso, COUNT(View_Registros.ID_Usuario), (SUM(View_Registros.Porcentaje) / COUNT(View_Registros.ID_Usuario)), SUM(Pago) FROM View_Registros
-	Group by View_Registros.ID_Curso
+SELECT View_Curso.ID as ID_Curso, 
+		View_Curso.Titulo as Titulo, 
+        View_Curso.ID_Profesor as ID_Profesor, 
+        COUNT(View_Registros.ID_Usuario) as Cantidad_Alumnos, 
+        (SUM(View_Registros.Porcentaje) / COUNT(View_Registros.ID_Usuario)) as Porcentaje, 
+        (SUM(View_Registros.Pago)) as Pago 
+        FROM View_Curso
+	left join View_Registros on View_Registros.ID_Curso = View_Curso.ID
+    Where View_Curso.ID_Profesor = 1
+	Group by View_Curso.ID
 
 select * from View_Registros
 
 select * from accesos
 
-select accesos.ID_Curso, accesos.ID_usuario, accesos.ID_Seccion, SUM(f_Precio) from accesos
+select cursos.ID_Usuario as Profesor, accesos.ID_Curso, accesos.ID_usuario, accesos.ID_Seccion, SUM(capitulos.f_Precio) from accesos
 	inner join capitulos on capitulos.ID_Curso = accesos.ID_Curso AND capitulos.ID_Seccion = accesos.ID_Seccion
+    inner join cursos on cursos.ID_Curso = accesos.ID_Curso
 		group by accesos.ID_Curso, accesos.ID_usuario
-						 
+
+
+SELECT ID, Titulo, Descripcion, Duracion, Imagen, ID_Profesor, Profesor, Activo, Tipo, Precio, Registro, Cambio, Registros_Cantidad, Likes FROM view_curso
+	inner join View_Registros
+            WHERE ID_Profesor = 1;
+
+select * from view_registros
+	group by Tipo_de_Pago
+    
+    select SUM(Pago) as Pago, Tipo_de_Pago, ID_Profesor from view_registros
+    where ID_Profesor = 1
+	group by Tipo_de_Pago
+    
+    
+    Select View_Registros
+    
+    SELECT ID_Usuario, ID_Curso, Nombre_Completo, Seccion_Actual, Capitulo_Actual, img, Titulo, Capitulos, Porcentaje, Titulo_Capitulo, Fecha_Cambio, Fecha_Terminacion, Fecha_Inscripcion, Fecha_Ultima_Entrada, Activo, Terminado, Pago, Tipo_de_Pago
+    FROM view_registros;
+

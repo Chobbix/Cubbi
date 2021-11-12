@@ -194,4 +194,48 @@
             
             return $rows;
         }
+
+        function query_select_reporte1($usuario, $curso) {
+            $database = new DB;
+            $conexion = $database->ConectarDB();
+            $sql = "call sp_Reportes ('Ventas_Cursos', ?, ?)";
+            $statementSelect = $conexion->prepare($sql);
+            $statementSelect->execute(array($usuario, $curso));
+            $rows = $statementSelect->fetchAll();
+            
+            return $rows;
+        }
+
+        function query_select_reporte2($usuario, $curso) {
+            $database = new DB;
+            $conexion = $database->ConectarDB();
+            $sql = "call sp_Reportes ('Ventas_Tipo_De_Pago', ?, ?)";
+            $statementSelect = $conexion->prepare($sql);
+            $statementSelect->execute(array($usuario, $curso));
+            $rows = $statementSelect->fetchAll();
+            
+            return $rows;
+        }
+
+        function query_select_reporte3($usuario, $curso) {
+            $database = new DB;
+            $conexion = $database->ConectarDB();
+            $sql = "call sp_Reportes ('Ventas_Totales', ?, ?)";
+            $statementSelect = $conexion->prepare($sql);
+            $statementSelect->execute(array($usuario, $curso));
+            $rows = $statementSelect->fetchAll();
+            
+            return $rows;
+        }
+
+        function query_select_reporte4($usuario, $curso) {
+            $database = new DB;
+            $conexion = $database->ConectarDB();
+            $sql = "call sp_Reportes ('Ventas_Detalladas', ?, ?)";
+            $statementSelect = $conexion->prepare($sql);
+            $statementSelect->execute(array($usuario, $curso));
+            $rows = $statementSelect->fetchAll();
+            
+            return $rows;
+        }
     }
