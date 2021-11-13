@@ -41,16 +41,6 @@ require("../../Controladores/db_nav.php");
                                     </scroll-container>
                                 </ul>
                             </li>
-                            <li class="a"><a href="#">Lo mas nuevo </a>
-                                <ul class="diseno">
-                                    <scroll-container class="scroll_nav">
-                                        <li><a href="#">dinero</a></li>
-                                        <li><a href="#">dinero</a></li>
-                                        <li><a href="#">dinero</a></li>
-                                        <li><a href="#">dinero</a></li>
-                                    </scroll-container>
-                                </ul>
-                            </li>
                         </ul>
                     </li>
                 </ul>
