@@ -9,7 +9,7 @@ CREATE PROCEDURE sp_Reportes (
 )
 BEGIN
 	IF opc = 'Ventas_Cursos' THEN
-        SELECT ID_Curso, Titulo, ID_Profesor, Cantidad_Alumnos, Porcentaje, Pago FROM view_ventas_cursos
+        SELECT view_ventas_cursos.ID_Curso, view_ventas_cursos.Titulo, view_ventas_cursos.ID_Profesor, view_ventas_cursos.Cantidad_Alumnos, view_ventas_cursos.Porcentaje, view_ventas_cursos.Pago FROM view_ventas_cursos
             WHERE ID_Profesor = ID_Usuario;
     END IF;
 
@@ -25,7 +25,7 @@ BEGIN
     END IF;
 
     IF opc = 'Ventas_Detalladas' THEN
-        SELECT ID_Usuario, ID_Curso, Nombre_Completo, Seccion_Actual, Capitulo_Actual, img, Titulo, Capitulos, Porcentaje, Titulo_Capitulo, Fecha_Cambio, Fecha_Terminacion, Fecha_Inscripcion, Fecha_Ultima_Entrada, Activo, Terminado, Pago, Tipo_de_Pago
+        SELECT view_registros.ID_Usuario, view_registros.ID_Curso, Nombre_Completo, Seccion_Actual, Capitulo_Actual, img, Titulo, Capitulos, Porcentaje, Titulo_Capitulo, Fecha_Cambio, Fecha_Terminacion, Fecha_Inscripcion, Fecha_Ultima_Entrada, Activo, Terminado, Pago, Tipo_de_Pago
             FROM view_registros;
     END IF;
 END

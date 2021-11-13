@@ -43,12 +43,28 @@
                                             <h2> Promedio curso: <?php echo $row['Porcentaje']; ?>%</h2>
                                         </div>
                                         <div class="puntuacion"><i class="fas fa-coins"></i>
-                                            <h2> Ingresos generados: <?php echo number_format($row['Pago'], 2); ?>$</h2>
+                                            <h2> Ingresos generados: $<?php echo number_format($row['Pago'], 2, '.', ','); ?></h2>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
+                            <?php
+                        }
+                        
+                        foreach($resReporte2 as $row){
+                            ?>
+                            <div class="contenedor-Todos container-dis">
+                                <h1>Ganancia por <?php echo $row['Tipo_de_Pago']; ?>: $<?php echo number_format($row['Pago'], 2, '.', ','); ?></h1>
+                            </div>
+                            <?php
+                        }
+
+                        foreach($resReporte3 as $row){
+                            ?>
+                            <div class="contenedor-Todos container-dis">
+                                <h1>Ganancia total: $<?php echo number_format($row['Pago_Total'], 2, '.', ','); ?></h1>
+                            </div>
                             <?php
                         }
                         ?>
@@ -58,26 +74,33 @@
                                 <section>
                                     <div class="container">
                                         <div class="accordion">
-                                            <div class="accordion-item" id="question1">
-                                                <a class="accordion-link" href="#question1">
-                                                    <h3>Tema1</h3>
-                                                    <i class="fas fa-angle-down"></i>
-                                                    <i class="fas fa-angle-up"></i>
-                                                </a>
-                                                <div class="answer">
-                                                    <?php include("./cuadrodesc.php") ?>
+                                        <?php
+                                        $contador = 1;
+                                        foreach($resReporte1 as $row){
+                                            ?>
+                                                <div class="accordion-item bloquesito" id="question<?php echo $contador ?>">
+                                                    <a class="accordion-link" href="#question<?php echo $contador ?>">
+                                                        <h3><?php echo $row['Titulo']; ?></h3>
+                                                        <i class="fas fa-angle-down"></i>
+                                                        <i class="fas fa-angle-up"></i>
+                                                    </a>
+                                                    <?php
+                                                    foreach($resReporte4 as $row2) {
+                                                        if($row2['ID_Curso'] == $row['ID_Curso']) {
+                                                            include("./cuadrodesc.php");
+                                                        }
+                                                    }
+                                                    ?>
+                                                    <div class="answer bloquesito-top">
+                                                        <div class="container">
+                                                            <div class="puntuacion"> <i class="fas fa-coins"></i> <h1>Ingreso total del curso: $<?php echo number_format($row['Pago'], 2, '.', ','); ?></h1></div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="accordion-item" id="question2">
-                                                <a class="accordion-link" href="#question2">
-                                                    <h3>Tema 2</h3>
-                                                    <i class="fas fa-angle-down"></i>
-                                                    <i class="fas fa-angle-up"></i>
-                                                </a>
-                                                <div class="answer">
-                                                    <?php include("./cuadrodesc.php") ?>
-                                                </div>
-                                            </div>
+                                            <?php
+                                            $contador ++;
+                                        }
+                                        ?>
                                         </div>
                                     </div>
                                 </section>
