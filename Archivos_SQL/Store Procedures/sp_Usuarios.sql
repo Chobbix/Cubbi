@@ -30,7 +30,12 @@ BEGIN
     END IF;
 
     IF opc = 'img' THEN
-		UPDATE Usuarios SET Usuarios.blob_img= blob_img WHERE Usuarios.ID_Usuario= ID_Usuario;
+		UPDATE Usuarios SET 
+        Usuarios.blob_img = blob_img, 
+        Usuarios.txt_Contra = txt_Contra,
+        Usuarios.txt_NomUser = txt_NomUser,
+        Usuarios.date_FchaUltiCambio = curdate()
+          WHERE Usuarios.ID_Usuario= ID_Usuario;
     END IF;
 END
 $$

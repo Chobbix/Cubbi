@@ -97,9 +97,9 @@
             try{
                 $database = new DB;
                 $conexion = $database->ConectarDB();
-                $sql = "call sp_Usuarios('img', ?, 0, ?, '', '', '', '', '', null, null, null, '{$this->blob_img}')";
+                $sql = "call sp_Usuarios('img', ?, 0, ?, ?, '', '', '', '', null, null, null, '{$this->blob_img}')";
                 $statement = $conexion->prepare($sql);
-                $statement->execute(array($this->id_Usuario, $this->txt_NomUser));
+                $statement->execute(array($this->id_Usuario, $this->txt_NomUser, $this->txt_Contra));
                 $statement->closeCursor();
 
             }catch(Exception $e) {

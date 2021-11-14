@@ -56,7 +56,23 @@ END
 //
 DELIMITER ;
 
+
+DELIMITER //
+
+CREATE TRIGGER validar_imagen_usuario
+BEFORE UPDATE
+ON usuarios FOR EACH ROW
+BEGIN
+    IF NEW.blob_img = "" THEN
+        SET NEW.blob_img = OLD.blob_img;
+    END IF;
+END
+//
+DELIMITER ;
+
+
 drop trigger validar_precio;
 drop trigger validar_rutas_capitulos;
 drop trigger validar_rutas_cursos;
 drop trigger finalizar_curso;
+drop trigger validar_imagen_usuario;

@@ -43,23 +43,19 @@
                                         </div>
                                         <div class="divisorio">
                                             <h1 class="selector" id="type">Nick name</h1>
-                                            <input type="text" name= "nickname">
+                                            <input type="text" name= "nickname" id="nickname" value="<?php echo $user->get_NomUser(); ?>">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="contenedor-resp" id="Registro">
                                     <div class="bloque-editar">
                                         <div class="divisorio">
-                                            <h1 class="selector " id="type">Contraseña original:</h1>
-                                            <input type="text">
-                                        </div>
-                                        <div class="divisorio">
                                             <h1 class="selector a" id="type">Nueva Contraseña</h1>
-                                            <input type="text">
+                                            <input type="text" name="pass_new" id="pass_new" value="<?php echo $user->get_Contra(); ?>">
                                         </div>
                                         <div class="divisorio">
                                             <h1 class="selector a" id="type">confirmar Contraseña</h1>
-                                            <input type="text">
+                                            <input type="text" name="pass_confirm" id="pass_confirm" value="<?php echo $user->get_Contra(); ?>">
                                         </div>
                                     </div>
                                 </div>

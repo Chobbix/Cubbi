@@ -11,6 +11,7 @@ require('../../Controladores/db_perfil.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../../JavaScript/info_usuario.js"></script>
     <link rel="stylesheet" href="./perfil.css">
     <link rel="stylesheet" href="../Navegacion/nav.css">
     
