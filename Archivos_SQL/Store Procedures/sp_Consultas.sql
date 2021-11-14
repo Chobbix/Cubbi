@@ -100,6 +100,23 @@ BEGIN
             inner join View_Usuarios on View_Usuarios.ID = View_Registros.ID_Profesor
                 WHERE View_Registros.ID_Usuario = id1 and View_Registros.ID_Curso = id2;
     END IF;
+
+    IF opc = 'Cont_Terminados' THEN
+        SELECT COUNT(ID_Usuario) as Cantidad FROM View_Registros
+            WHERE Activo = 1 AND Terminado = 1 AND ID_Usuario = id1;
+    END IF;
+
+    IF opc = 'Cont_inTerminados' THEN
+        SELECT COUNT(ID_Usuario) as Cantidad FROM View_Registros
+            WHERE Porcentaje >= 0 AND Porcentaje < 100 AND Activo = 1 AND Terminado = 0 AND ID_Usuario = id1;
+    END IF;
+
+    IF opc = 'Ultimo_Curso' THEN
+        SELECT ID_Usuario, ID_Curso, Seccion_Actual, Capitulo_Actual, img, Titulo, Capitulos, Porcentaje, Titulo_Capitulo, Activo, Terminado, Fecha_Terminacion, Fecha_Inscripcion, Fecha_Ultima_Entrada FROM View_Registros
+            WHERE ID_Usuario = id1
+            ORDER BY Fecha_Ultima_Entrada DESC
+            LIMIT 0,1;
+    END IF;
 END
 $$
 DELIMITER ;

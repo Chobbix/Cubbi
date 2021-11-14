@@ -64,15 +64,15 @@ require('../../Controladores/db_perfil.php');
                         <div class="titulo">
                             <div class="cont">
                                 <div class="info">
-                                    <h1>04</h1>
+                                    <h1><?php echo $resCantInTerminados[0]['Cantidad']; ?></h1>
                                     <i class="fas fa-clock"></i>
                                 </div>
                                 <div class="info ">
-                                    <h1>04</h1>
+                                    <h1><?php echo $resCantTerminados[0]['Cantidad']; ?></h1>
                                     <i class="fas fa-check-double"></i>
                                 </div>
                                 <div class="info ">
-                                    <h1>04</h1>
+                                    <h1><?php echo $resCantTerminados[0]['Cantidad']; ?></h1>
                                     <i class="fas fa-user-graduate"></i>
                                 </div>
                             </div>
@@ -99,21 +99,17 @@ require('../../Controladores/db_perfil.php');
                             </a>
                         </div>
                     </div>
-                    <a href="../elcurso/vista.php">
+                    <a href="../elcurso/vista.php?">
                         <div class="Cont-ultimo-curso">
                             <div class="bloque-ultimo-curso">
                                 <div class="icon">
-                                    <img src="../Multimedia/b.gif" alt="" class="miniatura">
+                                    <img src="data:image/png;base64,<?php echo base64_encode($resUltimoVisitado[0]['img']); ?>" alt="" class="miniatura">
                                 </div>
                                 <div class="descripcion">
                                     <div class="contenido-desc">
-
-                                        <h2>Curso</h2>
-
-                                        <h3 class="porcentaje">6% completo</h3>
-
+                                        <h2><?php echo $resUltimoVisitado[0]['Titulo']?></h2>
+                                        <h3 class="porcentaje"><?php echo $resUltimoVisitado[0]['Porcentaje']?>% completo</h3>
                                     </div>
-
                                 </div>
                             </div>
                         </div>

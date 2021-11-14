@@ -22,4 +22,8 @@ foreach($resultados as $row){
     $user->set_img($row['Foto_Perfil']);
 }
 
+$resCantTerminados = $select->query_select_cantidad_terminados($_SESSION['ses_usuario']);
+$resCantInTerminados = $select->query_select_cantidad_interminados($_SESSION['ses_usuario']);
+$resUltimoVisitado = $select->query_select_ultimo_visitado($_SESSION['ses_usuario']);
+
 ?>
