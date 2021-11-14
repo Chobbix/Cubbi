@@ -82,7 +82,11 @@ require("../../Controladores/db_info_usu.php");
                         </div>                            
                     </div>   
                     <div class="contenedor-diplomas bloque_contenedor_cursos" id="Registro">   
-                    <?php include ("./cuadro.php");?>                       
+                    <?php 
+                    foreach($resCursosregistrados as $row) {
+                        if($row['Terminado'] == 1) { include ("./cuadro.php"); }
+                    }
+                    ?>
                     </div>
                 </div>
             </div>                              

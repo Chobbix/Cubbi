@@ -94,6 +94,12 @@ BEGIN
         SELECT ID, Titulo, Descripcion, Duracion, Imagen, ID_Profesor, Profesor, Activo, Tipo, Precio, Registro, Cambio, Registros_Cantidad, Likes FROM view_curso
             WHERE ID_Profesor = id1;
     END IF;
+
+    IF opc = 'Diploma' THEN
+        SELECT View_Registros.Nombre_Completo as Alumno, View_Registros.Titulo as Curso, View_Registros.Fecha_Terminacion as Fecha, View_Usuarios.Nombre_Completo as Profesor FROM View_Registros
+            inner join View_Usuarios on View_Usuarios.ID = View_Registros.ID_Profesor
+                WHERE View_Registros.ID_Usuario = id1 and View_Registros.ID_Curso = id2;
+    END IF;
 END
 $$
 DELIMITER ;

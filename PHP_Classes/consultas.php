@@ -238,4 +238,15 @@
             
             return $rows;
         }
+        
+        function query_select_info_diploma($usuario, $curso) {
+            $database = new DB;
+            $conexion = $database->ConectarDB();
+            $sql = "call sp_Consultas ('Diploma', ?, ?, '', '')";
+            $statementSelect = $conexion->prepare($sql);
+            $statementSelect->execute(array($usuario, $curso));
+            $rows = $statementSelect->fetchAll();
+            
+            return $rows;
+        }
     }

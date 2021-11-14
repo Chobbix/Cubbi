@@ -1,3 +1,7 @@
+<?php
+require("../../Controladores/db_diploma.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,14 +17,15 @@
 </head>
 
 <body>
+    <?php foreach($resDiplomaInfo as $row){ ?>
     <div class="cubo1">
         <img src="../Multimedia/diplomabasico.jpg" alt="">
-        <h1 class="Estudiante"> *Nombre del estudiante*</h1><br>
-        <h1 class="Curso">*Nombre del curso*</h1>
-        <h2 class="Fecha">*Fecha*</h2>
-        <h2 class="Maesto">*Nombre del maestro*</h2>
+        <h1 class="Estudiante"><?php echo $row['Alumno']; ?></h1><br>
+        <h1 class="Curso"><?php echo $row['Curso']; ?></h1>
+        <h2 class="Fecha"><?php echo $row['Fecha']; ?></h2>
+        <h2 class="Maesto"><?php echo $row['Profesor']; ?></h2>
     </div>
-
+    <?php } ?>
 </body>
 
 </html>
