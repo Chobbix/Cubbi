@@ -24,6 +24,8 @@
                                 <input type="text" placeholder="Fecha expiracion">
                                 <h1></h1>
                                 <input type="text" placeholder="Codigo seguridad">
+                                <h1></h1>
+                                <input type="submit" class="btn-guarda" class="save-modal" id="PagarTarjetaCredito"></input>
                             </div>
                         </div> 
                         <div class="contenedor-resp" id="Registro" >

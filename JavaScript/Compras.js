@@ -65,7 +65,26 @@ $(document).ready(function(){
 
     }).render('#paypal-button-container');
 
+    $("#PagarTarjetaCredito").click(function(){
+        if(isRegistrado == false){
+            isRegistrado = true;
+            AgregarRegistroAjax(idCurso, precio, 1);
+        }
 
+        if(isCursoPorCapitulos) {
+            var padre = $("[Tema=" + idTema + "]").parent();
+            $("[Tema=" + idTema + "]").remove();
+            padre.replaceWith('<h2 class="comprado">Tema Comprado</h2>');
+
+            AgregarAcceso(idCurso, idTema);
+            MostrarMsgBox("Registrado y comprado el tema con exito", "Espero que te guste el curso", "success");
+            $(location).attr('href','#');
+
+        } else {
+            MostrarMsgBox("Registrado y comprado con exito", "Espero que te guste el curso", "success");
+            $(location).attr('href','../elcurso/vista.php?curso='+ idCurso);
+        }
+    });
 
     function MostrarMsgBox(titulo, descripcion, icono){
         Swal.fire({
