@@ -99,7 +99,7 @@ require('../../Controladores/db_perfil.php');
                             </a>
                         </div>
                     </div>
-                    <a href="../elcurso/vista.php?">
+                    <a href="../elcurso/vista.php?curso=<?php echo $resUltimoVisitado[0]['ID_Curso']; ?>">
                         <div class="Cont-ultimo-curso">
                             <div class="bloque-ultimo-curso">
                                 <div class="icon">

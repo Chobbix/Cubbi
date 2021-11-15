@@ -53,5 +53,6 @@ $consulta = new Consulta();
 $capitulosRes = $consulta->query_select_capitulos_by_curso($_GET["curso"]);
 $seccionesRes = $consulta->query_select_secciones_by_curso($_GET["curso"]);
 $accesosRes = $consulta->query_select_accesos($_GET["curso"], $_SESSION['ses_usuario']);
+$cursoRes = $consulta->query_select_cursosReg_By_Usuario($_SESSION['ses_usuario'], $_GET["curso"]);
 
 ?>

@@ -129,8 +129,18 @@ require('../../Controladores/db_curso.php');
                                                 <h1>$<?php echo number_format($curso->get_precio(), 2); ?></h1>
                                             </div>
                                             <a href="#modal" id="mostrar">
-                                                <div class="ayuda">                                        
-                                                    <button class="btn_diseño" Precio="<?php echo $curso->get_precio()?>" Curso="<?php echo $_GET['curso']; ?>">Comprar ahora</button>
+                                                <div class="ayuda">
+                                                    <?php 
+                                                    if(!isset($cursoRes)) { 
+                                                        ?>
+                                                            <button class="btn_diseño" Precio="<?php echo $curso->get_precio()?>" Curso="<?php echo $_GET['curso']; ?>">Comprar ahora</button>
+                                                        <?php 
+                                                    } else {
+                                                        ?>
+                                                            <h2 class="comprado">Curso Comprado</h2>
+                                                        <?php
+                                                    }
+                                                    ?>
                                                 </div>
                                             </a>
                                         </div>
