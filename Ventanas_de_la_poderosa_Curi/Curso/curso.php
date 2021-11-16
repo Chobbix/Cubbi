@@ -131,7 +131,7 @@ require('../../Controladores/db_curso.php');
                                             <a href="#modal" id="mostrar">
                                                 <div class="ayuda">
                                                     <?php 
-                                                    if(!isset($cursoRes)) { 
+                                                    if(!is_null($cursoRes)) { 
                                                         ?>
                                                             <button class="btn_diseño" Precio="<?php echo $curso->get_precio()?>" Curso="<?php echo $_GET['curso']; ?>">Comprar ahora</button>
                                                         <?php 
