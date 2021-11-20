@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="../Navegacion/nav.css">
 <link rel="stylesheet" href="./load.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../../JavaScript/Load2.js"></script>
 <script src="../../JavaScript/Load_Edit.js"></script>
 <?php include("../../Controladores/db_load.php"); ?>

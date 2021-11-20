@@ -105,18 +105,7 @@ require('../../Controladores/db_vista_curso.php');
                                 <div class="bloque_clases_info">
                                     <div class="informacion_clases contenedor_sep">
                                         <div class="bloque_todos_cap">
-                                            <?php include("../accordion/accordion.php"); ?>
-                                        </div>
-                                    </div>
-                                    <div class="arcchivos_descargar contenedor_sep">
-                                        <div class="contenedor_archivo">
-                                            <div class="img_box">
-                                                <div class="btn_img">
-                                                    <a href="../Multimedia/f.gif" download>
-                                                        <h1> Descargar archivos</h1>
-                                                    </a>
-                                                </div>
-                                            </div>
+                                            <?php include("acordeon_descarga.php"); ?>
                                         </div>
                                     </div>
                                 </div>

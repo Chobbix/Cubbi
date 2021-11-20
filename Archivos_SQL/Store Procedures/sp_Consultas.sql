@@ -31,7 +31,7 @@ BEGIN
     END IF;
 
     IF opc = 'Videos' THEN
-        SELECT Curso, Tema, Capitulo, Titulo, Precio, Video FROM View_VideosCursos
+        SELECT Curso, Tema, Capitulo, Titulo, Precio, Video, Documento FROM View_VideosCursos
             WHERE Curso = id1;
     END IF;
 

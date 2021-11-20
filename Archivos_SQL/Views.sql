@@ -20,7 +20,8 @@ SELECT Capitulos.ID_Curso as Curso,
             Capitulos.ID_Capitulo as Capitulo,
             Capitulos.txt_Titulo as Titulo,
             Capitulos.f_Precio as Precio,
-            Capitulos.ruta_vid as Video
+            Capitulos.ruta_vid as Video,
+            Capitulos.ruta_docs as Documento
             from Capitulos;
 
 CREATE VIEW View_Curso AS

@@ -196,7 +196,7 @@ $(document).ready(function(){
         form_data.append('Costo', costo);
         form_data.append('TipoPago', tipoPago);
         form_data.append("img", document.getElementById('id_imgCurso').files[0]);
-        form_data.append("vid", document.getElementById('id_vidCurso').files[0]);
+        form_data.append("vid", '');
 
         console.log(form_data);
         $.ajax({
@@ -279,8 +279,9 @@ $(document).ready(function(){
                 });
             });
         });
-
-        $(location).attr('href',"../perfil/perfil.php");
+        
+        MostrarMsgBox('Curso Agregado', 'Su curso fue agregado exitosamente', 'success');
+        //$(location).attr('href',"../perfil/perfil.php");
     });
 
     $("[btnGuardar=Editar]").click(function(){
@@ -406,9 +407,20 @@ $(document).ready(function(){
                 }
             });
         });
-
+        
+        MostrarMsgBox('Curso Modificado', 'Su curso fue modificado exitosamente', 'success');
     });
 });
+
+function MostrarMsgBox(titulo, descripcion, icono){
+    Swal.fire({
+        title: titulo,
+        text: descripcion,
+        icon: icono,
+        background: '#B8B7C9',
+        confirmButtonText: 'OK'
+    });
+}
 
 function sendRequest() {
     var theObject = new XMLHttpRequest();
