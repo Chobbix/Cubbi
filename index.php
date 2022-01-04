@@ -14,7 +14,7 @@
     </head>
 <body>
 <?php
-    $a = 15;
+    echo "Hola necesito ver si jala esto jsjsjs";
 ?>
 </body>
 </html>
